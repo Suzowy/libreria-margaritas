@@ -1,0 +1,182 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  background-image: url("../src/assets/img/fondo.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+/* estilos generales */
+
+.contain {
+  width: 55%;
+  height: auto;
+  padding: 100px;
+  margin: 0 auto;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.cabecera {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+}
+
+.cita {
+  display: block;
+  color: #573e43;
+  font-size: small;
+  font-style: italic;
+  text-align: center;
+}
+
+cite {
+  color: #573e43;
+  display: block;
+  margin-top: 5px;
+  font-style: italic;
+  text-align: center;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q::before {
+  content: open-quote;
+}
+
+q::after {
+  content: close-quote;
+}
+
+h1 {
+  font-size: 20px;
+  color: #37404fdb;
+  text-transform: uppercase;
+  border-bottom: 1px solid #c0bebe;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+h5 {
+  font-size: 17px;
+  color: #222321;
+  font-style: italic;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: justify;
+}
+
+ul{
+list-style: circle;
+font-size: 15px;
+margin-top: 20px;
+margin-left: 50px;
+margin-bottom: 20px;
+}
+
+
+button,
+.form__button{
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  display: inline-block;
+  width:35%;
+  height: 36px;
+  overflow: hidden;
+  cursor: pointer;
+ margin-top: 20px;
+ margin-bottom: 20px;
+  font-size: 12px;
+  z-index: 1;
+  border: 1px solid #ffba2f;
+  border-radius: 6px;
+  position: relative;
+}
+
+button::before,
+.form__button::before
+ {
+  position: absolute;
+  content: "";
+  background: #fed652ea;
+  width:150%;
+  height: 200px;
+  z-index: -1;
+  border-radius: 50%;
+}
+
+
+button:before,
+.form__button:before{
+  top: 100%;
+  left: 100%;
+  transition: 0.5s all;
+}
+
+button:hover::before,
+.form__button:hover::before{
+  top: -50px;
+  left: -50px;
+}
+
+@media (max-width: 585px) {
+  .contain {
+    width: 90%;
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 12px;
+  }
+
+  h5 {
+    font-size: 13px;
+    font-style: italic;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+ button,
+.form__button{
+width:100%;
+font-size: 10px;
+}
+
+}

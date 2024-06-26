@@ -1,0 +1,11 @@
+.foto-about{
+display: flex;
+width: 100%;
+height:auto;
+padding: 20px;
+}
+
+.foto{
+width: 30%;
+margin: 0 auto;
+}

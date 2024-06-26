@@ -1,0 +1,134 @@
+/* Pie de página */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: auto;
+  background: #e8e9e7af;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  overflow: hidden;
+}
+
+footer h2 {
+  color: #736f6acf;
+  text-transform: uppercase;
+  font-weight: lighter;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* social media */
+.card {
+  width: fit-content;
+  height: fit-content;
+  background-color: #ffffff;
+  display: -webkit-box;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 10px;
+  gap: 20px;
+  border-radius: 100px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+.socialContainer {
+  width: 52px;
+  height: 52px;
+  border-radius: 50px;
+  background-color: rgb(71, 69, 69);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+}
+
+.containerTwo:hover {
+  background-color: #00acee;
+  transition-duration: 0.3s;
+}
+
+.containerThree:hover {
+  background-color: #101517;
+  transition-duration: 0.3s;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 17px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.copy {
+  width: 97%;
+  margin-top: 20px;
+  color: rgba(74, 74, 74, 0.817);
+  font-size: 13px;
+  font-weight: lighter;
+}
+
+.footer-ul {
+  list-style: none;
+  text-align: center;
+  margin-left: 0px;
+  margin-top: 20px;
+  line-height: 3;
+}
+
+.listas {
+  margin-left: -85px;
+  display: flex;
+  gap: 120px;
+}
+
+.creditos {
+  margin-top: 30px;
+  font-size: 13px;
+  color: rgba(110, 110, 110, 0.606);
+}
+
+.creditos a {
+  text-decoration: none;
+  color: #cab4a1;
+}
+
+
+@media (max-width: 860px) {
+  .listas{
+    margin-left: 0px;
+    gap:10px;
+    flex-direction: column;
+  }
+}
