@@ -1,99 +1,161 @@
 <div class="contain">
 
+  <div class="contacto" id="contacto">
 
-  <h1>¿Qué podemos hacer por ti? </h1>
+    <section class="contact-cabecera" id="cabecera">
+      <div class="textos">
+        <h1>¿Qué podemos hacer por ti? </h1>
 
-  <p>La librería es un refugio para nosotras y queremos que también lo sea para ti. Un espacio seguro donde deambular
-    entre estanterías llenas de tesoros o relajarte sentada en un cómodo sillón junto a la chimenea mientras te tomas
-    una taza de earl grey sin preocuparte por lo que sucede fuera. Recuerda que tienes derecho a parar, a tomarte un
-    tiempo para ti y encontrar un remanso de paz desde el que viajar a través del tiempo y el espacio acompañada de las
-    mejores historias que hemos encontrado.
-  </p><br>
+        <p>La librería es un refugio para nosotras y queremos que también lo sea para ti. Un espacio seguro donde
+          deambular
+          entre estanterías llenas de tesoros o relajarte sentada en un cómodo sillón junto a la chimenea mientras te
+          tomas
+          una taza de earl grey sin preocuparte por lo que sucede fuera. Recuerda que tienes derecho a parar, a tomarte
+          un
+          tiempo para ti y encontrar un remanso de paz desde el que viajar a través del tiempo y el espacio acompañada
+          de
+          las
+          mejores historias que hemos encontrado.
+        </p><br>
 
-  <p>Espero que lo que has visto en la web te haya gustado y te haya suscitado la suficiente curiosidad como para hojear
-    nuestra mesa de novedades, acercarte a visitarnos o unirte a nuestro club de lectura de los viernes donde debatimos
-    sobre novelas, escritores, portadas y todo lo que se nos ocurre bien provistos de bebidas calientes y bizcochos
-    caseros.
-  </p><br>
+        <p>Espero que lo que has visto en la web te haya gustado y te haya suscitado la suficiente curiosidad como para
+          hojear
+          nuestra mesa de novedades, acercarte a visitarnos o unirte a nuestro club de lectura de los viernes donde
+          debatimos
+          sobre novelas, escritores, portadas y todo lo que se nos ocurre bien provistos de bebidas calientes y
+          bizcochos
+          caseros.
+        </p><br>
+        <div class="botones"><button><a href="/contacto#section2">QUIERO UNIRME AL CLUB</a></button></div>
 
-  <button>Quiero unirme al club</button>
+        <p class="quotes">Tal vez quieras echar un vistazo a nuestra página de preguntas frecuentes
+          <a href="/error">Aquí</a>
+        </p><br>
 
-  <p>Tal vez quieras echar un vistazo a nuestra página de preguntas frecuentes
-    <a href="">Aquí</a>
-  </p><br>
+      </div>
+      <div class="fotografia">
+        <img src="assets/img/chimenea.jpg" alt="Línea Corta">
+      </div>
 
-  <p>Si quieres transmitirnos cualquier sugerencia o duda rellena el formulario y te responderemos cualquiera de las dos
-    en un máximo de 48horas, y si podemos lo haremos antes.
-  </p> <br>
+    </section>
 
-  <p>Si prefieres escribirnos directamente: <a href="mailto:{{ email }}" class="email-link">
-      <h4 class="subtitle">Envianos un e-mail
-      </h4>
-    </a>
-  </p>
+    <section class="section section-2" id="section2">
+      <section class="formularios" id="formularios">
+        <div class="cajon">
+          <div class="textos">
+            <h5>Si quieres transmitirnos cualquier sugerencia o duda rellena el formulario y te responderemos cualquiera
+              de las
+              dos
+              en un máximo de 48horas, y si podemos lo haremos antes.
+            </h5> <br>
 
-  <div>
-    <h1 class="h1-form">¿Cómo podemos ayudarte?</h1>
-  </div>
-  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-    <div class="form__container">
-      <section class="form__left">
-        <div class="form__group">
-          <input type="text" class="form__input" name="name" ngModel required placeholder="Nombre" pattern="[A-Za-z]+"
-            #name="ngModel" />
-          <label class="form__label">Nombre</label>
+            <p>Si prefieres escribirnos directamente: <a href="mailto:{{ email }}" class="email-link"> Envianos un
+                e-mail
+              </a>
+            </p>
 
-          <span class="formError" *ngIf="name.invalid && name.touched">
-            El nombre debe contener solo letras.
-          </span>
+            <div class="fotografia">
+              <img src="assets/img/mail.jpg" alt="Línea Corta">
+            </div>
+
+          </div>
+        </div>
+        <div class="formulario">
+          <div>
+            <h1 class="h1-form">¿Cómo podemos ayudarte?</h1>
+          </div>
+
+<!-- Selector de motivos -->
+<div class="form__group">
+  <select class="form__input" name="reason" ngModel required #reason="ngModel" id="options">
+    <option value="" disabled selected>Selecciona un motivo</option>
+    <option value="newsletter">Quiero suscribirme a la newsletter</option>
+    <option value="capsulas">Quiero mi capsula literaria</option>
+    <option value="reclamacion">Quiero poner una reclamación</option>
+    <option value="otro">Otro</option>
+  </select>
+  <label class="form__label">Selecciona un Motivo</label>
+
+  <span class="formError" *ngIf="reason.invalid && reason.touched">
+    Debes seleccionar un motivo.
+  </span>
+</div>
+
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <div class="form__container">
+              <section class="form__left">
+                <div class="form__group">
+                  <input type="text" class="form__input" name="name" ngModel required placeholder="Nombre"
+                    pattern="[A-Za-z]+" #name="ngModel" />
+                  <label class="form__label">Nombre</label>
+
+                  <span class="formError" *ngIf="name.invalid && name.touched">
+                    El nombre debe contener solo letras.
+                  </span>
+                </div>
+
+                <div class="form__group">
+                  <input type="email" class="form__input" name="userEmail" ngModel required pattern=".+@.+"
+                    placeholder="Email" #userEmail="ngModel" />
+                  <label class="form__label">Email</label>
+
+                  <span class="formError" *ngIf="userEmail.invalid && userEmail.touched">
+                    Debes ingresar un correo electrónico válido.
+                  </span>
+                </div>
+
+
+
+                <div class="form__group">
+                  <input type="text" class="form__input" name="subject" ngModel required placeholder="Asunto"
+                    #subject="ngModel" />
+                  <label class="form__label">Asunto</label>
+                </div>
+              </section>
+
+              <section class="form__right">
+                <div class="form__group form__group--textarea">
+                  <textarea class="form__input form__input--textarea" name="message" ngModel required minlength="20"
+                    placeholder="Mensaje" #message="ngModel"></textarea>
+                  <label class="form__label">Mensaje</label>
+
+                  <span class="formError" *ngIf="message.invalid && message.touched">
+                    El mensaje debe contener al menos 20 caracteres.
+                  </span>
+                </div>
+              </section>
+            </div>
+
+            <div class="botones">
+              <input type="submit" class="form__button" value="Enviar mensaje" />
+            </div>
+          </form>
+          <div *ngIf="showSuccessMessage" class="message success">
+            El formulario ha sido enviado con éxito.
+          </div>
         </div>
 
-        <div class="form__group">
-          <input type="email" class="form__input" name="userEmail" ngModel required pattern=".+@.+" placeholder="Email"
-            #userEmail="ngModel" />
-          <label class="form__label">Email</label>
-
-          <span class="formError" *ngIf="userEmail.invalid && userEmail.touched">
-            Debes ingresar un correo electrónico válido.
-          </span>
-        </div>
-
-        <div class="form__group">
-          <input type="text" class="form__input" name="subject" ngModel required placeholder="Asunto"
-            #subject="ngModel" />
-          <label class="form__label">Asunto</label>
-
-        </div>
       </section>
+    </section>
 
-      <section class="form__right">
-        <div class="form__group form__group--textarea">
-          <textarea class="form__input form__input--textarea" name="message" ngModel required minlength="20"
-            placeholder="Mensaje" #message="ngModel"></textarea>
-          <label class="form__label">Mensaje</label>
-
-          <span class="formError" *ngIf="message.invalid && message.touched">
-            El mensaje debe contener al menos 20 caracteres.
-          </span>
+    <section class="section section-3" id="section3">
+      <div class="form-box">
+        <h1>¿Dónde estamos?</h1>
+        <div class="map">
+          <iframe class="iframe"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23413.611217144844!2d-1.6706211329719793!3d42.8157956343297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd50928ba31965c7%3A0x4e6e903632cb2e90!2sPamplona%2C%20Navarra!5e0!3m2!1ses!2ses!4v1711915914237!5m2!1ses!2ses"
+            width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
-      </section>
-    </div>
+        <div class="direccion">
+          <p>Callejón Diagon nº 26, 31001 pamplona, Navarra</p>
+        </div>
 
-    <input type="submit" class="form__button" value="Enviar mensaje" />
-  </form>
-  <div *ngIf="showSuccessMessage" class="message success">
-    El formulario ha sido enviado con éxito.
+      </div>
+      <div class="fotografia">
+        <img src="assets/img/fachada-margaritas.jpg" alt="Escalera">
+      </div>
+
+    </section>
   </div>
-
-
-  <section class="form-box">
-    <h1>¿Dónde estamos?</h1>
-    <div class="map">
-      <iframe class="iframe"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23413.611217144844!2d-1.6706211329719793!3d42.8157956343297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd50928ba31965c7%3A0x4e6e903632cb2e90!2sPamplona%2C%20Navarra!5e0!3m2!1ses!2ses!4v1711915914237!5m2!1ses!2ses"
-        width="500" height="250" style="border:0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
 </div>

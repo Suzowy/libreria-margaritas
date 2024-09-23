@@ -1,3 +1,23 @@
+h1 {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 2.7vw;
+}
+
+h3 {
+  font-size: 2.4vw;
+}
+
+h4 {
+  font-size: 2vw;
+}
+
+h5 {
+  font-size: 1.3vw;
+}
+
 /* Pie de página */
 footer {
   display: flex;
@@ -7,39 +27,63 @@ footer {
   text-align: center;
   width: 100%;
   height: auto;
-  background: #e8e9e7af;
-  padding-top: 50px;
+  background-color: #5c5041d0;
+  padding-top: 30px;
   padding-bottom: 30px;
-  overflow: hidden;
 }
 
 footer h2 {
-  color: #736f6acf;
+  color: #fefefecf;
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 15px;
-  text-align: center;
+  text-align: -webkit-center;
 }
+.logo {
+  margin: 0 auto;
+  width: 40%;
+}
+
+.title1 {
+  color: white;
+  font-family: "Bodoni Moda SC", serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-shadow:
+  4px 0px 0 rgba(15, 15, 15, 0.7)
+
+}
+
+.title2 {
+  color: white;
+  font-family: "Allura", cursive;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-shadow:
+    3px 0px 0 rgba(10, 10, 10, 0.7)
+}
+
+
 
 /* social media */
 .card {
   width: fit-content;
   height: fit-content;
-  background-color: #ffffff;
   display: -webkit-box;
   align-items: center;
   justify-content: center;
-  padding: 10px 10px;
-  gap: 20px;
-  border-radius: 100px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 30px;
+  background-color: transparent;
+  border: none;
 }
 
 .socialContainer {
   width: 52px;
   height: 52px;
   border-radius: 50px;
-  background-color: rgb(71, 69, 69);
+  background-color: rgba(29, 29, 29, 0.865);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,10 +135,19 @@ footer h2 {
   }
 }
 
+a{
+  color: rgb(26, 26, 26);
+}
+
+a:hover{
+  color: rgb(255, 255, 255);
+  text-decoration-color: goldenrod;
+}
+
 .copy {
   width: 97%;
   margin-top: 20px;
-  color: rgba(74, 74, 74, 0.817);
+  color: rgba(216, 216, 216, 0.817);
   font-size: 13px;
   font-weight: lighter;
 }
@@ -102,21 +155,28 @@ footer h2 {
 .footer-ul {
   list-style: none;
   text-align: center;
-  margin-left: 0px;
+  margin-left: -30px;
   margin-top: 20px;
   line-height: 3;
 }
 
 .listas {
-  margin-left: -85px;
   display: flex;
-  gap: 120px;
+  gap: 150px;
+  margin-top: 50px;
+  margin-left: -66px;
+  margin-bottom: 50px;
+}
+
+.social-h1{
+  color: white;
+  font-weight: lighter;
 }
 
 .creditos {
   margin-top: 30px;
   font-size: 13px;
-  color: rgba(110, 110, 110, 0.606);
+  color: rgba(255, 255, 255, 0.606);
 }
 
 .creditos a {

@@ -1,0 +1,157 @@
+.contain {
+ display: inline-block;
+  justify-content: center;
+  padding:10px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.seccion-club {
+  margin: 0 auto;
+  margin-top: 100px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.cards {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+  gap: 10px; /* Elimina el espacio entre las imágenes */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cards li {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(229, 224, 218);
+}
+
+.cards img {
+  width: 100%;
+  height:100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.cards li:hover img {
+  transform: scale(1.1);
+}
+
+/* Definir tamaños y posiciones específicas */
+
+.texto{
+  text-transform: uppercase;
+  font-family: "Forum", serif;
+  color: rgb(72, 64, 48);
+  margin: 0 auto;
+  margin-top: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.cards li:nth-child(1) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.cards li:nth-child(2) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.cards li:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(5) {
+  grid-column: span 2;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(6) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.cards li:nth-child(7) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(8) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(9) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(10) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.cards li:nth-child(11) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(12) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(13) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(14) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(15) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(16) {
+  grid-column: span 1;
+  grid-row: span 3;
+}
+
+.cards li:nth-child(17) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.cards li:nth-child(18) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(19) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.cards li:nth-child(20) {
+  grid-column: span 1;
+  grid-row: span 1;
+}

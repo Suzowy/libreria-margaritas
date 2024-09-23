@@ -11,7 +11,7 @@
 .bars {
   width: 100%;
   height: 4px;
-  background-color: #de858b;
+  background-color: #c3986e;
   border-radius: 4px;
 }
 
@@ -52,48 +52,40 @@
 }
 
 header {
-  font-family: "finger";
   z-index: 10000;
   display: block;
   width: 100%;
-  height: 88px;
-  justify-content: center;
+  height: 70px;
   background:#e8e9e7;
   position: fixed;
   text-transform: uppercase;
+
 }
 
 header ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
 }
 
 header ul li {
-  justify-content: space-around;
   display: inline-block;
   text-align: center;
-  line-height: 88px;
+  line-height:5;
 }
 
 header a {
   display: block;
-  padding: 0 20px;
   text-decoration: none;
-  color: #4e5663;
+  color: #63564e;
   transition: 0.3s ease-in-out;
+
 }
 
 header a:hover {
   transform: scale(1.1);
+  color: black;
 }
 
-header a.actived {
-  text-decoration: underline;
-  color: rgb(34, 5, 2);
-  font-weight: 500;
-  transform: scale(1.5);
-}
 
 @media (max-width: 928px) {
   .menu-toggle {

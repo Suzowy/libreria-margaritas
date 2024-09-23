@@ -1,1 +1,987 @@
+h1 {
+  font-size: 3vw;
+}
 
+h2 {
+  font-size: 2.7vw;
+}
+
+h3 {
+  font-size: 2.4vw;
+}
+
+h4 {
+  font-size: 2vw;
+}
+
+h5 {
+  font-size: 1.3vw;
+}
+
+/* cabecera */
+
+.contain {
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 1s ease;
+  margin-bottom: 100px;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0); /* Posición normal */
+}
+
+.section.entering {
+  opacity: 1;
+  transform: translateY(0px); /* Entra desde abajo suavemente */
+  transition: opacity 1s ease, transform 1s ease; /* Transición suave para la nueva sección */
+}
+
+.section.exiting {
+  opacity: 0;
+  transform: translateY(-50px); /* Se mueve hacia arriba mientras desaparece */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Transición rápida para la sección que desaparece */
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  10% {
+    transform: translate(50vw, 20vh) rotate(36deg);
+  }
+  20% {
+    transform: translate(80vw, 50vh) rotate(72deg);
+  }
+  30% {
+    transform: translate(20vw, 70vh) rotate(108deg);
+  }
+  40% {
+    transform: translate(70vw, 10vh) rotate(144deg);
+  }
+  50% {
+    transform: translate(30vw, 50vh) rotate(180deg);
+  }
+  60% {
+    transform: translate(90vw, 20vh) rotate(216deg);
+  }
+  70% {
+    transform: translate(10vw, 60vh) rotate(252deg);
+  }
+  80% {
+    transform: translate(60vw, 30vh) rotate(288deg);
+  }
+  90% {
+    transform: translate(20vw, 80vh) rotate(324deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
+
+.estrella {
+  position: absolute;
+  width: 7%;
+  z-index: 1;
+  margin-top: 150px;
+  animation: move 100s ease infinite;
+}
+
+/*logo margaritas a medianoche */
+.logo {
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 40%;
+}
+
+.title1 {
+  color: white;
+  font-family: "Bodoni Moda SC", serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-shadow: 4px 0px 0 rgba(61, 61, 61, 0.7);
+}
+
+.title2 {
+  color: white;
+  font-family: "Allura", cursive;
+  font-weight: lighter;
+  text-transform: uppercase;
+  text-shadow: 3px 0px 0 rgba(54, 53, 53, 0.7);
+}
+/* fin logo */
+
+.titulo {
+  position: relative;
+  font-family: "Bodoni Moda", serif;
+  margin: 0 auto;
+  margin-top: 90px;
+  color: white;
+  width: 70%;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: lighter;
+  line-height: 1;
+  z-index: 3;
+}
+
+.subtitulo {
+  position: relative;
+  font-family: "Nanum Myeongjo", serif;
+  margin: 0 auto;
+  margin-top: 70px;
+  color: rgb(255, 255, 255);
+  width: 45%;
+  text-align: center;
+  z-index: 1;
+}
+
+.cabecera {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 100px;
+  background-color: #8158328f;
+}
+
+.cita,
+cite {
+  font-size: 0.9vw;
+  position: relative;
+  z-index: 1;
+  color: rgb(230, 225, 215);
+}
+
+.forma-fondo {
+  width: 570px;
+  height: 500px;
+  margin: 0 auto;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  transform: translateY(-98%);
+  background-color: #77593ca3;
+}
+
+.cabecera::before {
+  content: "";
+  background: url("/assets/img/libreria.jpg") no-repeat center center;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+button {
+  margin-top: 40px;
+  font-family: "Forum", serif;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.713);
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  color: white;
+  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
+}
+
+.button:active {
+  transform: translateY(1px); /* Efecto de presionado */
+}
+/* fin cabecera */
+
+/* seccion 1 Seamos sinceros... */
+.section-1 {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 30px;
+}
+
+.textos {
+  color: rgb(116, 87, 40);
+  width: 50%;
+  height: auto;
+  margin-top: 70px;
+  margin-left: 50px;
+  padding: 10px;
+  font-size: 1vw;
+}
+
+.textos p {
+  margin: 0 auto;
+  text-align: left;
+  line-height: 1.6;
+  width: 65%;
+}
+
+.linea-corta img {
+  position: absolute;
+  width: 120vw;
+  height: 300px;
+  filter: opacity(36%) brightness(220%) hue-rotate(16deg);
+  top: 174%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.textos h2 {
+  text-align: center;
+  width: 100%;
+  font-weight: lighter;
+  margin-top: 13px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.fotografia {
+  width: 70vh;
+  height: 80vh;
+}
+
+.fotografia img {
+  width: 100%;
+  height: 80vh;
+  transform: translateY(5%);
+  margin: 0 auto;
+  z-index: -1;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+/* seccion 2 */
+.section-2 {
+  background-color: rgba(240, 248, 255, 0.711);
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.textos2 {
+  width: 40%;
+  height: auto;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.textos2 p {
+  margin: 0 auto;
+  text-align: left;
+  width: 65%;
+}
+
+.parrafo1 {
+  position: relative;
+  background-color: rgba(184, 161, 122, 0.852);
+  width: 120%;
+  height: 250px;
+  padding: 50px;
+  z-index: 10;
+  margin-top: -60px;
+}
+
+.parrafo1 p {
+  color: white;
+  width: 50%;
+  font-size: 18px;
+  margin-left: 100px;
+}
+
+.textos2 h2 {
+  font-family: "Bodoni Moda SC", serif;
+  margin: 0 auto;
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  font-size: 60px;
+}
+
+.parrafo2 {
+  margin-top: 50px;
+}
+
+.parrafo2 p {
+  margin-left: 80px;
+  color: rgb(125, 85, 46);
+}
+
+.fotografia2 {
+  width: 60%;
+  height: 100vh;
+}
+
+.fotografia2 img {
+  width: 100%;
+  height: 100vh;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20%;
+}
+
+/* seccion 3 */
+.section-3 {
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.textos3 {
+  width: 50%;
+  height: auto;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.textos3 p {
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 30px;
+  width: 65%;
+}
+
+.parrafo1-3 h2 {
+  background-color: rgba(184, 161, 122, 0.878);
+  width: 120%;
+  padding-left: 60px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  z-index: 10;
+}
+
+.parrafo1-3 p,
+.parrafo2-3 p {
+  margin-left: 70px;
+  color: rgb(125, 85, 46);
+}
+
+.textos3 h2 {
+  margin: 0 auto;
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+  font-weight: lighter;
+  margin-top: -60px;
+  margin-bottom: 10px;
+  font-size: 45px;
+}
+
+.fotografia3 {
+  width: 50%;
+  height: 90vh;
+  z-index: -1;
+}
+
+.fotografia3 img {
+  width: 100%;
+  height: 100vh;
+  border-top-left-radius: 0;
+  border-top-right-radius: 20%;
+}
+
+/* seccion4 */
+.section-4 {
+  margin-top: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.textos4 h4, .h4-1 {
+  text-align: left;
+  margin-left: 50px;
+  width: 60%;
+  text-transform: uppercase;
+}
+
+.textos4 {
+  margin-top: 60px;
+  width: 60%;
+  height: auto;
+  font-size: 17px;
+  color: rgb(125, 85, 46);
+}
+
+.textos4 p {
+  line-height: 1.5;
+  text-align: left;
+  margin-top: 30px;
+  margin-left: 80px;
+  width: 40%;
+}
+
+.imagenes {
+  width: 50%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.fotografia4 {
+  position: absolute;
+  z-index: 2;
+  width: 470px;
+  top: 50%;
+  left: -35%;
+}
+
+.fotografia5 {
+  width: 100%;
+  z-index: 1;
+}
+
+.fotografia4 img {
+  position: absolute;
+  width: 24vw;
+  height: 55vh;
+  left: 4vw;
+  top: -28vh;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  object-fit: cover;
+}
+
+.fotografia5 img {
+  width: 100%;
+  height: 100vh;
+}
+
+.section-4 button {
+  margin-left: 75px;
+  width: 30%;
+  background-color: #d1a77f;
+}
+
+/* seccion5 */
+
+.section-5 {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+  height: 100vh;
+}
+
+.section-5 h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #a79881da;
+
+  padding-top: 100px;
+}
+
+.sol img {
+  position: absolute;
+  width: 23vw;
+  left: 9vw;
+  top: 20vh;
+  z-index: -1;
+  filter: hue-rotate(44deg);
+}
+
+.enlaces {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 150px;
+  background-color: #a79881da;
+  gap: 20px;
+}
+
+.enlaces img {
+  width: 100%;
+  overflow: hidden;
+  transition: all 500ms ease-in-out;
+  padding: 10px;
+  filter: opacity(70%);
+}
+
+.enlaces img:hover {
+  transform: scale(1.01);
+  filter: drop-shadow(5px 5px 10px #70634efb);
+}
+
+.enlaces h2 {
+  color: rgb(249, 232, 201);
+  font-size: 20px;
+  font-weight: lighter;
+  text-transform: uppercase;
+  padding-top: 20px;
+  transition: all 300ms ease-in;
+}
+
+.enlaces img:hover + h2 {
+  color: white;
+  text-decoration-line: underline;
+}
+
+.enlaces a {
+  text-decoration: none;
+}
+
+.fotografia6 img,
+.fotografia7 img,
+.fotografia8 img {
+  width: 270px;
+  height: 270px;
+}
+
+/*seccion6 */
+.section-6 {
+  position: relative;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+}
+
+.textos6 {
+  color: rgb(116, 87, 40);
+  width: 50%;
+  height: auto;
+  padding: 10px;
+}
+
+.textos6 h5 {
+  text-align: left;
+  margin-left: 90px;
+  margin-top: 40px;
+  width: 50%;
+}
+
+.circulo2 img {
+  position: absolute;
+  width: 15vw; /* Utiliza unidades relativas para el tamaño */
+  height: 15vw; /* Aspecto proporcional al ancho del viewport */
+  left: calc(89% - 7.5vw); /* Calcula posición horizontal para centrar */
+  top: calc(47% - 7.5vw); /* Calcula posición vertical para centrar */
+  filter: hue-rotate(360deg) opacity(70%);
+  z-index: -1;
+  animation: circuloRotate 30s linear infinite;
+}
+
+/* Elemento circulo 2 */
+.circulo2-2 img {
+  position: absolute;
+  width: 15vw; /* Usando unidades relativas para el tamaño */
+  height: 15vw;
+  left: calc(
+    79% - 7.5vw + 5vw
+  ); /* Posiciona ligeramente a la derecha del primer círculo */
+  top: calc(
+    16% - 7.5vw + 5vw
+  ); /* Posiciona ligeramente abajo del primer círculo */
+  filter: hue-rotate(20deg) opacity(70%);
+  z-index: -1;
+  animation: circuloRotate2 20s linear infinite;
+}
+
+@keyframes circuloRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes circuloRotate2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+.textos6 h1 {
+  text-align: left;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-left: 90px;
+}
+
+.foto-about {
+  margin: 0 auto;
+  width: 50%;
+  height: 80vh;
+  margin-left: 50px;
+  margin-top: 44px;
+}
+
+.foto-about img {
+  height: 80vh;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+
+.section-6 button {
+  margin-left: 100px;
+  margin-top: 40px;
+  width: 30%;
+  background-color: #d1a77f;
+}
+
+@media (max-width: 585px) {
+  .forma-fondo {
+    display: none;
+  }
+
+  .logo {
+    margin-top: 70px;
+    width: 60%;
+    filter: brightness(200%);
+  }
+
+  .titulo {
+    width: 90%;
+    margin-top: 60px;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    margin-top: 50px;
+    font-size: 15px;
+    width: 75%;
+  }
+
+  button {
+    margin-top: 40px;
+  }
+
+  button,
+  .form__button {
+    width: 70%;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 430px) {
+  h1 {
+    font-size: 4.6vw;
+  }
+
+  h2 {
+    font-size: 4.5vw;
+  }
+
+  h3 {
+    font-size: 4vw;
+  }
+
+  h4 {
+    font-size: 3.5vw;
+  }
+
+  h5 {
+    font-size: 2.5vw;
+  }
+
+  .logo {
+    margin-top: 120px;
+    width: 100%;
+  }
+
+  .titulo {
+    width: 100%;
+    margin-top: 90px;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .subtitulo {
+    margin-top: 100px;
+    font-size: 14px;
+    width: 70%;
+  }
+
+  button {
+    margin-top: 50px;
+    width: 40%;
+    font-size: 12px;
+  }
+
+  .textos {
+    width: 100%;
+    margin-left: 0;
+    padding: 5px;
+    font-size: 3vw;
+    z-index: 10;
+  }
+
+  .textos p {
+    width: 100%;
+    padding: 7px;
+  }
+
+  .linea-corta img {
+    left: 32%;
+    top: 169%;
+    width: 165%;
+  }
+
+  .textos .texto-blanco {
+    font-family: "Nanum Myeongjo", serif;
+    text-transform: uppercase;
+    position: absolute;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.788), transparent);
+    padding-top: 40px;
+    z-index: 100;
+  }
+
+  .fotografia img {
+    margin-left: -5px;
+    margin-top: -87px;
+    width: 100%;
+    height: auto;
+    border-radius: 0%;
+    z-index: -1;
+  }
+
+  .parrafo1 {
+    position: relative;
+    margin-left: -60px;
+    background-color: rgb(184 161 122);
+    width: 125%;
+    height: 240px;
+    padding: 10px;
+    z-index: 10;
+    margin-top: -25px;
+  }
+
+  .parrafo2 p {
+    padding-top: 400px;
+    padding-bottom: 100px;
+    padding-left: 50px;
+    margin-top: -89px;
+    text-align: justify;
+    width: 100%;
+    line-height: 2;
+    font-size: 15px;
+    position: absolute;
+    background: linear-gradient(to right, black, transparent);
+    margin-left: -22px;
+    font-weight: 500;
+    color: rgb(251 251 251);
+  }
+
+  .fotografia2 img {
+    width: 138%;
+    height: 100vh;
+    margin-top: -56px;
+    margin-left: -92px;
+    border-top-right-radius: 0;
+  }
+
+  .textos3 h2 {
+    margin: 0 auto;
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+    font-weight: lighter;
+    margin-top: -101px;
+    margin-left: -12px;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+.fotografia3  img {
+  width: 104%;
+  height: 50vh;
+  margin-left: -10px;
+  border-top-right-radius: 0;
+}
+
+
+.parrafo1-3  p, .parrafo2-3  p {
+  margin-left: 31px;
+  width: 90%;
+  margin-bottom: 20px;
+  color: rgb(125, 85, 46);
+}
+  .textos4 {
+    /* background-color: #ffffff87; */
+    margin-top: -180px;
+    width: 100%;
+    height: auto;
+    font-size: 17px;
+    color: rgb(32 32 32);
+  }
+
+  .textos4 .h4-1{
+    background-color: #726050;
+    position: absolute;
+    color: white;
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: left;
+    margin-top: -96px;
+    margin-left: 92px;
+    width: 81%;
+    text-transform: uppercase;
+}
+
+.textos4 p{
+  text-align: justify;
+  margin-top: 40px;
+  margin-left: 104px;
+  width: 70%;
+}
+.textos4 .h4-2 {
+  position: relative;
+  background-color: #726050;
+  color: white;
+  padding: 20px;
+  text-align: left;
+  margin-left: -6px;
+  width: 84%;
+  text-transform: uppercase;
+}
+
+
+.section-5 {
+  margin-top: 20px;
+}
+
+.section-5[_ngcontent-ng-c1516677081]   h1[_ngcontent-ng-c1516677081] {
+  font-size: 27px;
+  font-weight: 700;
+  padding-top: 114px;
+  color: #7c7575;
+}
+
+.sol img {
+  width: 48vw;
+  top: 4vh;
+}
+
+.enlaces {
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+.enlaces h2 {
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.fotografia6 img,
+.fotografia7 img,
+.fotografia8 img {
+  width:40vw;
+  height: auto;
+}
+
+
+
+  .foto-about {
+    height: auto;
+    width: 100%;
+    margin-top: -20px;
+    margin-left: 0px;
+  }
+
+  .foto-about  img {
+    width: 102%;
+    height: auto;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+margin-left: -4px;
+}
+
+.textos6  h1 {
+  text-align: center;
+  font-weight: lighter;
+  text-transform: uppercase;
+  margin-left: 0px;
+  padding-bottom: -2px;
+  /* padding-top: 100px; */
+  margin-top: -514px;
+}
+
+.textos6  h5 {
+  text-align: justify;
+  margin-left: 76px;
+  margin-top: 37px;
+  width: 71%;
+}
+
+
+
+.section-6 button {
+  margin-left: 141px;
+  margin-top: 341px;
+  width: 30%;
+  background-color: #d1a77f;
+}
+
+  .section {
+    margin-bottom: 10px;
+    padding: 0px;
+  }
+
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4,
+  .section-5,
+  .section-6 {
+    display: block;
+    padding: 0px;
+    height: auto;
+  }
+
+  .textos2,
+  .textos3,
+  .textos4,
+  .textos6 {
+    width: 100%;
+  }
+
+  .fotografia2,
+  .fotografia3,
+  .fotografia4,
+  .foto-about {
+    width: 100%;
+    height: auto;
+  }
+
+  .fotografia4,
+  .fotografia5 {
+    display: none;
+  }
+}
