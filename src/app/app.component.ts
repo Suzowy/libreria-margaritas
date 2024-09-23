@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, Inject, PLATFORM_ID } from '@angular/core';
 import { ScrollService } from './services/scroll.service';
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -10,10 +11,12 @@ export class AppComponent implements OnInit, OnDestroy {
   private cleanupScrollEffect!: () => void;
   showScrollToTopButton = false;
 
-  constructor(private scrollService: ScrollService) {}
+  constructor(private scrollService: ScrollService, @Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit() {
-    this.cleanupScrollEffect = this.scrollService.initializeScrollEffect();
+    if (isPlatformBrowser(this.platformId)) {
+      this.cleanupScrollEffect = this.scrollService.initializeScrollEffect();
+    }
   }
 
   ngOnDestroy() {
@@ -30,9 +33,11 @@ export class AppComponent implements OnInit, OnDestroy {
 
   // Función para desplazar suavemente la página hasta el elemento con ID 'cabecera'
   scrollToTop(): void {
-    const cabeceraElement = document.getElementById('cabecera');
-    if (cabeceraElement) {
-      cabeceraElement.scrollIntoView({ behavior: 'smooth' });
+    if (isPlatformBrowser(this.platformId)) {
+      const cabeceraElement = document.getElementById('cabecera');
+      if (cabeceraElement) {
+        cabeceraElement.scrollIntoView({ behavior: 'smooth' });
+      }
     }
   }
 }
