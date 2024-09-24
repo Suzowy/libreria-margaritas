@@ -1,11 +1,80 @@
+
+:root {
+  --primary-color: #7a7064;
+  --secondary-color: #c1ae8e;
+  --light-text-color: #ffffff;
+  --cita-color:#d4c5b7;
+  --boton-color:#d1a77f;
+  --boton-background-color: #6a5c54;
+  --dark-text-color: #71572b;
+
+}
+
+
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
 }
+
+h1 {
+  font-size: 3vw;
+}
+
+h2 {
+  font-size: 2.7vw;
+}
+
+h3 {
+  font-size: 2.4vw;
+}
+
+h4 {
+  font-size: 2vw;
+}
+
+h5 {
+  font-size: 1.3vw;
+}
+
+
+.contain {
+  overflow-y: auto;
+  height: 100vh;
+  position: relative;
+}
+
+.section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease, transform 1s ease;
+margin-bottom: 100px;
+}
+
+.section.active {
+  opacity: 1;
+  transform: translateY(0); /* Posición normal */
+}
+
+.section.entering {
+  opacity: 1;
+  transform: translateY(110px); /* Entra desde abajo suavemente */
+  transition: opacity 1s ease, transform 1s ease; /* Transición suave para la nueva sección */
+}
+
+.section.exiting {
+  opacity: 0;
+  transform: translateY(-50px); /* Se mueve hacia arriba mientras desaparece */
+  transition: opacity 0.4s ease, transform 0.4s ease; /* Transición rápida para la sección que desaparece */
+}
+
 
 .btn-back-to-top {
   width: 200px;
@@ -14,7 +83,7 @@ html {
   font-family: "Forum", serif;
   bottom: 20px;
   right: 20px;
-  background-color: #48433e;
+  background-color: var(--background-color);
   color: white;
   border: none;
   padding: 20px 20px;
@@ -53,7 +122,6 @@ body {
   font-family: "Bodoni Moda", serif;
   font-weight: lighter;
   font-style: normal;
-  font-size: 1vw;
   margin: 0;
   padding: 0;
 }
@@ -138,7 +206,7 @@ button::before,
 .form__button::before {
   position: absolute;
   content: "";
-  background: #6a5c54;
+  background-color: var(--background-color);
   width: 150%;
   height: 200px;
   z-index: -1;
@@ -161,27 +229,11 @@ button:hover::before,
 @media (max-width: 585px) {
   .contain {
     width: 100%;
-    padding-top: 20px;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  h1 {
-    text-align: center;
-    font-size: 12px;
-  }
-
-  h5 {
-    font-size: 13px;
   }
 
   p {
     font-size: 13px;
   }
 
-  button,
-  .form__button {
-    width: 70%;
-    font-size: 7px;
-  }
+
 }

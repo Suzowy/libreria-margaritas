@@ -1,32 +1,3 @@
-.contain {
-  overflow-y: auto;
-  height: 100vh;
-  position: relative;
-}
-
-.section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease, transform 1s ease;
-margin-bottom: 100px;
-}
-
-.section.active {
-  opacity: 1;
-  transform: translateY(0); /* Posición normal */
-}
-
-.section.entering {
-  opacity: 1;
-  transform: translateY(110px); /* Entra desde abajo suavemente */
-  transition: opacity 1s ease, transform 1s ease; /* Transición suave para la nueva sección */
-}
-
-.section.exiting {
-  opacity: 0;
-  transform: translateY(-50px); /* Se mueve hacia arriba mientras desaparece */
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Transición rápida para la sección que desaparece */
-}
 
 
 .libreria-cabecera {
@@ -221,6 +192,7 @@ button:hover {
   align-items: center;
   height: 100vh;
 }
+
 .textos4 {
   width: 50%;
   height: auto;
@@ -231,7 +203,6 @@ button:hover {
 .textos4 p {
   margin: 0 auto;
   text-align: justify;
-
   width: 70%;
 }
 
@@ -240,7 +211,6 @@ button:hover {
   background-color: rgba(184, 161, 122, 0.878);
   width: 125%;
   height: 25vh;
-
   z-index: 10;
 }
 
@@ -275,7 +245,6 @@ button:hover {
 }
 
 /* seccion5 */
-
 .section-5 {
   margin-top: 100px;
   display: flex;
@@ -357,6 +326,7 @@ button:hover {
 .data h4 {
   margin-top: 50px;
 }
+
 .data {
   margin: 0 auto;
   padding: 10px;
@@ -419,9 +389,6 @@ button:hover {
 .accordion-item {
   margin-bottom: 5px;
 }
-/* .section6 .botones{
-  margin: 0 auto;
-} */
 
 /* Controles del Carrusel */
 .carousel-control-prev,
@@ -458,4 +425,75 @@ button:hover {
 .accordion-item button::before,
 .carousel button::before {
   background: none;
+}
+
+/* Media Queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .libreria-cabecera,
+  .section-2,
+  .section-4,
+  .section-5 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .libreria-cabecera h1,
+  .textos-section-2 .p-white,
+  .parrafo1-4 h2,
+  .textos4 h2 {
+    width: 90%;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .fotografia,
+  .fotografia-section-2,
+  .fotografia3,
+  .imagenes {
+    width: 100%;
+    height: auto;
+  }
+
+  .textos,
+  .textos-section-2,
+  .textos4,
+  .textos5 {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .botones button {
+    margin-left: 0;
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .section-3 h5 {
+    font-size: 5vw;
+    width: 80%;
+  }
+
+  .left {
+    width: 90%;
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  .left ul {
+    font-size: 3vw;
+  }
+
+  .data,
+  .producto {
+    width: 90%;
+    height: auto;
+  }
+
+  .data p {
+    width: 100%;
+  }
 }

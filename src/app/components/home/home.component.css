@@ -1,54 +1,7 @@
-h1 {
-  font-size: 3vw;
-}
-
-h2 {
-  font-size: 2.7vw;
-}
-
-h3 {
-  font-size: 2.4vw;
-}
-
-h4 {
-  font-size: 2vw;
-}
-
-h5 {
-  font-size: 1.3vw;
-}
 
 /* cabecera */
 
-.contain {
-  overflow-y: auto;
-  height: 100vh;
-  position: relative;
-}
 
-.section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease, transform 1s ease;
-  margin-bottom: 100px;
-}
-
-.section.active {
-  opacity: 1;
-  transform: translateY(0); /* Posición normal */
-}
-
-.section.entering {
-  opacity: 1;
-  transform: translateY(0px); /* Entra desde abajo suavemente */
-  transition: opacity 1s ease, transform 1s ease; /* Transición suave para la nueva sección */
-}
-
-.section.exiting {
-  opacity: 0;
-  transform: translateY(-50px); /* Se mueve hacia arriba mientras desaparece */
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Transición rápida para la sección que desaparece */
-}
 
 @keyframes move {
   0% {
@@ -169,7 +122,7 @@ cite {
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   transform: translateY(-98%);
-  background-color: #77593ca3;
+  background-color: #77593cb5;
 }
 
 .cabecera::before {
@@ -651,12 +604,13 @@ button:hover {
 
 @media (max-width: 585px) {
   .forma-fondo {
-    display: none;
-  }
+    width: 430px;
+    height: 410px;
+}
 
   .logo {
     margin-top: 70px;
-    width: 60%;
+    width: 100%;
     filter: brightness(200%);
   }
 
@@ -685,31 +639,16 @@ button:hover {
 }
 
 @media (max-width: 430px) {
-  h1 {
-    font-size: 4.6vw;
-  }
-
-  h2 {
-    font-size: 4.5vw;
-  }
-
-  h3 {
-    font-size: 4vw;
-  }
-
-  h4 {
-    font-size: 3.5vw;
-  }
-
-  h5 {
-    font-size: 2.5vw;
-  }
 
   .logo {
     margin-top: 120px;
     width: 100%;
   }
 
+
+  .cita,cite{
+    font-size: 10px;
+  }
   .titulo {
     width: 100%;
     margin-top: 90px;
@@ -720,12 +659,12 @@ button:hover {
   .subtitulo {
     margin-top: 100px;
     font-size: 14px;
-    width: 70%;
+    width:80%;
   }
 
   button {
     margin-top: 50px;
-    width: 40%;
+    width:70%;
     font-size: 12px;
   }
 
@@ -733,31 +672,36 @@ button:hover {
     width: 100%;
     margin-left: 0;
     padding: 5px;
+
     font-size: 3vw;
     z-index: 10;
   }
 
   .textos p {
-    width: 100%;
-    padding: 7px;
+    width: 90%;
+    padding: 10px;
+    text-align: justify;
   }
 
   .linea-corta img {
-    left: 32%;
-    top: 169%;
-    width: 165%;
+display: none;
   }
 
-  .textos .texto-blanco {
+  .textos .texto-blanco{
+    width: 72%;
+    margin-left: 61px;
     font-family: "Nanum Myeongjo", serif;
     text-transform: uppercase;
     position: absolute;
-    text-align: center;
     color: white;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.788), transparent);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.788),
+        transparent);
     padding-top: 40px;
+    padding: 29px;
     z-index: 100;
-  }
+}
 
   .fotografia img {
     margin-left: -5px;
@@ -780,8 +724,8 @@ button:hover {
   }
 
   .parrafo2 p {
-    padding-top: 400px;
-    padding-bottom: 100px;
+    padding-top: 374px;
+    padding-bottom: 128px;
     padding-left: 50px;
     margin-top: -89px;
     text-align: justify;
@@ -804,15 +748,16 @@ button:hover {
   }
 
   .textos3 h2 {
-    margin: 0 auto;
-    text-align: left;
-    color: white;
-    text-transform: uppercase;
-    font-weight: lighter;
     margin-top: -101px;
-    margin-left: -12px;
-    margin-bottom: 10px;
-    font-size: 36px;
+    margin-left: -38px;
+    font-size: 27px;
+}
+
+.parrafo1-3 p, .parrafo2-3 p {
+  margin-left: 18px;
+  text-align: justify;
+  width: 90%;
+  margin-bottom: 20px;
 }
 
 .fotografia3  img {
@@ -822,13 +767,6 @@ button:hover {
   border-top-right-radius: 0;
 }
 
-
-.parrafo1-3  p, .parrafo2-3  p {
-  margin-left: 31px;
-  width: 90%;
-  margin-bottom: 20px;
-  color: rgb(125, 85, 46);
-}
   .textos4 {
     /* background-color: #ffffff87; */
     margin-top: -180px;
@@ -838,15 +776,16 @@ button:hover {
     color: rgb(32 32 32);
   }
 
-  .textos4 .h4-1{
+  .textos4 .h4-1 {
     background-color: #726050;
     position: absolute;
     color: white;
+    font-size: 16px;
     padding: 20px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     text-align: left;
-    margin-top: -96px;
+    margin-top: -98px;
     margin-left: 92px;
     width: 81%;
     text-transform: uppercase;
@@ -857,24 +796,31 @@ button:hover {
   margin-top: 40px;
   margin-left: 104px;
   width: 70%;
+  color: #726050;
 }
-.textos4 .h4-2 {
+.textos4 .h4-2{
   position: relative;
-  background-color: #726050;
-  color: white;
-  padding: 20px;
-  text-align: left;
-  margin-left: -6px;
-  width: 84%;
+  text-align: center;
+  margin-left: 72px;
+  width: 81%;
   text-transform: uppercase;
+  color: #726050;
 }
 
+
+.section-4  button {
+  margin-left: 111px;
+  width: 69%;
+
+}
 
 .section-5 {
   margin-top: 20px;
+  margin-bottom: 50px;
+
 }
 
-.section-5[_ngcontent-ng-c1516677081]   h1[_ngcontent-ng-c1516677081] {
+.section-5 h1 {
   font-size: 27px;
   font-weight: 700;
   padding-top: 114px;
@@ -887,7 +833,7 @@ button:hover {
 }
 
 .enlaces {
-  flex-direction: column;
+  flex-direction: row;
   padding-top: 30px;
   padding-bottom: 30px;
 }
@@ -899,38 +845,30 @@ button:hover {
   padding-top: 5px;
 }
 
-.fotografia6 img,
-.fotografia7 img,
-.fotografia8 img {
-  width:40vw;
+.fotografia6 img, .fotografia7 img, .fotografia8  img{
+  width: 28vw;
   height: auto;
 }
-
 
 
   .foto-about {
     height: auto;
     width: 100%;
-    margin-top: -20px;
+    margin-top: -10px;
     margin-left: 0px;
   }
 
-  .foto-about  img {
+  .foto-about img{
     width: 102%;
     height: auto;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-margin-left: -4px;
+    margin-top: 75px;
+    margin-left: -4px;
 }
 
 .textos6  h1 {
   text-align: center;
-  font-weight: lighter;
-  text-transform: uppercase;
   margin-left: 0px;
-  padding-bottom: -2px;
-  /* padding-top: 100px; */
-  margin-top: -514px;
+  margin-top: -556px;
 }
 
 .textos6  h5 {
@@ -938,15 +876,17 @@ margin-left: -4px;
   margin-left: 76px;
   margin-top: 37px;
   width: 71%;
+  font-size: 12px;
 }
 
+.circulo2,.circulo2-2{
+  display: none;
+}
 
-
-.section-6 button {
-  margin-left: 141px;
-  margin-top: 341px;
-  width: 30%;
-  background-color: #d1a77f;
+.section-6 button{
+  margin-left: 65px;
+  margin-top: 381px;
+  width: 70%;
 }
 
   .section {

@@ -18,7 +18,7 @@
   overflow: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
-  gap: 10px; /* Elimina el espacio entre las imágenes */
+  gap: 10px;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -155,3 +155,33 @@
   grid-column: span 1;
   grid-row: span 1;
 }
+
+
+@media (max-width: 1200px) {
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr)); /* 3 columnas */
+  }
+}
+
+@media (max-width: 800px) {
+
+
+
+  .cards {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* 2 columnas */
+  }
+
+  .cards li:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .texto{
+    line-height: 2;
+    margin-top: 10px;
+    font-size: 9px;
+  }
+}
+
+
+

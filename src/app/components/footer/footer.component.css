@@ -1,22 +1,4 @@
-h1 {
-  font-size: 3vw;
-}
 
-h2 {
-  font-size: 2.7vw;
-}
-
-h3 {
-  font-size: 2.4vw;
-}
-
-h4 {
-  font-size: 2vw;
-}
-
-h5 {
-  font-size: 1.3vw;
-}
 
 /* Pie de página */
 footer {
@@ -41,7 +23,7 @@ footer h2 {
 }
 .logo {
   margin: 0 auto;
-  width: 40%;
+  width: 100%;
 }
 
 .title1 {
@@ -188,7 +170,11 @@ a:hover{
 @media (max-width: 860px) {
   .listas{
     margin-left: 0px;
-    gap:10px;
+    gap:5px;
     flex-direction: column;
   }
+
+  .footer-ul{
+   font-size: 10px;
+}
 }

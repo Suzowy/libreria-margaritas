@@ -1,32 +1,4 @@
-.contain {
-  overflow-y: auto;
-  height: 100vh;
-  position: relative;
-}
 
-.section {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 2s ease, transform 1s ease;
-  margin-bottom: 100px; /* Añadir margen inferior de 200px */
-}
-
-.section.active {
-  opacity: 1;
-  transform: translateY(0); /* Posición normal */
-}
-
-.section.entering {
-  opacity: 1;
-  transform: translateY(110px); /* Entra desde abajo suavemente */
-  transition: opacity 1s ease, transform 1s ease; /* Transición suave para la nueva sección */
-}
-
-.section.exiting {
-  opacity: 0;
-  transform: translateY(-50px); /* Se mueve hacia arriba mientras desaparece */
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Transición rápida para la sección que desaparece */
-}
 
 /* seccion 1 "que podemos hacer por ti" */
 .contact-cabecera {
@@ -373,19 +345,3 @@ button:hover {
   margin-top: 20px;
 }
 
-@media (max-width: 927px) {
-  .container {
-    width: 95%;
-  }
-
-  .container-info {
-    width: 95%;
-  }
-
-  .form__container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-}
