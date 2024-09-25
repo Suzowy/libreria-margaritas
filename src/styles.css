@@ -162,7 +162,7 @@ q::after {
   content: close-quote;
 }
 
-p {
+p {    font-family: "Bodoni Moda", serif;
   font-size: 1vw;
   font-weight: lighter;
   text-align: justify;
