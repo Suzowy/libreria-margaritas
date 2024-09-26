@@ -8,14 +8,14 @@
   height: 100vh;
 }
 
-.libreria-cabecera h1 {
+.libreria-cabecera  h1 {
   width: 120%;
-  height: 100px;
-  text-align: center;
-  margin-top: 30px;
-  margin-left: -50px;
+  height: auto;
+  text-align: left;
+  padding: 20px;
+  margin-top: 40px;
   color: white;
-  line-height: 2.2;
+  line-height: 1;
   background-color: rgba(130, 116, 89, 0.859);
   z-index: 10;
 }
@@ -210,7 +210,7 @@ button:hover {
   margin: 0 auto;
   background-color: rgba(184, 161, 122, 0.878);
   width: 125%;
-  height: 25vh;
+  height: auto;
   z-index: 10;
 }
 
@@ -427,8 +427,8 @@ button:hover {
   background: none;
 }
 
-/* Media Queries para pantallas pequeñas */
-@media (max-width: 768px) {
+/* Móviles (max-width: 480px) */
+@media (max-width: 480px) {
   .libreria-cabecera,
   .section-2,
   .section-4,
@@ -492,6 +492,190 @@ button:hover {
     width: 90%;
     height: auto;
   }
+
+  .data p {
+    width: 100%;
+  }
+}
+
+/* Tablets (min-width: 481px) y (max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .libreria-cabecera,
+  .section-2,
+  .section-4,
+  .section-5 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .libreria-cabecera h1,
+  .textos-section-2 .p-white,
+  .parrafo1-4 h2,
+  .textos4 h2 {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+  }
+
+  .fotografia,
+  .fotografia-section-2,
+  .fotografia3,
+  .imagenes {
+    width: 50%;
+    height:auto;
+  }
+
+  .textos,
+  .textos-section-2,
+  .textos4,
+  .textos5 {
+    width: 100%;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
+  .botones button {
+    margin-left: 0;
+    width: 70%;
+    margin: 10px auto;
+  }
+
+  .fotografia img{
+   display: none;
+}
+
+.fotografia-section-2 .cita-p {
+  margin-left: 0;
+}
+
+.section-2  .cita {
+  margin-top: 100px;
+  margin-bottom: 50px;
+ margin-left: 0px;
+
+}
+
+.fotografia-section-2 img{
+  width: 100%;
+  height:auto;
+  margin-left: 0;
+
+}
+
+ .section-2 .p-white{
+  text-align: center;
+  width: 100%;
+  margin-left: 0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+  .section-3 h5 {
+    font-size: 4vw;
+    width: 80%;
+  }
+
+  .left{
+    width: 71%;
+    position: relative;
+    left: 79px;
+    top: -431px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+  .left ul {
+    font-size: 2vw;
+  }
+
+  .fotografia3[_ngcontent-ng-c1215799791]   img[_ngcontent-ng-c1215799791] {
+    width: 100%;
+    height: 50vh;
+    border-top-left-radius: 0;
+    border-top-right-radius: 20%;
+}
+
+  .data,
+  .producto {
+    width: 85%;
+    height: auto;
+  }
+
+  .data p {
+    width: 100%;
+  }
+}
+
+/* Laptops Pequeñas (min-width: 769px) y (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .libreria-cabecera,
+  .section-2,
+  .section-4,
+  .section-5 {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
+
+  .libreria-cabecera h1,
+  .textos-section-2 .p-white,
+  .parrafo1-4 h2,
+  .textos4 h2 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .fotografia,
+  .fotografia-section-2,
+  .fotografia3,
+  .imagenes {
+    width: 50%;
+    height: auto;
+  }
+
+  .textos,
+  .textos-section-2,
+  .textos4,
+  .textos5 {
+    width: 80%;
+    font-size: 18px;
+  }
+
+   .botones button {
+    width: 60%;
+  }
+
+
+  .section-3 h5 {
+    font-size: 3.5vw;
+    width: 75%;
+  }
+
+  .left{
+    width: 100%;
+    position: relative;
+    left: 250px;
+    top: -394px;
+    margin: px;
+    text-align: left;
+}
+
+  .left ul {
+    font-size: 1.5vw;
+  }
+
+  .data,
+  .producto {
+    width: 80%;
+    height: auto;
+  }
+
 
   .data p {
     width: 100%;

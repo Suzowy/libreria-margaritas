@@ -527,51 +527,6 @@ button:hover {
   width: 50%;
 }
 
-.circulo2 img {
-  position: absolute;
-  width: 15vw; /* Utiliza unidades relativas para el tamaño */
-  height: 15vw; /* Aspecto proporcional al ancho del viewport */
-  left: calc(89% - 7.5vw); /* Calcula posición horizontal para centrar */
-  top: calc(47% - 7.5vw); /* Calcula posición vertical para centrar */
-  filter: hue-rotate(360deg) opacity(70%);
-  z-index: -1;
-  animation: circuloRotate 30s linear infinite;
-}
-
-/* Elemento circulo 2 */
-.circulo2-2 img {
-  position: absolute;
-  width: 15vw; /* Usando unidades relativas para el tamaño */
-  height: 15vw;
-  left: calc(
-    79% - 7.5vw + 5vw
-  ); /* Posiciona ligeramente a la derecha del primer círculo */
-  top: calc(
-    16% - 7.5vw + 5vw
-  ); /* Posiciona ligeramente abajo del primer círculo */
-  filter: hue-rotate(20deg) opacity(70%);
-  z-index: -1;
-  animation: circuloRotate2 20s linear infinite;
-}
-
-@keyframes circuloRotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes circuloRotate2 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
 .textos6 h1 {
   text-align: left;
   font-weight: lighter;
@@ -582,13 +537,14 @@ button:hover {
 .foto-about {
   margin: 0 auto;
   width: 50%;
-  height: 80vh;
+  height: auto;
   margin-left: 50px;
   margin-top: 44px;
 }
 
 .foto-about img {
-  height: 80vh;
+  width: 100%;
+  height: auto;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 50%;
@@ -602,7 +558,69 @@ button:hover {
   background-color: #d1a77f;
 }
 
-@media (max-width: 585px) {
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .cita,
+  cite {
+    left: 50%;
+    font-size: 12px;
+  }
+
+  .forma-fondo {
+    width: 464px;
+    height: 446px;
+  }
+
+  button,
+  .form__button {
+    width: 30%;
+    font-size: 12px;
+  }
+
+  .fotografia img {
+    width: 100%;
+    height: auto;
+    transform: translateY(1%);
+  }
+
+  p {
+    width: 50%;
+    font-size: 12px;
+  }
+
+  .textos h2 {
+    font-size: 20px;
+  }
+  .parrafo1 {
+    width: 133%;
+    height: 284px;
+    margin-top: -221px;
+}
+
+  .fotografia2 img,
+  .fotografia3 img,
+  .fotografia5 img {
+    height: 80vh;
+  }
+
+  .textos3 h2 {
+    margin-top: -107px;
+  }
+
+  .fotografia4 img {
+    width: 27vw;
+    height: auto;
+    top: -18vh;
+  }
+
+  .foto-about img {
+    width: 100%;
+    height: auto;
+    margin-top: 39px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
   .forma-fondo {
     width: 430px;
     height: 492px;
@@ -638,7 +656,7 @@ button:hover {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 480px)  {
   .logo {
     margin-top: 120px;
     width: 100%;
@@ -680,31 +698,37 @@ button:hover {
     display: none;
   }
 
-  .textos .texto-blanco{
+  .textos h2{
+    font-family: "Nanum Myeongjo", serif;
+    font-size: 20px;
+    padding: 20px;
+}
+
+  .textos .texto-blanco {
     width: 90%;
-    line-height: 2;
+    line-height:1.5;
     font-size: 17px;
     margin-left: 19px;
     font-family: "Nanum Myeongjo", serif;
     text-transform: uppercase;
     position: absolute;
     color: white;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.814), rgba(0, 0, 0, 0.449));
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.814),
+      rgba(0, 0, 0, 0.449)
+    );
     padding-top: 40px;
-    padding: 15px;
+    padding-bottom: 200px;
     z-index: 100;
-}
+  }
 
   .fotografia {
     width: 100%;
     height: auto;
   }
 
-
-
-
   .fotografia img {
-
     margin-top: -70px;
     width: 100%;
     height: auto;
@@ -720,7 +744,7 @@ button:hover {
     height: 240px;
     padding: 10px;
     z-index: 10;
-    margin-top: -70px;
+    margin-top: -100px;
   }
 
   .parrafo2 p {
@@ -780,7 +804,7 @@ button:hover {
   }
 
   .textos4 .h4-1 {
-    background-color: #a28469e9;
+    background-color: #a28469;
     position: absolute;
     color: white;
     font-size: 12px;
@@ -828,7 +852,7 @@ button:hover {
     font-size: 25px;
     font-weight: 700;
     padding-top: 114px;
-    color: #7c7575;
+    color: var(--boton-background-color);
   }
 
   .sol img {
@@ -882,11 +906,6 @@ button:hover {
     margin-top: 48px;
     width: 80%;
     font-size: 12px;
-}
-
-  .circulo2,
-  .circulo2-2 {
-    display: none;
   }
 
   .section-6 button {
