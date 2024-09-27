@@ -1,5 +1,3 @@
-
-
 /* seccion 1 "que podemos hacer por ti" */
 .contact-cabecera {
   position: relative;
@@ -345,3 +343,257 @@ button:hover {
   margin-top: 20px;
 }
 
+@media (max-width: 768px) {
+  .contact-cabecera .textos {
+    width: 100%; /* Aumenta el ancho en pantallas pequeñas */
+    margin: 0 auto; /* Centra el contenido */
+  }
+
+  .textos h1 {
+    text-align: center;
+    margin-top: -80px;
+    position: absolute;
+    width: 100%;
+    font-weight: lighter;
+    /* margin-bottom: 50px; */
+  }
+
+  .textos p {
+    font-size: 12px;
+  }
+
+  .contact-cabecera .fotografia {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-cabecera .fotografia img {
+    height: auto;
+  }
+
+  .contact-cabecera button {
+    width: 67%;
+    margin: 20px auto;
+    margin-left: 65px;
+  }
+
+  .formularios {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .formulario {
+    width: 100%;
+    height: auto;
+    margin-left: 20px;
+  }
+
+  .form__button {
+    width: 70%;
+    left: 100px;
+  }
+  .cajon {
+    width: 80%;
+    height: auto;
+  }
+
+  .formularios .fotografia img {
+    width: 100%;
+    height: auto;
+  }
+
+  .form-box {
+    width: 100%; /* Hace que el contenedor del formulario ocupe todo el ancho */
+    padding: 0 10px; /* Agrega un poco de padding */
+  }
+
+  .form__right {
+    flex-basis: 100%; /* Hace que el lado derecho ocupe todo el ancho */
+    max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
+  }
+
+  .section-3 {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .section-3 .fotografia img {
+    width: 100%;
+    height: auto; /* Ajusta la altura proporcionalmente */
+  }
+
+  .map {
+    width: 50%;
+    height: 30vh;
+  }
+
+  .direccion p {
+    font-size: 17px;
+    padding: 20px; /* Ajusta el margen superior */
+  }
+}
+
+/* Responsive styles for mobile screens */
+@media (max-width: 480px) {
+
+
+  .contact-cabecera {
+    flex-direction: column; /* Mantiene la dirección de columna */
+    width: 100%; /* Asegura que ocupe el 100% del ancho */
+    padding: 10px; /* Añade un poco de padding */
+    height: auto; /* Ajusta la altura al contenido */
+  }
+
+  .contact-cabecera .textos {
+    width: 100%; /* Ancho completo en móviles */
+    margin-top: 100px; /* Espaciado vertical */
+    margin-bottom: 25px;
+  }
+
+  .contact-cabecera .textos p {
+    width: 85%;
+    font-size: 15px;
+  }
+
+  .contact-cabecera button {
+    width: 65%;
+    margin: 30px auto;
+    margin-left: 70px;
+  }
+  .contact-cabecera button a {
+    font-size: 15px;
+  }
+
+  .contact-cabecera .fotografia img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
+
+  .contact-cabecera .fotografia img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-cabecera button {
+    width: 90%;
+    margin: 10px auto;
+    font-size: 4vw;
+  }
+
+  .formularios {
+    display: inline;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formulario {
+    width: 90%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 17px;
+    padding: 10px;
+  }
+
+  .formularios .fotografia img {
+    display: none;
+  }
+
+  .cajon {
+    background-color: #83755c;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 100%;
+    padding: 10px;
+    top: -40px;
+  }
+
+  .form__button[_ngcontent-ng-c2923406024] {
+    width: 90%;
+    font-size: 14px;
+    margin-top: 150px;
+    margin-left: -72px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: lighter;
+  }
+
+  .h1-form {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 65px;
+  }
+  .form-box {
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .form__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__left,
+  .form__right {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
+  .section-3 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .section-3  .fotografia{
+    width: 100%;
+    height: auto;
+}
+
+  .section-3 .fotografia img {
+    width: 100%;
+    height:40vh;
+  }
+
+  .map {
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 25vh;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #e5e7e9d8;
+    border: 1px solid #b5c0ce;
+    box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.277);
+  }
+
+  .direccion {
+    margin-top: 5px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+
+  .textos h1 {
+    font-size: 5vw;
+  }
+
+  .formularios h5 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .form__input {
+    font-size: 14px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+
+}

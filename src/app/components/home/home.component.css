@@ -657,6 +657,13 @@ button:hover {
 }
 
 @media (max-width: 480px)  {
+
+  .forma-fondo {
+    width: 430px;
+    height: 492px;
+  }
+
+
   .logo {
     margin-top: 120px;
     width: 100%;
