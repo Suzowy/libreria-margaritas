@@ -427,6 +427,207 @@ button:hover {
   background: none;
 }
 
+
+
+/* Laptops Pequeñas (min-width: 769px) y (max-width: 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .libreria-cabecera,
+  .section-2,
+  .section-4,
+  .section-5 {
+    flex-direction: row;
+    align-items: center;
+    height: auto;
+  }
+
+  .libreria-cabecera h1,
+  .textos-section-2 .p-white,
+  .parrafo1-4 h2,
+  .textos4 h2 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .fotografia,
+  .fotografia-section-2,
+  .fotografia3,
+  .imagenes {
+    width: 50%;
+    height: auto;
+  }
+
+  .textos,
+  .textos-section-2,
+  .textos4,
+  .textos5 {
+    width: 90%;
+    font-size: 18px;
+  }
+
+   .botones button {
+    width: 60%;
+  }
+
+
+  .section-3 h5 {
+    font-size: 3.5vw;
+    width: 75%;
+  }
+
+  .left{
+    width: 100%;
+    position: relative;
+    left: 250px;
+    top: -394px;
+    margin: px;
+    text-align: left;
+}
+
+  .left ul {
+    font-size: 15px;
+  }
+
+  .data,
+  .producto {
+    width: 80%;
+    height: auto;
+  }
+
+
+  .data p {
+    width: 100%;
+  }
+}
+
+/* Tablets (min-width: 481px) y (max-width: 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .libreria-cabecera,
+  .section-2,
+  .section-4,
+  .section-5 {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+
+  .libreria-cabecera h1, .textos-section-2   .p-white, .parrafo1-4 {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 60px;
+}
+
+  .libreria-cabecera h1,
+  .textos-section-2 .p-white,
+  .parrafo1-4 h2,
+  .textos4 h2 {
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+    margin-top: 50px;
+  }
+
+  .fotografia,
+  .fotografia-section-2,
+  .fotografia3,
+  .imagenes {
+    width: 50%;
+    height:auto;
+  }
+
+  .textos,
+  .textos-section-2,
+  .textos4,
+  .textos5 {
+    width: 100%;
+  }
+
+  .textos p{
+    width: 80%;
+    font-size: 12px;
+  }
+
+  .botones button {
+    margin-left: 0;
+    width: 70%;
+    margin: 10px auto;
+  }
+
+  .fotografia img{
+   display: none;
+}
+
+.fotografia-section-2 .cita-p {
+  margin-left: 0;
+}
+
+
+.section-2  .cita {
+  margin-top: 100px;
+  margin-bottom: 50px;
+ margin-left: 0px;
+
+}
+
+.fotografia-section-2 img{
+  width: 100%;
+  height:auto;
+  margin-left: 0;
+
+}
+
+.section-2  .p-white{
+  text-align: left;
+  width: 112%;
+  margin-left: -88px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 48px;
+  color: white;
+  font-size: 15px;
+}
+
+  .section-3 h5 {
+    font-size: 4vw;
+    width: 80%;
+  }
+
+  .left{
+    width: 71%;
+    position: relative;
+    left: 79px;
+    top: -431px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+  .left ul {
+    font-size: 2vw;
+  }
+
+  .fotografia3[_ngcontent-ng-c1215799791]   img[_ngcontent-ng-c1215799791] {
+    width: 100%;
+    height: 50vh;
+    border-top-left-radius: 0;
+    border-top-right-radius: 20%;
+}
+
+  .data,
+  .producto {
+    width: 85%;
+    height: auto;
+  }
+
+  .data p {
+    width: 100%;
+  }
+}
+
+
 /* Móviles (max-width: 480px) */
 @media (max-width: 480px) {
   .libreria-cabecera,
@@ -450,6 +651,44 @@ button:hover {
     font-size: 20px;
   }
 
+  .textos p,.textos-section-2 p {
+    width: 90%;
+    font-size: 12px;
+  }
+
+  .textos5[_ngcontent-ng-c1215799791]   p[_ngcontent-ng-c1215799791] {
+    width: 90%;
+    margin-left: 15px;
+    font-size: 12px;
+    text-align: justify;
+}
+
+  .parrafo1-4[_ngcontent-ng-c1215799791]   p[_ngcontent-ng-c1215799791] {
+    width: 95%;
+    font-size: 12px;
+    margin-left: 46px;
+    padding-right: 60px;
+    padding-bottom: 270px;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.871),
+        rgba(255, 254, 254, 0));
+}
+
+.botones[_ngcontent-ng-c1215799791]   button[_ngcontent-ng-c1215799791] {
+  margin-left: 0;
+  width: 80%;
+  margin: 10px 30px;
+}
+
+  .parrafo1-4 h2 {
+    width: 120%;
+    text-align: center;
+    margin-left: -45px;
+    margin-top: -14px;
+    font-size: 20px;
+}
+
   .fotografia,
   .fotografia-section-2,
   .fotografia3,
@@ -457,6 +696,16 @@ button:hover {
     width: 100%;
     height:auto;
   }
+
+  .fotografia3 img {
+    width: 100%;
+    height: 60vh;
+    z-index: -1;
+    margin-top: -415px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0%;
+    mask-image: linear-gradient(to top,rgb(255, 255, 255) 40%, transparent);
+}
 
   .fotografia img{
   display: none;
@@ -466,17 +715,30 @@ button:hover {
     width: 90%;
     height: 400px;
     margin-left: 22px;
+
 }
 
-.textos-section-2[_ngcontent-ng-c1215799791][_ngcontent-ng-c1215799791]   .p-white[_ngcontent-ng-c1215799791][_ngcontent-ng-c1215799791] {
-  font-weight: 500;
-  background-color: rgba(130, 116, 89, 0.465);
+.fotografia5 img{
+  width: 100%;
+  height: 70vh;
+  margin-top: -90px;
+  mask-image: linear-gradient(
+      to top,
+      rgb(255, 255, 255) 40%,
+      transparent);
+}
+
+.section-2 .p-white{
+  text-align: left;
+  width: 117%;
+  margin-left: -74px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 48px;
   color: white;
-  padding: 50px 50px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  width: 120%;
-  margin-left: -34px;
+  font-size: 15px;
 }
   .section-2 .cita {
     font-family: "Forum", serif;
@@ -530,202 +792,23 @@ button:hover {
     font-size: 12px;
   }
 
+  .product-content[_ngcontent-ng-c1215799791] {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.section-6{
+  background: none;
+  width: 100%;
+  height:auto;
+}
+
   .data,
   .producto {
     width: 90%;
     height: auto;
   }
-
-  .data p {
-    width: 100%;
-  }
-}
-
-/* Tablets (min-width: 481px) y (max-width: 768px) */
-@media (min-width: 481px) and (max-width: 768px) {
-  .libreria-cabecera,
-  .section-2,
-  .section-4,
-  .section-5 {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
-
-
-  .libreria-cabecera h1, .textos-section-2   .p-white, .parrafo1-4 {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 60px;
-}
-
-  .libreria-cabecera h1,
-  .textos-section-2 .p-white,
-  .parrafo1-4 h2,
-  .textos4 h2 {
-    text-align: center;
-    width: 100%;
-    margin-left: 0;
-    margin-top: 50px;
-  }
-
-  .fotografia,
-  .fotografia-section-2,
-  .fotografia3,
-  .imagenes {
-    width: 50%;
-    height:auto;
-  }
-
-  .textos,
-  .textos-section-2,
-  .textos4,
-  .textos5 {
-    width: 100%;
-  }
-
-  p{
-    font-size: 12px;
-  }
-
-  .botones button {
-    margin-left: 0;
-    width: 70%;
-    margin: 10px auto;
-  }
-
-  .fotografia img{
-   display: none;
-}
-
-.fotografia-section-2 .cita-p {
-  margin-left: 0;
-}
-
-.section-2  .cita {
-  margin-top: 100px;
-  margin-bottom: 50px;
- margin-left: 0px;
-
-}
-
-.fotografia-section-2 img{
-  width: 100%;
-  height:auto;
-  margin-left: 0;
-
-}
-
- .section-2 .p-white{
-  text-align: center;
-  width: 100%;
-  margin-left: 0;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-  .section-3 h5 {
-    font-size: 4vw;
-    width: 80%;
-  }
-
-  .left{
-    width: 71%;
-    position: relative;
-    left: 79px;
-    top: -431px;
-    margin: 20px 0;
-    text-align: left;
-}
-
-  .left ul {
-    font-size: 2vw;
-  }
-
-  .fotografia3[_ngcontent-ng-c1215799791]   img[_ngcontent-ng-c1215799791] {
-    width: 100%;
-    height: 50vh;
-    border-top-left-radius: 0;
-    border-top-right-radius: 20%;
-}
-
-  .data,
-  .producto {
-    width: 85%;
-    height: auto;
-  }
-
-  .data p {
-    width: 100%;
-  }
-}
-
-/* Laptops Pequeñas (min-width: 769px) y (max-width: 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .libreria-cabecera,
-  .section-2,
-  .section-4,
-  .section-5 {
-    flex-direction: row;
-    align-items: center;
-    height: auto;
-  }
-
-  .libreria-cabecera h1,
-  .textos-section-2 .p-white,
-  .parrafo1-4 h2,
-  .textos4 h2 {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 40px;
-    text-align: center;
-  }
-
-  .fotografia,
-  .fotografia-section-2,
-  .fotografia3,
-  .imagenes {
-    width: 50%;
-    height: auto;
-  }
-
-  .textos,
-  .textos-section-2,
-  .textos4,
-  .textos5 {
-    width: 80%;
-    font-size: 18px;
-  }
-
-   .botones button {
-    width: 60%;
-  }
-
-
-  .section-3 h5 {
-    font-size: 3.5vw;
-    width: 75%;
-  }
-
-  .left{
-    width: 100%;
-    position: relative;
-    left: 250px;
-    top: -394px;
-    margin: px;
-    text-align: left;
-}
-
-  .left ul {
-    font-size: 1.5vw;
-  }
-
-  .data,
-  .producto {
-    width: 80%;
-    height: auto;
-  }
-
 
   .data p {
     width: 100%;

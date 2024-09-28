@@ -733,6 +733,7 @@ button:hover {
   .fotografia {
     width: 100%;
     height: auto;
+
   }
 
   .fotografia img {
@@ -741,7 +742,9 @@ button:hover {
     height: auto;
     border-radius: 0%;
     z-index: -1;
+
   }
+
 
   .parrafo1 {
     position: relative;
@@ -898,6 +901,11 @@ button:hover {
     height: auto;
     margin-top: 75px;
     margin-left: -4px;
+    mask-image: linear-gradient(
+      to top,
+      rgb(255, 255, 255) 40%,
+      transparent);
+      z-index: -1;
   }
 
   .textos6 h1 {
