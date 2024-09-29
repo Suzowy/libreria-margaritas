@@ -713,7 +713,7 @@ button:hover {
 
   .textos .texto-blanco {
       width:90%;
-
+font-size: 15px;
     padding: 10px;
     text-align: justify;
     position: absolute;
@@ -922,9 +922,9 @@ button:hover {
   .textos6 h5 {
     text-align: justify;
     margin-left: 20px;
-    margin-top: 5px;
+    margin-top: 0px;
     width: 90%;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
   }
 
