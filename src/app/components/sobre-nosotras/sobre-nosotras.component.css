@@ -465,34 +465,45 @@ article p {
 
 @media (max-width: 430px) {
   /* Estilos adicionales para pantallas extra pequeñas */
-  .texto-about1,
+
   .texto-about2,
   .texto-about3,
   .manifiesto,
   .texto-left,
   .texto-right {
     width: 90%;
-
   }
 
-  p{
+  .texto-about1 {
+    width: 90%;
+    margin-top: -50px;
+  }
+
+  p {
+    font-size: 13px;
     text-align: justify;
   }
 
-  .texto-about3 p,h5{
+  .texto-about3 p {
     width: 90%;
     margin-left: 20px;
+    margin-bottom: 15px;
   }
 
   .destacado-about3 {
     width: 100%;
     height: 186px;
+    margin-top: -51px;
+  }
 
-}
+  .texto-about3 h5 {
 
-.video-wrapper{
-  display: none;
-}
+    margin-left: 20px;
+    margin-top: -54px;
+  }
+  .video-wrapper {
+    display: none;
+  }
 
   .foto-about img {
     width: 100%;
@@ -504,74 +515,82 @@ article p {
     border-bottom-left-radius: 50%;
   }
 
-  .about2 .foto-about{
+  .about2 .foto-about {
     width: 100%;
   }
-  .about2 .foto-about img{
-
-    border-bottom-right-radius:0%;
-    border-bottom-left-radius:0%;
-    mask-image: linear-gradient(
-      to top,
-      rgb(255, 255, 255) 30%,
-      transparent);
-      z-index: -1;
+  .about2 .foto-about img {
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+    mask-image: linear-gradient(to top, rgb(255, 255, 255) 30%, transparent);
+    z-index: -1;
   }
 
-  .texto-about2 .p-1{
+  .texto-about2 .p-1 {
     z-index: 10px;
-    margin-top: -695px;
+    margin-top: -625px;
+    font-size: 14px;
+    font-weight: bold;
     background-color: rgba(255, 255, 255, 0.864);
-}
+  }
 
   .destacado-about2 h5 {
     font-size: 25px;
- margin-left: 30px;
-    margin-top: 372px;
-}
+    margin-left: 30px;
+    margin-top: 350px;
+  }
 
   .texto-left h2 {
     font-size: 26px;
   }
 
-  .texto-left   p {
+  .texto-left p {
     margin-bottom: 100px;
-    margin-top: -175px;
+    margin-top: -150px;
     font-size: 17px;
     font-weight: bold;
+  }
 
+  .texto-about3 {
+    margin-top: -50px;
+  }
+
+  .foto-about5 {
+    margin-top: 50px;
+  }
+
+
+  .testimonios     h1 {
+    padding-top: 0px;
+  
 }
-
-.foto-about5{
-  margin-top: 50px;
-}
-
   .testimonios p,
   article p {
     font-size: 14px;
   }
 
-li{
-  margin-left: -50px;
-  list-style: circle;
-  font-size: 12px;
+  li {
+    margin-left: -50px;
+    list-style: circle;
+    font-size: 12px;
+  }
+.about4{
+  margin-top: -80px;
 }
-
-
-.foto-manifiesto{
-  width: 100%;
-}
- .foto-manifiesto img {
-  width: 100%;
-  height: auto;
-  margin-left: 0px;
-  border-radius: 0%;
-  mask-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.883) 80%,
-    transparent);
+  .foto-manifiesto {
+    width: 100%;
+  }
+  .foto-manifiesto img {
+    width: 100%;
+    height: auto;
+    margin-left: 0px;
+    border-radius: 0%;
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.883) 80%,
+      transparent
+    );
     z-index: -1;
-}
+  }
 
   .podcast-imagen {
     width: 80px; /* Ajustar tamaño de imagen */

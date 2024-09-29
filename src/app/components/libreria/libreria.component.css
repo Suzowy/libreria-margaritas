@@ -659,14 +659,14 @@ button:hover {
   .textos5[_ngcontent-ng-c1215799791]   p[_ngcontent-ng-c1215799791] {
     width: 90%;
     margin-left: 15px;
-    font-size: 12px;
+    font-size: 14px;
     text-align: justify;
 }
 
   .parrafo1-4[_ngcontent-ng-c1215799791]   p[_ngcontent-ng-c1215799791] {
-    width: 95%;
-    font-size: 12px;
-    margin-left: 46px;
+    width: 100%;
+    font-size: 13px;
+    margin-left: 30px;
     padding-right: 60px;
     padding-bottom: 270px;
     background: linear-gradient(
@@ -728,17 +728,17 @@ button:hover {
       transparent);
 }
 
-.section-2 .p-white{
-  text-align: left;
-  width: 117%;
-  margin-left: -74px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-right: 48px;
+.section-2  .p-white {
+  text-align: justify;
+  width: 130%;
+  margin-left: -107px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 34px;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
 }
   .section-2 .cita {
     font-family: "Forum", serif;
@@ -773,29 +773,36 @@ button:hover {
     margin: 10px auto;
   }
 
-  .section-3[_ngcontent-ng-c1215799791]   h5[_ngcontent-ng-c1215799791] {
+  .section-3  h5 {
     font-size: 6vw;
     padding-top: 5px;
     width: 100%;
     height: 60vh;
 }
   .left {
-    width: 90%;
+    width: 100%;
     position: relative;
-    left: 0;
+    left: -40px;
     top: -350px;
     margin: 0px 0;
-    text-align:left;
+    text-align:center;
   }
 
   .left ul {
-    font-size: 12px;
+    font-family: "Forum", serif;
+    font-size: 13px;
+    list-style: none;
   }
 
+
+  .product{
+    height:auto;
+  }
   .product-content[_ngcontent-ng-c1215799791] {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+
 }
 
 .section-6{
@@ -813,4 +820,14 @@ button:hover {
   .data p {
     width: 100%;
   }
+
+  .accordion {
+    width: 100%;
+}
+
+.accordion-item ul{
+  font-size: 11px;
+  text-align: left;
+  margin-left: 0px;
+}
 }
