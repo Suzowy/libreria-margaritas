@@ -501,15 +501,6 @@ button:hover {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .portada {
-      width: 30%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
-  }
-
-  .portada:active {
-      transform: scale(2.0); /* Zoom al hacer tap en móviles */
-  }
-}
 
 
 /* Tablets (min-width: 481px) y (max-width: 768px) */
@@ -835,12 +826,8 @@ button:hover {
   width: 30%;
   height: auto;
   filter: drop-shadow(10px 10px 7px rgba(30, 30, 30, 0.965));
-  transition: transform 0.3s ease; /* Transición suave para el zoom */
 }
 
-.portada:hover {
-  transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% */
-}
 
   .data,
   .producto {
