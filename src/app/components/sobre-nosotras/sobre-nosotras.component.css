@@ -463,7 +463,7 @@ article p {
   }
 }
 
-@media (max-width: 430px) {
+@media (min-width: 430px) {
   /* Estilos adicionales para pantallas extra pequeñas */
 
   .texto-about2,
@@ -487,7 +487,7 @@ article p {
   .texto-about3 p {
     width: 90%;
     margin-left: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .destacado-about3 {
@@ -539,9 +539,10 @@ article p {
     margin-top: 310px;
   }
 
-  .texto-left h2 {
+  .texto-left h2{
     font-size: 26px;
-  }
+    top: 100px;
+}
 
   .texto-left p {
     margin-bottom: 100px;
@@ -550,13 +551,18 @@ article p {
     font-weight: bold;
   }
 
-  .texto-about3 {
-    margin-top: -50px;
-  }
+  .destacado-about3{
+    background-color: rgba(184, 161, 122, 0.644);
+    width: 115%;
+    left: -15px;
+    height: 186px;
+    margin-top: -70px;
+}
 
-  .foto-about5 {
-    margin-top: 50px;
-  }
+
+  .texto-about3 h5{
+    margin-top: -66px;
+}
 
 
   .testimonios     h1 {

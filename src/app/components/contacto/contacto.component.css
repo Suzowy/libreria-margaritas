@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-#fachada{
+#fachada {
   display: none;
 }
 
@@ -347,7 +347,7 @@ button:hover {
   margin-top: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 926px) {
   .contact-cabecera .textos {
     width: 100%; /* Aumenta el ancho en pantallas pequeñas */
     margin: 0 auto; /* Centra el contenido */
@@ -442,8 +442,6 @@ button:hover {
 
 /* Responsive styles for mobile screens */
 @media (max-width: 480px) {
-
-
   .contact-cabecera {
     flex-direction: column; /* Mantiene la dirección de columna */
     width: 100%; /* Asegura que ocupe el 100% del ancho */
@@ -477,32 +475,23 @@ button:hover {
     font-size: 15px;
   }
 
-
-  .contact-cabecera .fotografia{
+  .contact-cabecera .fotografia {
     width: 100%;
-
   }
   .contact-cabecera .fotografia img {
-
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height: 400px;
+    margin-left: 22px;
     border-top-left-radius: 0%;
-    border-bottom-left-radius: 0%;
-    border-bottom-right-radius: 0%;
-    mask-image: linear-gradient(
-      to bottom,
-      rgba(86, 65, 42, 0.937) 80%,
-      transparent
-    );
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
   }
 
-
-
-  .contact-cabecera[_ngcontent-ng-c2923406024]   button[_ngcontent-ng-c2923406024] {
+  .contact-cabecera button {
     width: 90%;
     margin: 20px 20px;
     font-size: 4vw;
-}
+  }
 
   .formularios {
     display: inline;
@@ -511,25 +500,33 @@ button:hover {
   }
 
   .formulario {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-top: 20px;
-    margin-left: 17px;
-    padding: 10px;
+    margin-left: 0px;
+    padding: 20px;
   }
 
   .formularios .fotografia img {
     display: none;
   }
 
-  .cajon {color: #998460;
+  .form__input[type="select"],
+  .form__input {
+    height: auto;
+    font-size: 12px;
+    line-height: 1.5rem;
+  }
+
+  .cajon {
+    color: #998460;
     font-size: 15px;
     background-color: #83755c00;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
     width: 100%;
     padding: 10px;
-    top: -40px;
+top: 0px;
   }
 
   .form__button[_ngcontent-ng-c2923406024] {
@@ -538,17 +535,18 @@ button:hover {
     margin-top: 151px;
     text-transform: uppercase;
     font-weight: lighter;
-}
+  }
 
   .h1-form {
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 65px;
   }
+
   .form-box {
-    width: 100%;
-    padding: 0 5px;
-  }
+    position: relative;
+    top: -80px;
+}
 
   .form__container {
     width: 100%;
@@ -569,34 +567,29 @@ button:hover {
     margin-top: -70px;
   }
 
-  .section-3  .fotografia{
+  .section-3 .fotografia {
     width: 100%;
     height: auto;
-}
+  }
 
   .section-3 .fotografia img {
+    position: relative;
     width: 100%;
-    height:40vh;
+    height:50vh;
+    top: -525px;
   }
 
   .map {
-    display: flex;
-    justify-content: center;
+    position: relative;
     width: 90%;
-    height: 25vh;
-    margin: 20px 0;
-    border-radius: 5px;
-    background-color: #e5e7e9d8;
-    border: 1px solid #b5c0ce;
-    box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.277);
+    height: 50vh;
+    top: 469px;
   }
 
-  .direccion {
+  .direccion p{
     margin-top: 5px;
-    font-size: 12px;
     text-align: center;
   }
-
 
   .textos h1 {
     font-size: 5vw;
@@ -606,7 +599,4 @@ button:hover {
     font-size: 16px;
     text-align: center;
   }
-
-
-
 }

@@ -9,8 +9,8 @@ footer {
   text-align: center;
   width: 100%;
   height: auto;
-  background-color: #5c5041d0;
-  padding-top: 30px;
+  background-color: #6054459f;
+  padding-top: 20px;
   padding-bottom: 30px;
 }
 
@@ -65,7 +65,7 @@ footer h2 {
   width: 52px;
   height: 52px;
   border-radius: 50px;
-  background-color: rgba(29, 29, 29, 0.865);
+  background-color: rgba(65, 64, 64, 0.71);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,6 +151,7 @@ a:hover{
 }
 
 .social-h1{
+  font-family: "Forum", serif;
   color: white;
   font-weight: lighter;
 }
@@ -176,5 +177,16 @@ a:hover{
 
   .footer-ul{
    font-size: 10px;
+}
+
+.socialContainer{
+  width: 40px;
+  height: 40px;
+}
+
+.copy{
+
+  font-size: 10px;
+
 }
 }

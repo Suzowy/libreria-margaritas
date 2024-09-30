@@ -501,6 +501,17 @@ button:hover {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .portada {
+      width: 30%; /* Ajusta el tamaño de la imagen en pantallas pequeñas */
+  }
+
+  .portada:active {
+      transform: scale(2.0); /* Zoom al hacer tap en móviles */
+  }
+}
+
+
 /* Tablets (min-width: 481px) y (max-width: 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .libreria-cabecera,
@@ -721,17 +732,17 @@ button:hover {
 .fotografia5 img{
   width: 100%;
   height: 70vh;
-  margin-top: -90px;
+  margin-top: -200px;
   mask-image: linear-gradient(
       to top,
       rgb(255, 255, 255) 40%,
       transparent);
 }
 
-.section-2  .p-white {
+.section-2 .p-white{
   text-align: justify;
-  width: 130%;
-  margin-left: -107px;
+  width: 140%;
+  margin-left: -123px;
   margin-top: 20px;
   margin-bottom: 20px;
   padding-top: 10px;
@@ -777,13 +788,13 @@ button:hover {
     font-size: 6vw;
     padding-top: 5px;
     width: 100%;
-    height: 60vh;
+    height: 50vh;
 }
   .left {
     width: 100%;
     position: relative;
     left: -40px;
-    top: -350px;
+    top: -290px;
     margin: 0px 0;
     text-align:center;
   }
@@ -793,6 +804,10 @@ button:hover {
     font-size: 13px;
     list-style: none;
   }
+
+  .parrafo1-4 h2 {
+    background-color: rgb(184, 161, 122);
+}
 
 
   .product{
@@ -805,10 +820,26 @@ button:hover {
 
 }
 
+.textos5{
+  position: relative;
+  top: -99px;
+}
+
 .section-6{
   background: none;
   width: 100%;
   height:auto;
+}
+
+.portada {
+  width: 30%;
+  height: auto;
+  filter: drop-shadow(10px 10px 7px rgba(30, 30, 30, 0.965));
+  transition: transform 0.3s ease; /* Transición suave para el zoom */
+}
+
+.portada:hover {
+  transform: scale(1.1); /* Aumenta el tamaño de la imagen al 110% */
 }
 
   .data,
@@ -831,3 +862,4 @@ button:hover {
   margin-left: 0px;
 }
 }
+

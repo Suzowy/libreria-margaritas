@@ -163,6 +163,7 @@ button:hover {
   align-items: center;
   height: 100vh;
   padding: 30px;
+
 }
 
 .textos {
@@ -173,6 +174,7 @@ button:hover {
   margin-left: 50px;
   padding: 10px;
   font-size: 1vw;
+  z-index: -1;
 }
 
 .textos p {
@@ -183,14 +185,15 @@ button:hover {
 }
 
 .linea-corta img {
-  position: absolute;
+  display: none;
+  /* position: absolute;
   width: 120vw;
   height: 300px;
   filter: opacity(36%) brightness(220%) hue-rotate(16deg);
   top: 174%;
   left: 30%;
   transform: translate(-50%, -50%);
-  z-index: 100;
+  z-index: 100; */
 }
 
 .textos h2 {

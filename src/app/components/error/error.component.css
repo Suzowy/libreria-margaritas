@@ -27,61 +27,52 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 60%;
   text-align: center;
   color: white;
   z-index: 2;
-  padding: 20px;
+  padding: 5px;
   background-color: rgba(67, 61, 56, 0.5);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.636);
 }
 
 .seccion-error h2,
-.seccion-error h4 { font-family: "Forum", serif;
+.seccion-error h4 {
+  font-family: "Forum", serif;
   text-transform: uppercase;
   margin: 10px 0;
 }
 
 /*derecha */
-.seccion-lista {
-  flex: 1;
-  padding: 40px;
-  color: white;
-  background-color: rgba(123, 102, 76, 0.769);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
 
-.texto,
-.lista {
-  flex: 1;
-}
 
-.texto { font-family: "Forum", serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+
+p {
+  font-family: "Forum", serif;
+text-align: center;
   width: 100%;
+  font-size: 17px;
   padding: 20px;
 }
 
-.lista {
-  display: flex;
+ul {
+  position: relative;
+  text-align: center;
   align-items: center;
-  justify-content: left;
-  margin-top: 30px;
-  padding: 10px;
+  list-style: none;
+  margin-top: 20px;
+left: -40px;
 }
 
-.seccion-lista ul li a { font-family: "Forum", serif;
-  color: rgb(243, 192, 192);
-  text-decoration: none;
-  font-size: 3vh;
-  line-height: 2;
+ul li a { font-family: "Forum", serif;
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  font-size: 15px;
+  line-height: 3;
 }
 
-.seccion-lista ul li a:hover {
+ul li a:hover {
   text-decoration: underline;
   color: rgb(249, 221, 221);
 }
@@ -93,35 +84,4 @@
   }
 
 
-
-  .seccion-error {
-    width: 80%; /* Ajustar el ancho de la sección de error */
-    margin: 20px auto; /* Centrar la sección de error */
-    padding: 15px; /* Ajustar padding */
-    margin-top: -200px;
-  }
-
-  .seccion-lista{
-    width: 100%;
-    padding: 20px;
-    margin-top: -464px;
-}
-
-  .texto p{
-    justify-content: center; /* Centrar texto horizontalmente */
-    padding: 5px; /* Ajustar padding */
-    font-size: 15px;
-    margin-top: -10px;
-  }
-
-  .lista {
-    flex-direction: column; /* Cambiar la dirección a columna */
-    align-items: left; /* Centrar elementos de la lista */
-    margin-left: -67px;
-  }
-
-
-  .seccion-lista ul li a {
-    font-size:3vh; /* Aumentar el tamaño de fuente para mejor legibilidad */
-  }
 }

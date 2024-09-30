@@ -184,8 +184,8 @@ button,
 .form__button{
   text-decoration: none;
   text-align: center;
-  width: 20%;
-  height: 40px;
+  width:200px;
+  height: 35px;
   overflow: hidden;
   cursor: pointer;
   margin-top: 20px;
