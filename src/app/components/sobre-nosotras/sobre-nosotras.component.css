@@ -463,7 +463,7 @@ article p {
   }
 }
 
-@media (min-width: 430px) {
+@media (max-width: 430px) {
   /* Estilos adicionales para pantallas extra pequeñas */
 
   .texto-about2,
