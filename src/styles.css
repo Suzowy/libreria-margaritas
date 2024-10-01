@@ -30,12 +30,12 @@ html {
 }
 
 h1 {
-  font-family: "Bodoni Moda SC", serif;
+  font-family: "Forum", serif;
   font-size: 2.5rem; /* Ajuste en rem */
 }
 
 h2 {
-  font-family: "Bodoni Moda SC", serif;
+  font-family: "Forum", serif;
   font-size: 2.25rem; /* Ajuste en rem */
 }
 
@@ -55,15 +55,16 @@ h5 {
 }
 
 p {
-  font-family: "Bodoni Moda", serif;
+  font-family: "Forum", serif;
   font-size: 1rem; /* 16px */
   font-weight: lighter;
   text-align: justify;
 }
 
 ul {
+  font-family: "Forum", serif;
   list-style: circle;
-  font-size: 1rem; /* Ajuste en rem */
+  font-size: 1rem;
   margin-top: 20px;
   margin-left: 50px;
   margin-bottom: 20px;
@@ -87,19 +88,19 @@ ul {
 
 .section.active {
   opacity: 1;
-  transform: translateY(0); /* Posición normal */
+  transform: translateY(0);
 }
 
 .section.entering {
   opacity: 1;
-  transform: translateY(110px); /* Entra desde abajo suavemente */
-  transition: opacity 1s ease, transform 1s ease; /* Transición suave para la nueva sección */
+  transform: translateY(110px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
 .section.exiting {
   opacity: 0;
-  transform: translateY(-50px); /* Se mueve hacia arriba mientras desaparece */
-  transition: opacity 0.4s ease, transform 0.4s ease; /* Transición rápida para la sección que desaparece */
+  transform: translateY(-50px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 
@@ -153,8 +154,6 @@ body {
 }
 
 /* estilos generales */
-
-
 
 .cita, cite {
   display: block;
@@ -228,7 +227,6 @@ button:hover::before,
   left: -50px;
 }
 
-/* Breakpoints */
 
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }

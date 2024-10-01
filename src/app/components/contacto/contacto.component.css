@@ -41,6 +41,8 @@
 }
 
 .textos h1 {
+  font-family: "Forum", serif;
+  text-transform: uppercase;
   text-align: center;
   width: 100%;
   font-weight: lighter;

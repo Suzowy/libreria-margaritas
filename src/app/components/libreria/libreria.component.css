@@ -9,7 +9,10 @@
 }
 
 .libreria-cabecera  h1 {
+  font-family: "Forum", serif;
+  text-transform: uppercase;
   width: 120%;
+  font-size: 30px;
   height: auto;
   text-align: left;
   padding: 20px;
@@ -644,9 +647,10 @@ button:hover {
   }
 
   .libreria-cabecera h1,
-
   .parrafo1-4 h2,
   .textos4 h2 {
+    font-family: "Forum", serif;
+    text-transform: uppercase;
     width: 100%;
     text-align: center;
     margin-left: 0;
@@ -659,14 +663,14 @@ button:hover {
     font-size: 12px;
   }
 
-  .textos5[_ngcontent-ng-c1215799791]   p[_ngcontent-ng-c1215799791] {
+  .textos5  p {
     width: 90%;
     margin-left: 15px;
     font-size: 14px;
     text-align: justify;
 }
 
-  .parrafo1-4[_ngcontent-ng-c1215799791]   p[_ngcontent-ng-c1215799791] {
+  .parrafo1-4 p{
     width: 100%;
     font-size: 13px;
     margin-left: 30px;
@@ -678,7 +682,7 @@ button:hover {
         rgba(255, 254, 254, 0));
 }
 
-.botones[_ngcontent-ng-c1215799791]   button[_ngcontent-ng-c1215799791] {
+.botones button {
   margin-left: 0;
   width: 80%;
   margin: 10px 30px;
@@ -797,9 +801,6 @@ button:hover {
     list-style: none;
   }
 
-  .parrafo1-4 h2 {
-    background-color: rgb(184, 161, 122);
-}
 
 
   .product{

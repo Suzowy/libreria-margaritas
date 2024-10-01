@@ -51,7 +51,6 @@
 
 .seccion-error h2,
 .seccion-error h4 {
-  font-family: "Forum", serif;
   text-transform: uppercase;
   margin: 10px 0;
 }
@@ -59,7 +58,6 @@
 /*derecha */
 
 p {
-  font-family: "Forum", serif;
   text-align: center;
   width: 100%;
   font-size: 15px;

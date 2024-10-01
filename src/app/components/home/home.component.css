@@ -747,7 +747,7 @@ button:hover {
     mask-image: linear-gradient(
       to top,
       rgb(0, 0, 0) ,
-   rgba(0, 0, 0, 0.512));
+   rgba(0, 0, 0, 0.893));
     z-index: -1;
 
   }
