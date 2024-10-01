@@ -1,13 +1,16 @@
 
 :root {
-  --primary-color: #7a7064;
-  --secondary-color: #c1ae8e;
-  --light-text-color: #ffffff;
-  --cita-color:#d4c5b7;
-  --boton-color:#d1a77f;
-  --boton-background-color: #6a5c54;
-  --dark-text-color: #71572b;
-
+  --color-principal: #8158328f;
+  --color-secundario: #77593cb5;
+  --color-texto: white;
+  --color-boton: #d1a77f;
+  --boton-background-color: #b9936c;
+  --color-texto-secundario: rgb(116, 87, 40);
+  --color-fondo-cabecera: rgba(240, 248, 255, 0.711);
+  --color-parrafo: rgba(184, 161, 122, 0.852);
+  --color-parrafo-secundario: rgb(125, 85, 46);
+  --color-hover-boton: white;
+  font-size: 16px; /* 1 rem = 16px */
 }
 
 
@@ -23,55 +26,63 @@ html {
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {font-family: "Bodoni Moda SC", serif;
-  font-size: 3vw;
+h1 {
+  font-family: "Bodoni Moda SC", serif;
+  font-size: 2.5rem; /* Ajuste en rem */
 }
 
-h2 {font-family: "Bodoni Moda SC", serif;
-  font-size: 2.7vw;
+h2 {
+  font-family: "Bodoni Moda SC", serif;
+  font-size: 2.25rem; /* Ajuste en rem */
 }
 
-h3 {font-family: "Forum", serif;
-  font-size: 2.4vw;
+h3 {
+  font-family: "Forum", serif;
+  font-size: 2rem; /* Ajuste en rem */
 }
 
-h4 {font-family: "Forum", serif;
-  font-size: 2vw;
+h4 {
+  font-family: "Forum", serif;
+  font-size: 1.75rem; /* Ajuste en rem */
 }
 
-h5 {font-family: "Forum", serif;
-  font-size: 1.3vw;
+h5 {
+  font-family: "Forum", serif;
+  font-size: 1.25rem; /* Ajuste en rem */
 }
 
 p {
   font-family: "Bodoni Moda", serif;
-  font-size: 1vw;
+  font-size: 1rem; /* 16px */
   font-weight: lighter;
   text-align: justify;
 }
 
 ul {
   list-style: circle;
-  font-size: 1vw;
+  font-size: 1rem; /* Ajuste en rem */
   margin-top: 20px;
   margin-left: 50px;
   margin-bottom: 20px;
 }
 
 .contain {
+  width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
-  height: 100vh;
+  height: auto;
   position: relative;
+
 }
 
 .section {
   opacity: 0;
   transform: translateY(50px);
   transition: opacity 2s ease, transform 1s ease;
-margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .section.active {
@@ -99,9 +110,8 @@ margin-bottom: 100px;
   font-family: "Forum", serif;
   bottom: 20px;
   right: 20px;
-  background-color: var(--background-color);
-  color: wheat;
-
+  background-color: var(--boton-background-color);
+  color: var(--light-text-color);
   padding: 10px 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -109,7 +119,7 @@ margin-bottom: 100px;
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 10px;
+  font-size: 0.625rem; /* 10px */
   transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
@@ -144,24 +154,11 @@ body {
 
 /* estilos generales */
 
-.contain {
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
 
-.cita {
-  display: block;
-  color: #ffffff;
-  font-size: small;
-  font-style: italic;
-  text-align: center;
-}
 
-cite {
-  color: #ffffff;
+.cita, cite {
   display: block;
-  margin-top: 5px;
+  color: var(--light-text-color);
   font-style: italic;
   text-align: center;
 }
@@ -181,23 +178,24 @@ q::after {
 
 
 button,
-.form__button{
+.form__button {
   text-decoration: none;
   text-align: center;
-  width:200px;
+  width: 200px;
   height: 35px;
-  overflow: hidden;
   cursor: pointer;
   margin-top: 20px;
   margin-bottom: 20px;
-  z-index: 1;
   border: 1px solid white;
   position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-button a {font-family:"Forum", serif ;
+button a {
+  font-family:"Forum", serif ;
   text-decoration: none;
-  font-size: 9px;
+  font-size: 0.625rem; /* 10px */
   font-weight: 550;
   color: black;
 }
@@ -210,7 +208,7 @@ button::before,
 .form__button::before {
   position: absolute;
   content: "";
-  background-color: var(--background-color);
+  background-color: var(--boton-background-color);
   width: 150%;
   height: 200px;
   z-index: -1;
@@ -230,14 +228,22 @@ button:hover::before,
   left: -50px;
 }
 
+/* Breakpoints */
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.75rem; }
+  p { font-size: 0.875rem; }
+}
+
 @media (max-width: 585px) {
-  .contain {
-    width: 100%;
-  }
+  h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.5rem; }
+  p { font-size: 0.8125rem; } /* 13px */
+}
 
-  p {
-    font-size: 13px;
-  }
-
-
+@media (max-width: 480px) {
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.25rem; }
+  p { font-size: 0.75rem; } /* 12px */
 }

@@ -527,16 +527,15 @@ article p {
 
   .texto-about2 .p-1 {
     z-index: 10px;
-    margin-top: -625px;
-    font-size: 14px;
-    font-weight: bold;
+    margin-top: -630px;
     background-color: rgba(255, 255, 255, 0.864);
   }
 
   .destacado-about2 h5 {
     font-size: 25px;
     margin-left: 30px;
-    margin-top: 310px;
+    margin-top: 300px;
+    z-index: 10;
   }
 
   .texto-left h2{
