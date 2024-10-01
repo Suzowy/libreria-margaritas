@@ -208,13 +208,13 @@ button:hover {
 }
 
 .fotografia {
-  width: 50%;
-  height: auto;
+  width:50%;
+  height:auto;
 }
 
 .fotografia img {
-  width: 100%;
-  height: auto;
+  width: 90%;
+  height: 80vh;
   transform: translateY(5%);
   margin: 0 auto;
   z-index: -1;
@@ -748,7 +748,7 @@ font-size: 15px;
     mask-image: linear-gradient(
       to top,
       rgb(0, 0, 0) ,
-   rgba(0, 0, 0, 0.828));
+   rgba(0, 0, 0, 0.512));
     z-index: -1;
 
   }

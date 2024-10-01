@@ -99,7 +99,7 @@ p {
 .destacado-about3 {
   background-color: rgba(184, 161, 122, 0.809);
   width: 90%;
-  height: 150px;
+  height: 170px;
   position: absolute;
   transform: translateX(-30%);
   z-index: -1;

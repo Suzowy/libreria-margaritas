@@ -1,3 +1,17 @@
+:root {
+  --color-principal: #8158328f;
+  --color-secundario: #77593cb5;
+  --color-texto: white;
+  --color-boton: #d1a77f;
+  --boton-background-color: #b9936c;
+  --color-texto-secundario: rgb(116, 87, 40);
+  --color-fondo-cabecera: rgba(240, 248, 255, 0.711);
+  --color-parrafo: rgba(184, 161, 122, 0.852);
+  --color-parrafo-secundario: rgb(125, 85, 46);
+  --color-hover-boton: white;
+  font-size: 15px; /* 1 rem = 16px */
+}
+
 .contain {
   position: relative;
   display: flex;
@@ -5,7 +19,6 @@
   height: 100vh;
   overflow: hidden;
 }
-
 
 /* izquierda */
 .video-background {
@@ -29,10 +42,10 @@
   transform: translate(-50%, -50%);
   width: 60%;
   text-align: center;
-  color: white;
+  color: black;
   z-index: 2;
   padding: 5px;
-  background-color: rgba(67, 61, 56, 0.5);
+  background-color: rgba(255, 255, 255, 0.505);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.636);
 }
 
@@ -45,14 +58,11 @@
 
 /*derecha */
 
-
-
-
 p {
   font-family: "Forum", serif;
-text-align: center;
+  text-align: center;
   width: 100%;
-  font-size: 17px;
+  font-size: 15px;
   padding: 20px;
 }
 
@@ -62,11 +72,12 @@ ul {
   align-items: center;
   list-style: none;
   margin-top: 20px;
-left: -40px;
+  left: -40px;
 }
 
-ul li a { font-family: "Forum", serif;
-  color: rgb(0, 0, 0);
+ul li a {
+  font-family: "Forum", serif;
+  color: rgb(44, 44, 44);
   text-decoration: underline;
   font-size: 15px;
   line-height: 3;
@@ -79,9 +90,11 @@ ul li a:hover {
 
 @media (max-width: 768px) {
   .contain {
-    flex-direction: column; /* Cambiar la dirección del flex a columna */
-    height: auto; /* Ajustar la altura automática */
+    flex-direction: column;
+    height: auto;
   }
 
-
+  .seccion-error {
+    width: 90%;
+  }
 }
