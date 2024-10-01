@@ -136,17 +136,17 @@ cite {
   z-index: -1;
 }
 
-button {
+button { box-shadow: 2px 2px 8px rgba(114, 114, 114, 0.913);
   margin-top: 40px;
   font-family: "Forum", serif;
   font-weight: 600;
   color: black;
   background-color: #d1a77f;
-  border-radius: 2px;
+  border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
 
-button:hover {
+button:hover {box-shadow: 2px 2px 8px rgba(55, 54, 54, 0.913);
   color: white;
   background-color: var(--boton-background-color);
   transform: translateY(-2px);

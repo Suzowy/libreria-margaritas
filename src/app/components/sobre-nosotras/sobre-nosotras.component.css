@@ -140,20 +140,23 @@ p {
   left: 0;
 }
 
-.botones {
-  margin-top: 20px; /* Ajusta el espacio entre el video y el botón */
+.botones button{
+  border-radius: 5px;
+  margin-top: 20px;
+  box-shadow:0px 2px 8px gray;
 }
 
+
 .foto-about3 button {
-  width: auto; /* Ajusta el ancho del botón automáticamente */
-  margin: 0 auto; /* Centra el botón horizontalmente */
+  width: auto;
+  margin: 0 auto;
   background-color: rgba(184, 161, 122, 0.809);
   transition: all 0.3s ease-in-out;
 }
 
 button:hover {
   color: white;
-  box-shadow: 2px 2px 8px gray;
+  box-shadow: 2px 2px 8px rgb(52, 52, 52);
   transform: translateY(-2px);
 }
 
@@ -180,7 +183,7 @@ button:hover {
 }
 
 .manifiesto h5 {
-  font-size: 40px; /* Cambiado a px */
+  font-size: 40px;
   color: rgba(118, 97, 65, 0.865);
   padding-top: 70px;
   padding-bottom: 10px;
@@ -220,7 +223,7 @@ button:hover {
   margin-left: 509px;
   padding: 0px;
   position: absolute;
-  font-size: 36px; /* Cambiado a px */
+  font-size: 36px;
 }
 
 .texto-left p,
@@ -228,7 +231,7 @@ button:hover {
   width: 60%;
   margin: 0 auto;
   color: rgba(139, 117, 85, 0.865);
-  font-size: 16px; /* Cambiado a px */
+  font-size: 16px;
 }
 
 .texto-right {
@@ -267,7 +270,7 @@ button:hover {
 
 .testimonios h1,
 .about7 h1 {
-  font-size: 36px; /* Cambiado a px */
+  font-size: 36px;
   font-family: "Forum", serif;
   text-transform: uppercase;
   padding-top: 120px;
@@ -279,7 +282,7 @@ button:hover {
   margin-top: 30px;
   margin-bottom: 10px;
   text-align: center;
-  font-size: 20px; /* Cambiado a px */
+  font-size: 20px;
 }
 
 .testimonios-articles {
@@ -298,7 +301,7 @@ button:hover {
 article p {
   margin: 0 auto;
   width: 80%;
-  font-size: 16px; /* Cambiado a px */
+  font-size: 16px;
 }
 
 .about7 {
@@ -328,10 +331,10 @@ article p {
   margin: 0 auto;
   margin-bottom: 20px;
   color: white;
-  font-size: 16px; /* Cambiado a px */
+  font-size: 16px;
 }
 
-/* Estilos para pantallas pequeñas */
+
 @media (max-width: 768px) {
   .about1,
   .about2,
@@ -352,14 +355,14 @@ article p {
   .manifiesto,
   .texto-left,
   .texto-right {
-    width: 90%; /* Aumentar el ancho para pantallas pequeñas */
+    width: 90%;
     margin: 0 auto;
 
-    padding: 10px 0; /* Agregar un poco de padding para separación */
+    padding: 10px 0;
   }
 
   .texto-about1 {
-    padding-top: 50px; /* Ajustar padding en pantallas pequeñas */
+    padding-top: 50px;
     padding-bottom: 50px;
   }
 
@@ -367,8 +370,8 @@ article p {
   .foto-about3,
   .foto-manifiesto,
   .foto-about5 {
-    width: 90%; /* Ajustar el ancho de las fotos */
-    height: auto; /* Permitir que la altura se ajuste */
+    width: 90%;
+    height: auto;
     margin-top: 20px;
   }
 
@@ -376,69 +379,69 @@ article p {
   .foto-about3 img,
   .foto-manifiesto img,
   .foto-about5 img {
-    height: auto; /* Permitir que la imagen se ajuste a su contenedor */
-    border-radius: 10%; /* Redondear bordes */
+    height: auto;
+    border-radius: 10%;
   }
 
   .destacado-about2 h5,
   .texto-about3 h5 {
-    font-size: 20px; /* Cambiado a px */
+    font-size: 20px;
   }
 
   .destacado-about3 {
-    width: 100%; /* Ajustar el ancho para pantallas pequeñas */
-    transform: none; /* Eliminar la transformación */
+    width: 100%;
+    transform: none;
   }
 
   .texto-left h2 {
-    margin-left: 0; /* Alinear a la izquierda */
-    text-align: center; /* Centrar el texto */
-    font-size: 24px; /* Cambiado a px */
+    margin-left: 0;
+    text-align: center;
+    font-size: 24px;
   }
 
   .texto-right {
-    margin-top: 20px; /* Ajustar margen superior */
-    text-align: center; /* Centrar el texto */
+    margin-top: 20px;
+    text-align: center;
   }
 
   .texto-left p,
   .texto-right p {
-    width: 100%; /* Ajustar el ancho de los párrafos */
-    font-size: 16px; /* Cambiado a px */
+    width: 100%;
+    font-size: 16px;
   }
 
   .testimonios h1,
   .about7 h1 {
-    padding-top: 80px; /* Ajustar padding superior */
-    font-size: 28px; /* Cambiado a px */
+    padding-top: 80px;
+    font-size: 28px;
   }
 
   .testimonios p {
-    width: 90%; /* Ajustar ancho de los párrafos */
-    font-size: 16px; /* Cambiado a px */
+    width: 90%;
+    font-size: 16px;
   }
 
   .article-imagen {
-    width: 80px; /* Ajustar tamaño de imagen */
+    width: 80px;
     height: 80px;
   }
 
   .testimonios-articles {
-    display: block; /* Cambiar de flex a block para apilar los testimonios */
-    width: 100%; /* Asegurarse de que ocupen toda la pantalla */
-    margin: 0 auto; /* Centrar el contenedor */
+    display: block;
+    width: 100%;
+    margin: 0 auto;
   }
 
   .article-imagen {
-    width: 30%; /* Hacer que las imágenes ocupen todo el ancho */
-    height: auto; /* Permitir que la altura se ajuste */
-    margin: 10px 0; /* Margen vertical para separación */
+    width: 30%;
+    height: auto;
+    margin: 10px 0;
   }
 
   article p {
-    width: 80%; /* Ajustar ancho de los párrafos */
-    margin: 10px auto; /* Centrar los párrafos */
-    font-size: 16px; /* Cambiado a px */
+    width: 80%;
+    margin: 10px auto;
+    font-size: 16px;
   }
 
   .podcast-imagen {
@@ -450,27 +453,27 @@ article p {
   }
 
   .about7-final {
-    height: auto; /* Permitir altura automática */
-    padding: 10px; /* Ajustar padding */
+    height: auto;
+    padding: 10px;
   }
 
   .about7-final p {
     text-align: justify;
-    width: 80%; /* Ajustar el ancho de los párrafos */
-    margin: 0 auto; /* Centrar texto */
-    font-size: 12px; /* Cambiado a px */
+    width: 80%;
+    margin: 0 auto;
+    font-size: 12px;
   }
 
   .botones button,
   button {
-    width: 100%; /* Ajustar ancho de los botones */
-    margin: 20px auto; /* Centrar los botones */
-    font-size: 14px; /* Cambiado a px */
+    width: 100%;
+    margin: 20px auto;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 460px) {
-  /* Estilos adicionales para pantallas extra pequeñas */
+
 
   .texto-about2,
   .texto-about3,
@@ -559,7 +562,7 @@ article p {
     background-color: rgba(184, 161, 122, 0.644);
     width: 115%;
     left: -15px;
-    height: 186px;
+    height: 163px;
     margin-top: -70px;
 }
 
@@ -603,18 +606,20 @@ article p {
   }
 
   .podcast-imagen {
-    width: 80px; /* Ajustar tamaño de imagen */
-    margin-top: 20px; /* Reducir margen superior */
+    width: 80px;
+    margin-top: 20px;
   }
 
   .about7-final p {
-    font-size: 10px; /* Cambiado a px */
-    width: 90%; /* Aumentar el ancho de los párrafos */
+    font-size: 10px;
+    width: 90%;
   }
 
   .foto-about3 .botones {
-    margin-top: 165px;
-    width: 100%; /* Ajustar ancho de los botones */
-    font-size: 14px; /* Cambiado a px */
+    margin-top: 50px;
+    width: 100%;
+    font-size: 14px;
   }
+
+
 }
