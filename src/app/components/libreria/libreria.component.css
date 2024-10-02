@@ -95,24 +95,6 @@
   margin-top: 30px;
 }
 
-.botones button {box-shadow: 2px 2px 8px rgba(114, 114, 114, 0.913);
-   border-radius: 5px;
-  margin-left: 50px;
-  width: 30%;
-  background-color: #d1a77f;
-  font-family: "Forum", serif;
-  transition: all 0.3s ease-in-out;
-}
-
-button:hover {
-  box-shadow: 2px 2px 8px rgba(65, 65, 65, 0.913);
-  color: white;
-  transform: translateY(-2px); /* Efecto de elevación al pasar el mouse */
-}
-
-.button:active {
-  transform: translateY(1px); /* Efecto de presionado */
-}
 
 .cita-content {
   width: 100%;
@@ -289,9 +271,51 @@ button:hover {
 
 .section-5 button {
   margin-left: 100px;
-  width: 30%;
-  background-color: #d1a77f;
 }
+
+#buy{
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: normal;
+  padding: 10px 10px;
+  gap: 15px;
+  background-color:var(--color-boton);
+  outline: 3px var(--color-secundario) solid;
+  outline-offset: -3px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 400ms;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+#buy .text {
+  text-transform: uppercase;
+  color: white;
+  font-weight: lighter;
+  font-size: 1em;
+  transition: 400ms;
+}
+
+#buy svg path {
+  transition: 400ms;
+}
+
+#buy:hover {
+  background-color: white;
+}
+
+#buy:hover .text {
+  color: #181717;
+}
+
+#buy:hover svg path {
+  fill: #181717;
+}
+
+
 
 /* sección general del carrusel */
 .section-6 {
@@ -360,7 +384,7 @@ button:hover {
 }
 
 .accordion-button {
-  background-color: #eadbcbea;
+
   color: #292929;
   font-weight: lighter;
   border: none;
@@ -430,7 +454,7 @@ button:hover {
 
 .accordion-item button::before,
 .carousel button::before {
-  background: none;
+  background: transparent;
 }
 
 
@@ -475,6 +499,7 @@ button:hover {
    .botones button {
     width: 60%;
   }
+
 
 
   .section-3 h5 {
@@ -563,6 +588,10 @@ button:hover {
     margin: 10px auto;
   }
 
+  #buy{
+    width: 40%;
+  }
+
   .fotografia img{
    display: none;
 }
@@ -617,7 +646,7 @@ button:hover {
     font-size: 2vw;
   }
 
-  .fotografia3[_ngcontent-ng-c1215799791]   img[_ngcontent-ng-c1215799791] {
+  .fotografia3 img {
     width: 100%;
     height: 50vh;
     border-top-left-radius: 0;
@@ -648,7 +677,7 @@ button:hover {
     height: auto;
   }
 
-  .libreria-cabecera h1,
+
   .parrafo1-4 h2,
   .textos4 h2 {
     font-family: "Forum", serif;
@@ -659,6 +688,16 @@ button:hover {
     margin-top: 50px;
     font-size: 20px;
   }
+
+  .libreria-cabecera h1 {
+    width: 100%;
+    font-family: "Forum", serif;
+    text-align: center;
+    background-color: transparent;
+    color: var(--color-secundario);
+    margin-top: 20px;
+    font-size: 25px;
+}
 
   .textos p,.textos-section-2 p {
     width: 90%;
@@ -684,20 +723,15 @@ button:hover {
         rgba(255, 254, 254, 0));
 }
 
-.botones button {
-  margin-left: 0;
-  width: 80%;
-  margin: 10px 30px;
-}
 
-  .parrafo1-4 h2 {
-    width: 120%;
-    text-align: center;
-    margin-left: -45px;
-    margin-top: -14px;
-    font-size: 20px;
-}
 
+.parrafo1-4  h2 {
+  width: 120%;
+  text-align: center;
+  margin-left: -45px;
+  margin-top: -100px;
+  font-size: 20px;
+}
   .fotografia,
   .fotografia-section-2,
   .fotografia3,
@@ -749,12 +783,14 @@ button:hover {
   color: white;
   font-size: 14px;
 }
-  .section-2 .cita {
-    font-family: "Forum", serif;
-    margin-top: 74px;
-    margin-left: 0px;
-    font-size: 25px;
-    color: rgb(129, 111, 88);
+.section-2  .cita{
+  font-family: "Forum", serif;
+  margin-top: -15px;
+  width: 70%;
+  margin-left: 59px;
+  padding: 20px;
+  font-size: 25px;
+  color: rgb(95 87 76);
 }
 
 .section-2 .cita-p {
@@ -774,12 +810,6 @@ button:hover {
     width: 90%;
     font-size: 14px;
 
-  }
-
-  .botones button {
-    margin-left: 0;
-    width: 80%;
-    margin: 10px auto;
   }
 
   .section-3  h5 {
@@ -808,16 +838,22 @@ button:hover {
   .product{
     height:auto;
   }
-  .product-content[_ngcontent-ng-c1215799791] {
+  .product-content {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-
 }
+
+
 
 .textos5{
   position: relative;
   top: -99px;
+}
+
+.section-5 .button {
+  margin-left: 62px;
+
 }
 
 .section-6{

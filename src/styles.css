@@ -111,7 +111,7 @@ ul {
   font-family: "Forum", serif;
   bottom: 20px;
   right: 20px;
-  background-color: var(--boton-background-color);
+  background-color: var(  --color-fondo-cabecera);
   color: var(--light-text-color);
   padding: 10px 10px;
   border-radius: 10px;
@@ -120,7 +120,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.625rem; /* 10px */
+  font-size:10px; /* 10px */
   transition: all 0.3s ease-in-out;
   z-index: 1000;
 }
@@ -132,6 +132,8 @@ ul {
 
 .btn-back-to-top:hover {
   transform: translateY(-2px);
+  background-color: var(--boton-background-color);
+  color: var(--color-texto);
 }
 
 .btn-back-to-top:active {
@@ -175,56 +177,83 @@ q::after {
 }
 
 
-
-button,
-.form__button {
-  text-decoration: none;
-  text-align: center;
-  width: 200px;
-  height: 35px;
-  cursor: pointer;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 1px solid white;
+.button {
+  width: fit-content;
+  height: 45px;
+  background: #ffffff0d;
+  border-radius: 8px;
+  border: 2px solid var(--color-boton);
+  box-shadow: 2px 2px 8px rgba(114, 114, 114, 0.913);
+  font-size: 12px;
+  font-weight: lighter;
+  color: var(--color-texto-secundario);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
   position: relative;
   overflow: hidden;
+  padding: 10px 25px;
   z-index: 1;
+  transition: all 0.3s ease-in-out;
 }
 
-button a {
+.button:before {
+  width: 50%;
+  height: 100%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  left: -50%;
+  background: var(--color-secundario);
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.button:after {
+  width: 50%;
+  height: 100%;
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+  background: var(--color-secundario);
+
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+
+.button:hover {
+  color: var(--color-hover-boton);
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(55, 54, 54, 0.913);
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button:hover:before {
+  top: 0;
+  left: 0;
+}
+
+.button:hover:after {
+  top: 0;
+  left: 50%;
+}
+
+.button a {
   font-family:"Forum", serif ;
   text-decoration: none;
-  font-size: 0.625rem; /* 10px */
+  font-size: 0.625rem;
   font-weight: 550;
-  color: black;
+  color: var(--color-texto-secundario);
 }
 
-button:hover > a {
-  color: white;
-}
-
-button::before,
-.form__button::before {
-  position: absolute;
-  content: "";
-  background-color: var(--boton-background-color);
-  width: 150%;
-  height: 200px;
-  z-index: -1;
-  border-radius: 50%;
-}
-
-button:before,
-.form__button:before {
-  top: 100%;
-  left: 100%;
-  transition: 0.6s all;
-}
-
-button:hover::before,
-.form__button:hover::before {
-  top: -50px;
-  left: -50px;
+.button:hover > a {
+  color: var(--color-texto);
 }
 
 
