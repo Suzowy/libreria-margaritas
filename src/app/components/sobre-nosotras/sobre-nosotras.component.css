@@ -442,12 +442,11 @@ article p {
     font-size: 12px;
   }
 
-  /* .botones button,
-  button {
+   .botones .button {
     width: 100%;
     margin: 20px auto;
     font-size: 14px;
-  } */
+  }
 }
 
 @media (max-width: 460px) {

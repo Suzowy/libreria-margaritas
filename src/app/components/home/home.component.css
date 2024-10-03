@@ -138,8 +138,8 @@ cite {
 }
 
 .cabecera .button{
+  font-family: "Forum", serif;
   background-color: whitesmoke;
-  font-size: 12px;
   color: black;
 }
 
@@ -562,7 +562,7 @@ cite {
     height: 446px;
   }
 
-  button,
+  .button,
   .form__button {
     width: 30%;
     font-size: 12px;
@@ -636,11 +636,11 @@ cite {
     width: 75%;
   }
 
-  button {
+  .button {
     margin-top: 40px;
   }
 
-  button,
+  .button,
   .form__button {
     width: 70%;
     font-size: 7px;
@@ -671,7 +671,7 @@ cite {
     width: 60%;
   }
 
-  button {
+  .button {
     margin-top: 83px;
     width: 50%;
     font-size: 12px;
@@ -840,7 +840,7 @@ cite {
     color: #726050;
   }
 
-  .section-4 button {
+  .section-4 .button {
     margin-left: 72px;
     margin-top: 20px;
     width: 70%;

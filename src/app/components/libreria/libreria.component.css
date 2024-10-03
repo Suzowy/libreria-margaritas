@@ -278,11 +278,11 @@
   justify-content: center;
   margin: 0 auto;
   align-items: normal;
-  padding: 10px 10px;
-  gap: 15px;
-  background-color:var(--color-boton);
-  outline: 3px var(--color-secundario) solid;
-  outline-offset: -3px;
+  padding: 5px 10px;
+  gap: 10px;
+  background-color: var(--color-boton);
+  outline: 2px var(--color-secundario) solid;
+  outline-offset: 1px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
@@ -496,7 +496,7 @@
     font-size: 18px;
   }
 
-   .botones button {
+   .botones .button {
     width: 60%;
   }
 
@@ -582,7 +582,7 @@
     font-size: 12px;
   }
 
-  .botones button {
+  .botones .button {
     margin-left: 0;
     width: 70%;
     margin: 10px auto;
