@@ -6,7 +6,7 @@
   --color-boton: #d1a77f;
   --boton-background-color: #b9936c;
   --color-texto-secundario: rgb(116, 87, 40);
-  --color-fondo-cabecera: rgba(240, 248, 255, 0.711);
+  --color-fondo-cabecera: whitesmoke;
   --color-parrafo: rgba(184, 161, 122, 0.852);
   --color-parrafo-secundario: rgb(125, 85, 46);
   --color-hover-boton: white;
@@ -17,9 +17,10 @@
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
   width: 100%;
+  max-width: 1600px;
 
 }
 
@@ -76,7 +77,6 @@ ul {
   overflow-y: hidden;
   height: auto;
   position: relative;
-
 }
 
 .section {
@@ -84,6 +84,7 @@ ul {
   transform: translateY(50px);
   transition: opacity 2s ease, transform 1s ease;
   margin-bottom: 100px;
+  background-color: var(--color-fondo-cabecera);
 }
 
 .section.active {
@@ -178,20 +179,20 @@ q::after {
 
 
 .button {
-  width: fit-content;
+  width: 200px;
   height: 45px;
   background: #ffffff0d;
   border-radius: 8px;
   border: 2px solid var(--color-boton);
   box-shadow: 2px 2px 8px rgba(114, 114, 114, 0.913);
-  font-size: 12px;
+  font-size: 9px;
   font-weight: lighter;
   color: var(--color-texto-secundario);
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   position: relative;
   overflow: hidden;
-  padding: 10px 25px;
+  padding: 10px 10px;
   z-index: 1;
   transition: all 0.3s ease-in-out;
 }
@@ -218,7 +219,6 @@ q::after {
   top: 0%;
   left: 100%;
   background: var(--color-secundario);
-
   transition: all 0.5s ease;
   z-index: -1;
 }
@@ -257,13 +257,13 @@ q::after {
 }
 
 
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   p { font-size: 0.875rem; }
 }
 
-@media (max-width: 585px) {
+@media (min-width: 481px) and (max-width: 768px)  {
   h1 { font-size: 1.75rem; }
   h2 { font-size: 1.5rem; }
   p { font-size: 0.8125rem; } /* 13px */
