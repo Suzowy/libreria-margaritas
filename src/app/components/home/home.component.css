@@ -127,7 +127,6 @@ cite {
 .cabecera::before {
   content: "";
   background: url("/assets/img/libreria.jpg") no-repeat center center;
-
   background-size: cover;
   position: absolute;
   top: 0;
