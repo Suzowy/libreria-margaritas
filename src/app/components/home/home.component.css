@@ -100,7 +100,7 @@
   text-align: center;
   margin: 0 auto;
   position: relative;
-  height: 120vh;
+  height: 100vh;
   overflow: hidden;
   margin-bottom: 100px;
   background-color: #8072648a;
@@ -999,6 +999,11 @@ cite {
     margin-top: -100px;
   }
 
+  .parrafo2{
+    position: relative;
+    top: -130px;
+  }
+
   .parrafo2 p {
     padding-top: 375px;
     padding-bottom: 143px;
@@ -1019,13 +1024,13 @@ cite {
     font-weight: 500;
     color: rgb(251 251 251);
   }
-  .fotografia2 img {
-    width: 138%;
-    height: 100vh;
+  .fotografia2  img {
+    width: 100%;
+    height: 70vh;
     margin-top: -56px;
-    margin-left: -92px;
+    margin-left: 0px;
     border-top-right-radius: 0;
-  }
+}
 
   .textos3 h2 {
     margin-top: -100px;

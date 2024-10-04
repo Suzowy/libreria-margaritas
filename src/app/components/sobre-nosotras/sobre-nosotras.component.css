@@ -530,18 +530,18 @@ article p {
     display: none;
   }
 
-  .foto-about img {
-    width: 100%;
-    height: auto;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-  }
+  .about1 .foto-about {
+    margin-top: 0px;
+    width: 80%;
+}
 
-  .about2 .foto-about {
-    width: 100%;
-  }
+.about2 .foto-about {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  z-index: -1;
+}
+
   .about2 .foto-about img {
     border-bottom-right-radius: 0%;
     border-bottom-left-radius: 0%;
@@ -550,9 +550,9 @@ article p {
   }
 
   .texto-about2 .p-1 {
-    z-index: 10px;
-    margin-top: -630px;
-    background-color: rgba(255, 255, 255, 0.864);
+    margin-top: -700px;
+    z-index: 10;
+    font-size: 15px;
   }
 
   .destacado-about2 h5 {
@@ -601,12 +601,19 @@ article p {
     list-style: circle;
     font-size: 12px;
   }
+
 .about4{
-  margin-top: -80px;
+  margin-top: -500px;
 }
+
+.manifiesto  h5 {
+  padding-top: 0px;
+}
+
   .foto-manifiesto {
     width: 100%;
   }
+
   .foto-manifiesto img {
     width: 100%;
     height: auto;
@@ -620,6 +627,16 @@ article p {
     z-index: -1;
   }
 
+  .foto-about5 {
+    width: 100%;
+    margin-top: 40px;
+}
+
+  .foto-about5 img {
+    width: 100%;
+    height: auto;
+}
+
   .podcast-imagen {
     width: 80px;
     margin-top: 20px;
@@ -631,8 +648,7 @@ article p {
   }
 
   .foto-about3 .botones {
-    margin-top: 50px;
-
+    margin-top: 80px;
     font-size: 14px;
   }
 
