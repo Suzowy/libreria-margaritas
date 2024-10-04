@@ -15,6 +15,7 @@
 h5{
   font-family: "Forum", serif;
   text-transform: uppercase;
+  color: var(--color-secundario);
 }
 
 p {
@@ -537,7 +538,7 @@ article p {
 
 .about2 .foto-about {
   position: relative;
-  top: -100px;
+  top: -25px;
   width: 100%;
   z-index: -1;
 }
@@ -651,6 +652,8 @@ article p {
     margin-top: 80px;
     font-size: 14px;
   }
+
+ 
 
 
 }

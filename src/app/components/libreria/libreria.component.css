@@ -917,7 +917,7 @@
 
   .left ul {
     font-family: "Forum", serif;
-    font-size: 12px;
+    font-size: 13px;
     list-style: none;
   }
 
@@ -940,6 +940,8 @@
 }
 
 .section-5 .button {
+  margin-top: 50px;
+  margin-bottom: 50px;
   margin-left: 85px;
 
 }
