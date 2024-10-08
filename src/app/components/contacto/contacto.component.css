@@ -22,7 +22,7 @@
   }
 }
 
-/* Apply the animation to the text */
+
 .contact-cabecera .textos {
   color: var(--color-texto);
   width: 50%;
@@ -30,7 +30,7 @@
   margin-top: 70px;
   margin-left: 50px;
   font-size: 1vw;
-  animation: slideInFromTop 2s ease-out; /* Adjust the duration and easing as needed */
+  animation: slideInFromTop 2s ease-out;
 }
 
 .contact-cabecera .textos p {
@@ -65,13 +65,13 @@
   }
 }
 
-/* Apply the animation to the image */
+
 .contact-cabecera .fotografia img {
   border-top-left-radius: 40%;
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  animation: slideInFromRight 2s ease-out; /* Adjust the duration and easing as needed */
+  animation: slideInFromRight 2s ease-out;
 }
 
 .contact-cabecera button {
@@ -247,7 +247,7 @@
 }
 
 .message {
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.688);
   border: 1px solid #ffffff;
@@ -255,6 +255,7 @@
 }
 
 .success {
+  margin-top: 80px;
   width: 100%;
   color: rgb(68, 158, 68);
   font-family: "finger";
@@ -613,10 +614,10 @@ top: 0px;
     max-width: 100%;
   }
 
-  .form__button{
+  .btn{
     width: 70%;
     left: 61px;
-    top: 56px;
+    top: 60px;
 }
 
   .section-3 {

@@ -906,6 +906,7 @@
     padding-top: 5px;
     width: 100%;
     height: 55vh;
+    background-color: #8f7b61bb;
 }
   .left {
     width: 100%;
@@ -918,7 +919,7 @@
 
   .left ul {
     font-family: "Forum", serif;
-    font-size: 13px;
+    font-size: 12px;
     list-style: none;
   }
 
