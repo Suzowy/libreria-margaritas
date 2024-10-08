@@ -9,13 +9,13 @@ footer {
   text-align: center;
   width: 100%;
   height: auto;
-  background-color: #6054459f;
+  background-color: var(--color-footer);
   padding-top: 20px;
   padding-bottom: 30px;
 }
 
 footer h2 {
-  color: #fefefecf;
+  color: var(--color-texto-white);
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 15px;
@@ -98,7 +98,7 @@ footer h2 {
 }
 
 .socialSvg path {
-  fill: rgb(255, 255, 255);
+  fill: var(--color-texto-white);
 }
 
 .socialContainer:hover .socialSvg {
@@ -152,7 +152,7 @@ a:hover{
 
 .social-h1{
   font-family: "Forum", serif;
-  color: white;
+  color: var(--color-texto-white);
   font-weight: lighter;
 }
 

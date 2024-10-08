@@ -15,13 +15,13 @@
 h5{
   font-family: "Forum", serif;
   text-transform: uppercase;
-  color: var(--color-secundario);
+  color: var(--color-titulo);
 }
 
 p {
   font-size: 16px; /* Cambiado a px */
   text-align: left;
-  color: rgb(116, 87, 40);
+  color: var(--color-texto);
 }
 
 .foto-about {
@@ -60,9 +60,9 @@ p {
 
 .destacado-about2 h5 {
   font-size: 30px; /* Cambiado a px */
-  color: rgb(255, 255, 255);
+  color: var(--color-texto-white);
   text-transform: uppercase;
-  background-color: rgb(184, 161, 122);
+  background-color: var(--color-secundario);
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 30px;
@@ -94,16 +94,16 @@ p {
 
 .texto-about3 h5 {
   font-size: 30px; /* Cambiado a px */
-  color: white;
+  color: var(--color-texto-white);
   padding-top: 20px;
   text-transform: uppercase;
 }
 
 .p1 {
-  color: white;
+  color: var(--color-texto-white);
 }
 .destacado-about3 {
-  background-color: rgba(184, 161, 122, 0.809);
+  background-color: var(--color-secundario);
   width: 90%;
   height: 170px;
   position: absolute;
@@ -159,13 +159,13 @@ p {
 .manifiesto ul {
   font-family: "Forum", serif;
   width: 80%;
-  color: rgba(118, 97, 65, 0.865);
+  color: var(--color-titulo);
   list-style: none;
 }
 
 .manifiesto h5 {
   font-size: 40px;
-  color: rgba(118, 97, 65, 0.865);
+  color: var(--color-titulo);
   padding-top: 70px;
   padding-bottom: 10px;
   text-transform: uppercase;
@@ -200,7 +200,7 @@ p {
 
 .texto-left h2 {
   text-transform: uppercase;
-  color: rgba(118, 97, 65, 0.865);
+  color: var(--color-titulo);
   margin-left: 509px;
   padding: 0px;
   position: absolute;
@@ -211,7 +211,7 @@ p {
 .texto-right p {
   width: 60%;
   margin: 0 auto;
-  color: rgba(139, 117, 85, 0.865);
+  color: var(--color-principal);
   font-size: 16px;
 }
 
@@ -301,7 +301,7 @@ article p {
 
 .about7-final {
   margin-top: 100px;
-  background-color: rgba(139, 117, 85, 0.758);
+  background-color: var(--color-principal);
   padding: 30px;
   height: auto;
 }
@@ -309,7 +309,7 @@ article p {
   width: 50%;
   margin: 0 auto;
   margin-bottom: 20px;
-  color: white;
+  color: var(--color-texto-white);
   font-size: 16px;
 }
 
@@ -559,7 +559,7 @@ article p {
   .destacado-about2 h5 {
     font-size: 25px;
     margin-left: 30px;
-    margin-top: 300px;
+    margin-top: 265px;
     z-index: 10;
   }
 
@@ -575,7 +575,7 @@ article p {
   }
 
   .destacado-about3{
-    background-color: rgba(184, 161, 122, 0.644);
+    background-color:var(--color-secundario);
     width: 115%;
     left: -15px;
     height: 163px;
@@ -653,7 +653,7 @@ article p {
     font-size: 14px;
   }
 
- 
+
 
 
 }

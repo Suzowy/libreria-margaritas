@@ -1,15 +1,16 @@
 
 :root {
-  --color-principal: #8158328f;
-  --color-secundario: #77593cb5;
-  --color-texto: white;
-  --color-boton: #d1a77f;
-  --boton-background-color: #b9936c;
-  --color-texto-secundario: rgb(116, 87, 40);
-  --color-fondo-cabecera: whitesmoke;
-  --color-parrafo: rgba(184, 161, 122, 0.852);
-  --color-parrafo-secundario: rgb(125, 85, 46);
-  --color-hover-boton: white;
+  --color-principal: #8f7b61;  /*base*/
+  --color-secundario: #c1ac90;  /*fondos */
+  --color-titulo:#4a3b29;
+  --color-texto: #6f604d;   /*texto normal*/
+  --color-texto-white: white; /*texto blanco*/
+  --color-boton: #efe2d2;    /*background-boton */
+  --boton-background-color: #706251; /*boton hover*/
+  --color-hover-boton: white; /*letras hover boton*/
+  --color-fondo-cabecera: #f9f3ec;
+--color-forma:#513b22ca;
+--color-footer:#9c938a;
   font-size: 15px; /* 1 rem = 16px */
 }
 
@@ -114,8 +115,8 @@ ul {
   font-family: "Forum", serif;
   bottom: 20px;
   right: 20px;
-  background-color: var(  --color-fondo-cabecera);
-  color: var(--light-text-color);
+  background-color: var(  --color-boton);
+  color: var(--color-titulo);
   padding: 10px 10px;
   border-radius: 10px;
   cursor: pointer;
@@ -136,7 +137,7 @@ ul {
 .btn-back-to-top:hover {
   transform: translateY(-2px);
   background-color: var(--boton-background-color);
-  color: var(--color-texto);
+  color: var(--color-texto-white);
 }
 
 .btn-back-to-top:active {
@@ -162,7 +163,6 @@ body {
 
 .cita, cite {
   display: block;
-  color: var(--light-text-color);
   font-style: italic;
   text-align: center;
 }
@@ -183,13 +183,13 @@ q::after {
 .button {
   width: 200px;
   height: 45px;
-  background: #ffffff0d;
+  background: var(--color-boton);
   border-radius: 8px;
   border: 2px solid var(--color-boton);
   box-shadow: 2px 2px 8px rgba(114, 114, 114, 0.913);
   font-size: 9px;
   font-weight: lighter;
-  color: var(--color-texto-secundario);
+  color: var(--color-texto);
   -webkit-transition: 0.5s all ease;
   transition: 0.5s all ease;
   position: relative;
@@ -207,7 +207,7 @@ q::after {
   position: absolute;
   top: 0%;
   left: -50%;
-  background: var(--color-secundario);
+  background: var(--boton-background-color);
   transition: all 0.5s ease;
   z-index: -1;
 }
@@ -220,13 +220,13 @@ q::after {
   position: absolute;
   top: 0%;
   left: 100%;
-  background: var(--color-secundario);
+  background: var(--boton-background-color);
   transition: all 0.5s ease;
   z-index: -1;
 }
 
 .button:hover {
-  color: var(--color-hover-boton);
+  color: var(--color-texto-white);
   cursor: pointer;
   box-shadow: 2px 2px 8px rgba(55, 54, 54, 0.913);
   transform: translateY(-2px);
@@ -251,11 +251,11 @@ q::after {
   text-decoration: none;
   font-size: 0.625rem;
   font-weight: 550;
-  color: var(--color-texto-secundario);
+  color: var(--color-texto);
 }
 
 .button:hover > a {
-  color: var(--color-texto);
+  color: var(--color-texto-white);
 }
 
 

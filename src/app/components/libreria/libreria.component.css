@@ -17,14 +17,14 @@
   text-align: left;
   padding: 20px;
   margin-top: 40px;
-  color: white;
+  color: var(--color-texto-white);
   line-height: 1;
-  background-color: rgba(130, 116, 89, 0.859);
+  background-color:var(--color-secundario);
   z-index: 10;
 }
 
 .textos {
-  color: rgb(116, 87, 40);
+  color: var(--color-texto);
   width: 70%;
   height: auto;
   margin-top: 25px;
@@ -65,7 +65,7 @@
 }
 
 .textos-section-2 {
-  color: rgb(116, 87, 40);
+  color: var(--color-texto);
   width: 60%;
   height: auto;
   margin-top: 60px;
@@ -83,7 +83,7 @@
 
 .textos-section-2 .p-white {
   font-weight: 500;
-  background-color: rgba(130, 116, 89, 0.465);
+  background-color: #c1ac90b7;
   padding: 25px 130px;
   width: 100%;
   margin-left: -6px;
@@ -104,7 +104,7 @@
   margin-top: 74px;
   margin-left: 70px;
   font-size: 20px;
-  color: rgb(129, 111, 88);
+  color: var(--color-titulo);
 }
 
 .fotografia-section-2 {
@@ -125,7 +125,7 @@
   margin-left: 50px;
   text-align: center;
   width: 100%;
-  color: rgb(129, 111, 88);
+  color: var(--color-texto);
 }
 
 /* seccion3 */
@@ -140,9 +140,9 @@
 
 .section-3 h5 {
   font-family: "Forum", serif;
-  color: white;
+  color: var(--color-texto-white);
   font-size: 3vw;
-  background-color: #88735fc7;
+  background-color: var(--color-secundario);
   height: 80vh;
   margin: 0 auto;
   width: 40%;
@@ -167,7 +167,7 @@
 
 .left ul {
   list-style: outside;
-  color: white;
+  color: var(--color-texto-white);
   font-size: 1vw;
 }
 
@@ -195,7 +195,7 @@
 
 .parrafo1-4 h2 {
   margin: 0 auto;
-  background-color: rgba(184, 161, 122, 0.878);
+  background-color: var(--color-secundario);
   width: 125%;
   height: auto;
   z-index: 10;
@@ -203,7 +203,7 @@
 
 .parrafo1-4 p {
   margin-top: 60px;
-  color: rgb(125, 85, 46);
+  color: var(--color-texto);
 }
 
 .textos4 h2 {
@@ -211,7 +211,7 @@
   margin-top: -70px;
   margin-left: -70px;
   text-align: center;
-  color: white;
+  color: var(--color-texto-white);
   text-transform: uppercase;
   font-weight: lighter;
   font-size: 4vw;
@@ -244,7 +244,7 @@
   margin-top: 60px;
   width: 60%;
   height: auto;
-  color: rgb(125, 85, 46);
+  color: var(--color-texto);
 }
 
 .textos5 p {
@@ -279,8 +279,9 @@
   align-items: normal;
   padding: 5px 10px;
   gap: 10px;
-  background-color: var(--color-boton);
+  background-color: var( --boton-background-color);
   outline: 2px var(--color-secundario) solid;
+
   outline-offset: 1px;
   border-radius: 5px;
   border: none;
@@ -292,7 +293,7 @@
 
 #buy .text {
   text-transform: uppercase;
-  color: white;
+  color: var(--color-texto-white);
   font-weight: lighter;
   font-size: 1em;
   transition: 400ms;
@@ -300,10 +301,11 @@
 
 #buy svg path {
   transition: 400ms;
+  color: var(--color-texto);
 }
 
 #buy:hover {
-  background-color: white;
+  background-color: var(--color-texto-white);
 }
 
 #buy:hover .text {
@@ -384,7 +386,7 @@
 
 .accordion-button {
 
-  color: #292929;
+  color: var(--color-texto);
   font-weight: lighter;
   border: none;
   border-radius: 5px;
@@ -395,17 +397,17 @@
 }
 
 .accordion-button:not(.collapsed) {
-  background-color: #5e5349;
+  background-color: var(--color-secundario);
   color: #ffffff;
 }
 
 .accordion-button:hover {
-  background-color: #5e5349;
+  background-color: var( --boton-background-color);
   color: #ffffff;
 }
 
 .accordion-body {
-  background-color: #f7ece4cf;
+  background-color: var(--color-fondo-cabecera);
   color: #333;
   padding: 15px;
   border-radius: 0 0 5px 5px;
@@ -426,18 +428,18 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #000 !important;
-  background: none !important;
-  border: none !important;
-  outline: none !important;
-  box-shadow: none !important;
-  text-decoration: none !important;
-  padding: 0 !important;
+  color: var(--color-titulo);
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  text-decoration: none;
+  padding: 0;
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.5);
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -445,10 +447,10 @@
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  opacity: 0.8 !important;
-  transition: opacity 0.3s ease !important;
-  background: none !important;
-  color: #000 !important;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  background: none;
+  color: #000;
 }
 
 .accordion-item button::before,
@@ -528,7 +530,7 @@
 
 
 
-/* Tablets (min-width: 481px) y (max-width: 768px) */
+/* Tablets */
 @media (min-width: 481px) and (max-width: 768px) {
   .libreria-cabecera,
   .section-2,
@@ -557,7 +559,7 @@
     font-family: "Forum", serif;
     text-align: center;
     background-color: transparent;
-    color: var(--color-secundario);
+    color: var(--color-titulo);
     margin-top: 20px;
     font-size: 25px;
 }
@@ -643,7 +645,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 34px;
-  color: white;
+  color:var(--color-texto-white);
   font-size: 14px;
 }
 .section-2  .cita{
@@ -653,14 +655,13 @@
   margin-left: 65px;
   padding: 20px;
   font-size: 25px;
-  color: rgb(95 87 76);
+  color: var(--color-principal);
 }
 
 .section-2 .cita-p {
   width:70%;
   margin: 0 auto;
   text-align: justify;
-
   margin-top: 50px;
   margin-bottom: 20px;
   font-size: 15px;
@@ -780,7 +781,7 @@
     font-family: "Forum", serif;
     text-align: center;
     background-color: transparent;
-    color: var(--color-secundario);
+    color: var(--color-titulo);
     margin-top: 20px;
     font-size: 25px;
 }
@@ -868,7 +869,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-right: 34px;
-  color: white;
+  color: var(--color-texto-white);
   font-size: 14px;
 }
 .section-2  .cita{
@@ -878,7 +879,7 @@
   margin-left: 59px;
   padding: 20px;
   font-size: 25px;
-  color: rgb(95 87 76);
+  color: var(--color-principal);
 }
 
 .section-2 .cita-p {
