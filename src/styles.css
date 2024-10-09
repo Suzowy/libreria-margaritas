@@ -1,6 +1,6 @@
 
 :root {
-  --color-contain:#fff5e667;
+  --color-contain:#e8decf4c;
   --color-principal: #8f7b61;  /*base*/
   --color-secundario: #c1ac90;  /*fondos textos*/
   --color-secundario-transparente: #c1ac90d3;
@@ -277,5 +277,5 @@ q::after {
 @media (max-width: 480px) {
   h1 { font-size: 1.5rem; }
   h2 { font-size: 1.25rem; }
-  p { font-size: 0.75rem; } /* 12px */
+  p { font-size: 0.875rem; } /* 12px */
 }
