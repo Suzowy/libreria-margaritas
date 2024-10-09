@@ -475,7 +475,7 @@ cite {
 
 .enlaces h2 {
   color: var(--color-boton);
-  font-size: 20px;
+  font-size: 16px;
   font-weight: lighter;
   text-transform: uppercase;
   padding-top: 20px;
@@ -494,8 +494,8 @@ cite {
 .fotografia6 img,
 .fotografia7 img,
 .fotografia8 img {
-  width: 250px;
-  height: 250px;
+  width: 180px;
+  height: 180px;
 }
 
 /*seccion6 */
@@ -604,6 +604,13 @@ cite {
     width: 27vw;
 
     top: -30vh;
+  }
+
+  .fotografia6 img,
+  .fotografia7 img,
+  .fotografia8 img {
+    width: 130px;
+    height: 130px;
   }
 
   .foto-about img {
@@ -841,8 +848,8 @@ cite {
   .fotografia6 img,
   .fotografia7 img,
   .fotografia8 img {
-    width: 200px;
-    height: auto;
+    width: 100px;
+    height: 100px;
   }
 
   .foto-about {
@@ -1153,9 +1160,9 @@ cite {
   }
 
   .enlaces {
-    flex-direction: column;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    flex-direction: row;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .enlaces h2 {
@@ -1167,8 +1174,8 @@ cite {
   .fotografia6 img,
   .fotografia7 img,
   .fotografia8 img {
-    width: 35vw;
-    height: auto;
+    width: 120px;
+    height: 120px;
   }
 
   .foto-about {
