@@ -60,7 +60,7 @@ header {
   background:var(--color-fondo-cabecera);
   position: fixed;
   text-transform: uppercase;
-
+  box-shadow: 0 4px 6px rgba(37, 37, 37, 0.198);
 }
 
 header ul {
@@ -112,6 +112,7 @@ header a:hover {
     align-items: center;
     padding: 0 15px;
     background: none;
+    box-shadow: none;
   }
 
   header ul {

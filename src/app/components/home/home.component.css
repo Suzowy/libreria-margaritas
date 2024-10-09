@@ -53,7 +53,7 @@
 
 .title1 {
   font-size: 40px;
-  color:var(--color-texto-white);
+  color: var(--color-texto-white);
   font-family: "Bodoni Moda SC", serif;
   font-weight: lighter;
   text-transform: uppercase;
@@ -62,7 +62,7 @@
 
 .title2 {
   font-size: 40px;
-  color:var(--color-texto-white);
+  color: var(--color-texto-white);
   font-family: "Allura", cursive;
   font-weight: lighter;
   text-transform: uppercase;
@@ -75,7 +75,7 @@
   font-family: "Bodoni Moda", serif;
   margin: 0 auto;
   margin-top: 90px;
-  color:var(--color-fondo-cabecera);
+  color: var(--color-texto-white);
   width: 70%;
   text-align: center;
   font-size: 5vw;
@@ -87,9 +87,10 @@
 .subtitulo {
   position: relative;
   font-family: "Nanum Myeongjo", serif;
+  font-weight: lighter;
   margin: 0 auto;
   margin-top: 70px;
-  color:var(  --color-fondo-cabecera);
+  color: var(--color-texto-white);
   width: 45%;
   text-align: center;
   z-index: 1;
@@ -103,7 +104,8 @@
   height: 100vh;
   overflow: hidden;
   margin-bottom: 100px;
-  background-color: #80726489;
+  background-color: #48321e49;
+
 }
 
 .cita,
@@ -111,7 +113,7 @@ cite {
   font-size: 0.9vw;
   position: relative;
   z-index: 1;
-  color:var(--color-fondo-cabecera);
+  color: var(--color-fondo-cabecera);
 }
 
 .forma-fondo {
@@ -122,6 +124,7 @@ cite {
   border-top-right-radius: 50%;
   transform: translateY(-50%);
   background-color: var(--color-forma);
+  z-index: 10;
 }
 
 .cabecera::before {
@@ -138,8 +141,14 @@ cite {
 
 .cabecera .button {
   font-family: "Forum", serif;
-  background-color:var( --color-boton);
-  color: black;
+  background-color: var(--color-boton);
+  color: var(--color-texto);
+  font-weight: 700;
+}
+
+.cabecera .button:hover {
+  color: var(--color-texto-white);
+  font-weight: lighter;
 }
 
 /* seccion 1 Seamos sinceros... */
@@ -153,7 +162,7 @@ cite {
 }
 
 .textos {
-  color:var(--color-texto);
+  color: var(--color-texto);
   width: 50%;
   height: auto;
   margin-top: 70px;
@@ -189,7 +198,7 @@ cite {
   margin-top: 13px;
   margin-bottom: 10px;
   font-size: 25px;
-  color: var( --color-titulo);
+  color: var(--color-titulo);
 }
 
 .fotografia {
@@ -230,7 +239,7 @@ cite {
 
 .parrafo1 {
   position: relative;
-  background-color: var( --color-secundario);
+  background-color: var(--color-secundario-transparente);
   width: 120%;
   height: 250px;
   padding: 50px;
@@ -303,7 +312,7 @@ cite {
 }
 
 .parrafo1-3 h2 {
-  background-color: var(--color-secundario);
+  background-color: var(--color-secundario-transparente);
   width: 120%;
   padding-left: 60px;
   padding-top: 40px;
@@ -397,9 +406,9 @@ cite {
 .fotografia4 img {
   position: absolute;
   width: 65%;
-  height: auto;
+  height: 60vh;
   left: 6vw;
-  top: -20vh;
+  top: -28vh;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   object-fit: cover;
@@ -447,7 +456,7 @@ cite {
   text-align: center;
   padding-top: 150px;
   padding-bottom: 150px;
-  background-color: var(--color-principal);
+  background-color: var(--color-secundario-transparente);
   gap: 20px;
 }
 
@@ -465,7 +474,7 @@ cite {
 }
 
 .enlaces h2 {
-  color:var(--color-boton);
+  color: var(--color-boton);
   font-size: 20px;
   font-weight: lighter;
   text-transform: uppercase;
@@ -587,8 +596,8 @@ cite {
 
   .fotografia4 img {
     width: 27vw;
-    height: auto;
-    top: -18vh;
+
+    top: -30vh;
   }
 
   .foto-about img {
@@ -750,7 +759,7 @@ cite {
   }
 
   .textos4 .h4-1 {
-    background-color:var(--color-secundario);
+    background-color: var(--color-secundario);
     position: absolute;
     color: var(--color-texto-white);
     font-size: 12px;
@@ -909,7 +918,6 @@ cite {
     width: 100%;
     height: 63%;
     transform: translateY(-230px);
-
   }
 
   .logo {
@@ -922,7 +930,7 @@ cite {
     font-size: 12px;
   }
 
-  .titulo{
+  .titulo {
     width: 100%;
     font-size: 32px;
   }
@@ -1005,7 +1013,7 @@ cite {
     margin-top: -100px;
   }
 
-  .parrafo2{
+  .parrafo2 {
     position: relative;
     top: -130px;
   }
@@ -1018,25 +1026,26 @@ cite {
     margin-top: -55px;
     text-align: justify;
     width: 100%;
-    line-height: 2.0;
+    line-height: 2;
     font-size: 15px;
     position: absolute;
     font-weight: 600;
     background: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.651) 68%,
-        rgba(0, 0, 0, 0));
+      to bottom,
+      rgba(0, 0, 0, 0.651) 68%,
+      rgba(0, 0, 0, 0)
+    );
     margin-left: 0px;
     color: var(--color-texto-white);
-}
+  }
 
-  .fotografia2  img {
+  .fotografia2 img {
     width: 100%;
     height: 70vh;
     margin-top: -56px;
     margin-left: 0px;
     border-top-right-radius: 0;
-}
+  }
 
   .textos3 h2 {
     margin-top: -100px;
@@ -1071,7 +1080,7 @@ cite {
   }
 
   .textos4 .h4-1 {
-    background-color:var(--color-secundario);
+    background-color: var(--color-secundario);
     position: absolute;
     color: var(--color-texto-white);
     font-size: 12px;

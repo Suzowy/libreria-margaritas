@@ -1,15 +1,17 @@
 
 :root {
+  --color-contain:#fff5e667;
   --color-principal: #8f7b61;  /*base*/
-  --color-secundario: #c1ac90;  /*fondos */
-  --color-titulo:#4a3b29;
-  --color-texto: #6f604d;   /*texto normal*/
+  --color-secundario: #c1ac90;  /*fondos textos*/
+  --color-secundario-transparente: #c1ac90d3;
+  --color-titulo:#805541;
+  --color-texto: #b28564;   /*texto normal*/
   --color-texto-white: white; /*texto blanco*/
   --color-boton: #efe2d2;    /*background-boton */
   --boton-background-color: #706251; /*boton hover*/
   --color-hover-boton: white; /*letras hover boton*/
   --color-fondo-cabecera: #f9f3ec;
---color-forma:#513b22ca;
+--color-forma:#8f7b6173;
 --color-footer:#9c938a;
   font-size: 15px; /* 1 rem = 16px */
 }
@@ -80,6 +82,7 @@ ul {
   overflow-y: hidden;
   height: auto;
   position: relative;
+  background-color: var(--color-contain);
 }
 
 .section {
