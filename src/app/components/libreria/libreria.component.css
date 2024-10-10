@@ -1,14 +1,14 @@
 
-
 .libreria-cabecera {
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
+  overflow: hidden; /* Para evitar el desbordamiento durante la animación */
 }
 
-.libreria-cabecera  h1 {
+.libreria-cabecera h1 {
   font-family: "Forum", serif;
   text-transform: uppercase;
   width: 120%;
@@ -19,8 +19,19 @@
   margin-top: 40px;
   color: var(--color-texto-white);
   line-height: 1;
-  background-color:var(--color-secundario-transparente);
+  background-color: var(--color-secundario-transparente);
   z-index: 10;
+  opacity: 0; /* Comienza oculto */
+  transform: translateX(-100%); /* Desplazado a la izquierda */
+  animation: slideInLeft 2s forwards; /* Aplicar animación */
+  animation-delay: 0.5s; /* Retrasar la animación */
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1; /* Hacerlo visible */
+    transform: translateX(0); /* Mover a su posición original */
+  }
 }
 
 .textos {
@@ -29,6 +40,10 @@
   height: auto;
   margin-top: 25px;
   font-size: 15px;
+  opacity: 0; /* Comienza oculto */
+  transform: translateX(-100%); /* Desplazado a la izquierda */
+  animation: slideInLeft 2s forwards; /* Aplicar animación */
+  animation-delay: 0.5s; /* Retrasar la animación */
 }
 
 .textos p {
@@ -40,8 +55,19 @@
 
 .fotografia {
   width: 50%;
-  height:auto;
+  height: auto;
   z-index: -1;
+  opacity: 0; /* Comienza oculto */
+  transform: translateX(100%); /* Desplazado a la derecha */
+  animation: slideInRight 2s forwards; /* Aplicar animación */
+  animation-delay: 0.5s; /* Retrasar la animación */
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1; /* Hacerlo visible */
+    transform: translateX(0); /* Mover a su posición original */
+  }
 }
 
 .fotografia img {

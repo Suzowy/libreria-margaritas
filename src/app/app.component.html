@@ -1,5 +1,10 @@
 <app-header></app-header>
 
+<!-- Contenedor del loader -->
+<div class="loader-container" *ngIf="isLoading">
+    <span class="loader"></span>
+</div>
+
 <router-outlet></router-outlet>
 
 <button class="btn-back-to-top" (click)="scrollToTop()" *ngIf="showScrollToTopButton">

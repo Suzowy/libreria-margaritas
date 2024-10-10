@@ -3,6 +3,7 @@
   height: 100vh;
   display: flex;
   align-items: center;
+  overflow: hidden; /* Para evitar el desbordamiento durante la animación */
 }
 
 .texto-about1 {
@@ -10,9 +11,20 @@
   padding-bottom: 120px;
   width: 25%;
   margin: 0 auto;
+  opacity: 0; /* Comienza oculto */
+  transform: translateY(-100%); /* Desplazado hacia arriba */
+  animation: slideInDown 2s forwards; /* Aplicar animación */
+  animation-delay: 0.5s; /* Retrasar la animación */
 }
 
-h5{
+@keyframes slideInDown {
+  to {
+    opacity: 1; /* Hacerlo visible */
+    transform: translateY(0); /* Mover a su posición original */
+  }
+}
+
+h5 {
   font-family: "Forum", serif;
   text-transform: uppercase;
   color: var(--color-titulo);
@@ -28,7 +40,17 @@ p {
   width: 38%;
   margin: 0 auto;
   margin-top: 90px;
-  overflow: hidden;
+  opacity: 0; /* Comienza oculto */
+  transform: translateX(100%); /* Desplazado a la derecha */
+  animation: slideInRight 2s forwards; /* Aplicar animación */
+  animation-delay: 0.5s; /* Retrasar la animación */
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1; /* Hacerlo visible */
+    transform: translateX(0); /* Mover a su posición original */
+  }
 }
 
 .foto-about img {
