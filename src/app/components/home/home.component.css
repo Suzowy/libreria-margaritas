@@ -1320,7 +1320,7 @@ cite {
 }
 
 /* moviles pequeñisimos */
-@media (max-width: 375px) {
+@media (max-width: 376px) {
   .estrella {
     width: 15%;
   }
