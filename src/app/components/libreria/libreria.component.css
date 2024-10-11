@@ -1015,3 +1015,32 @@
 }
 }
 
+@media (max-width: 320px){
+
+  .section-2 .cita{
+    margin-top: -60px;
+    width: 100%;
+    margin-left: 0px;
+}
+
+.fotografia-section-2 img{
+  width: -webkit-fill-available;
+  height: auto;
+  margin-left: 0px;
+}
+
+.section-2 .p-white{
+  width: 150%;
+}
+
+.section-3 h5 {
+  height: 60vh;
+}
+
+.section-5 .button {
+  margin-left: 39px;
+}
+
+
+}
+

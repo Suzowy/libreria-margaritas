@@ -678,7 +678,63 @@ article p {
     font-size: 14px;
   }
 
+}
 
+@media (max-width: 375px) {
 
+  .texto-about2 .p-1 {
+    margin-top: -575px;
+}
+
+.about2{
+  margin-top: 60px;
+}
+
+.texto-about3  h5 {
+  margin-top: -85px;
+}
+
+.foto-about3 .botones {
+  margin-top: 120px;
+}
+
+.manifiesto  h5 {
+  padding-top: 45px;
+}
 
 }
+
+@media (max-width: 320px) {
+
+
+  .about2{
+    margin-top: 100px;
+  }
+
+  .destacado-about2  h5 {
+    font-size: 22px;
+}
+
+  .texto-about2  .p-1 {
+    margin-top: -616px;
+}
+
+.texto-about3  p {
+  font-size: 15px;
+}
+
+.texto-left p {
+  margin-top: -130px;
+}
+
+.testimonios h1, .about7  h1{
+  font-size: 22px;
+}
+
+.about7-final p{
+  font-size: 15px;
+  width: 100%;
+}
+
+}
+

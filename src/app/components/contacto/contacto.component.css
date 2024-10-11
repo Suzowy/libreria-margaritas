@@ -22,7 +22,6 @@
   }
 }
 
-
 .contact-cabecera .textos {
   color: var(--color-texto);
   width: 50%;
@@ -65,7 +64,6 @@
   }
 }
 
-
 .contact-cabecera .fotografia img {
   border-top-left-radius: 40%;
   width: 100%;
@@ -78,7 +76,6 @@
   margin-left: 17vw;
   margin-bottom: 50px;
 }
-
 
 .quotes {
   font-size: 0.9vw;
@@ -198,7 +195,7 @@
   font-size: 1rem;
   padding: 1rem 1.2rem;
   outline: none;
-  background-color:white;
+  background-color: white;
   line-height: 2.1rem;
   z-index: 1;
 }
@@ -212,7 +209,7 @@
   top: 1rem;
   left: 1.5rem;
   z-index: -1;
-  color: var(--color-secundario)!important;
+  color: var(--color-secundario) !important;
   font-size: 1.3rem;
   transition: all 300ms ease-in-out;
   pointer-events: none;
@@ -308,9 +305,9 @@
   width: 40%;
   margin-top: 100px;
 }
-h1{
+h1 {
   text-transform: uppercase;
-    color: var(--color-titulo);
+  color: var(--color-titulo);
 }
 
 .section-3 .fotografia {
@@ -320,7 +317,6 @@ h1{
   align-content: center;
   justify-content: center;
   align-items: center;
-
 }
 
 .section-3 .fotografia img {
@@ -384,7 +380,7 @@ h1{
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  transition: all .4s ease;
+  transition: all 0.4s ease;
 }
 
 button svg {
@@ -392,7 +388,8 @@ button svg {
   height: 1.25rem;
 }
 
-.btn span:nth-child(2),.btn span:nth-child(3) {
+.btn span:nth-child(2),
+.btn span:nth-child(3) {
   position: absolute;
   top: 40px;
   color: #fff;
@@ -410,7 +407,8 @@ button svg {
   box-shadow: 0 10px 15px -3px #2a374a4f, 0 4px 6px -2px #25344b17;
 }
 
-.btn:hover span:nth-child(2), .btn:focus span:nth-child(3) {
+.btn:hover span:nth-child(2),
+.btn:focus span:nth-child(3) {
   top: 0;
 }
 
@@ -597,10 +595,10 @@ button svg {
     border-bottom-right-radius: 0%;
     width: 100%;
     padding: 10px;
-top: 0px;
+    top: 0px;
   }
 
-  .form__button{
+  .form__button {
     width: 90%;
     left: 20px;
     margin-top: 151px;
@@ -616,7 +614,7 @@ top: 0px;
   .form-box {
     position: relative;
     top: 0px;
-}
+  }
 
   .form__container {
     width: 100%;
@@ -630,11 +628,11 @@ top: 0px;
     max-width: 100%;
   }
 
-  .btn{
+  .btn {
     width: 70%;
     left: 61px;
     top: 60px;
-}
+  }
 
   .section-3 {
     flex-direction: column;
@@ -648,11 +646,11 @@ top: 0px;
     height: auto;
   }
 
-  .section-3  .fotografia  img {
+  .section-3 .fotografia img {
     position: relative;
     width: 100%;
     top: -400px;
-}
+  }
   .map {
     position: relative;
     width: 90%;
@@ -660,7 +658,7 @@ top: 0px;
     top: 400px;
   }
 
-  .direccion p{
+  .direccion p {
     margin-top: 5px;
     text-align: center;
   }
@@ -674,7 +672,27 @@ top: 0px;
     text-align: center;
   }
 
-  .form__group--textarea, #options {
+  .form__group--textarea,
+  #options {
     width: 96%;
+  }
 }
+
+@media (max-width: 375px) {
+  .contact-cabecera .textos h1,
+  .h1-form,
+  .form-box h1 {
+    font-size: 20px;
+  }
+
+  .contact-cabecera .fotografia img {
+    height: 340px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .btn {
+    left: 44px;
+  }
 }

@@ -105,7 +105,6 @@
   overflow: hidden;
   margin-bottom: 100px;
   background-color: #48321e66;
-
 }
 
 .cita,
@@ -124,7 +123,6 @@ cite {
   border-top-right-radius: 50%;
   transform: translateY(-50%);
   background-color: var(--color-forma);
-
 }
 
 .cabecera::before {
@@ -339,7 +337,7 @@ cite {
 
 .fotografia3 {
   width: 50%;
-  height:80vh;
+  height: 80vh;
   z-index: -1;
 }
 
@@ -552,11 +550,9 @@ cite {
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-
   .estrella {
     width: 9%;
   }
-
 
   .cita,
   cite {
@@ -600,13 +596,11 @@ cite {
     margin-top: -107px;
   }
 
-  .fotografia4  img {
+  .fotografia4 img {
     width: 50%;
     height: 44vh;
     top: -23vh;
-}
-
-
+  }
 
   .fotografia6 img,
   .fotografia7 img,
@@ -623,7 +617,6 @@ cite {
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-
   .estrella {
     width: 9%;
   }
@@ -859,8 +852,7 @@ cite {
   .fotografia6,
   .fotografia7,
   .fotografia8 {
-
-width: 100%;
+    width: 100%;
     overflow: hidden;
   }
 
@@ -886,7 +878,6 @@ width: 100%;
   .enlaces a:hover img {
     transform: scale(1.05);
   }
-
 
   .foto-about {
     height: auto;
@@ -969,7 +960,6 @@ width: 100%;
 }
 
 @media (max-width: 480px) {
-
   .estrella {
     width: 12%;
   }
@@ -1220,8 +1210,7 @@ width: 100%;
   .fotografia6,
   .fotografia7,
   .fotografia8 {
-
-width: 100%;
+    width: 100%;
     overflow: hidden;
   }
 
@@ -1327,5 +1316,185 @@ width: 100%;
   .fotografia4,
   .fotografia5 {
     display: none;
+  }
+}
+
+/* moviles pequeñisimos */
+@media (max-width: 375px) {
+  .estrella {
+    width: 15%;
+  }
+
+  .forma-fondo {
+    transform: translateY(-200px);
+  }
+
+  .logo {
+    margin-top: 100px;
+    width: 90%;
+  }
+
+  .cita,
+  cite {
+    font-size: 11px;
+  }
+
+  .subtitulo {
+    margin-top: 100px;
+    font-size: 12px;
+    width: 70%;
+  }
+
+  .button {
+    width: 180px;
+    font-size: 9px;
+  }
+
+  .textos h2 {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  .textos .texto-blanco {
+    top: 474px;
+    background: #00000014;
+    font-size: 15px;
+    padding: 10px;
+    margin-left: 15px;
+  }
+
+  .fotografia img {
+    margin-top: -60px;
+  }
+
+  .parrafo1 {
+    margin-left: -75px;
+    width: 120%;
+    height: 220px;
+  }
+
+  .parrafo2 p {
+    padding-top: 238px;
+    padding-bottom: 120px;
+    font-size: 14px;
+  }
+
+  .fotografia2 img {
+    width: 120%;
+    margin-left: -40px;
+  }
+
+  .section-5 h1 {
+    font-size: 30px;
+  }
+
+  .enlaces img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .textos6 h1 {
+    margin-top: -500px;
+  }
+
+  .section-6 button {
+    margin-left: 100px;
+    margin-top: 350px;
+  }
+}
+
+@media (max-width: 320px) {
+  .estrella {
+    width: 20%;
+  }
+
+
+
+  .logo {
+    margin-top: 80px;
+    width: 100%;
+  }
+
+  .cita,
+  cite {
+    font-size: 10px;
+  }
+
+  .subtitulo {
+    margin-top: 120px;
+    font-size: 10px;
+    width: 75%;
+  }
+
+  .button {
+    width: 160px;
+    font-size: 8px;
+  }
+
+  .textos h2 {
+    font-size: 16px;
+  }
+
+  .textos .texto-blanco {
+    top: 887px;
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 10px;
+  }
+
+  .fotografia img {
+    margin-top: -50px;
+  }
+
+  .parrafo1 {
+    margin-left: -78px;
+    width: 130%;
+    height: 200px;
+  }
+
+  .parrafo2 p {
+    padding-top: 300px;
+    padding-bottom: 100px;
+    font-size: 13px;
+  }
+
+  .parrafo1 p{
+    font-size: 17px;
+}
+
+.textos2  h2 {
+  font-size: 50px;
+}
+
+
+  .fotografia2 img {
+    width: 115%;
+    margin-left: -30px;
+  }
+
+  .textos3  h2 {
+    margin-left: -60px;
+}
+
+.textos4 .h4-2{
+  margin-left: 85px;
+}
+
+.section-4 .button {
+  margin-left: 80px;
+}
+
+  .section-5 h1 {
+    font-size: 28px;
+  }
+
+
+  .textos6 h1 {
+    margin-top: -470px;
+  }
+
+  .section-6 button {
+    margin-left:74px;
+    margin-top: 300px;
   }
 }
