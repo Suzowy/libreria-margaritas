@@ -85,8 +85,7 @@ ul {
   transform: translateY(50px);
   transition: opacity 2s ease, transform 1s ease;
   margin-bottom: 100px;
-  background-color: #ddd;
-  height: 900px;
+  height: 1000px;
 }
 
 .section.active {
