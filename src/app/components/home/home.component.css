@@ -91,7 +91,7 @@
   margin: 0 auto;
   margin-top: 70px;
   color: var(--color-texto-white);
-  width: 45%;
+  width: 30%;
   text-align: center;
   z-index: 1;
 }
@@ -101,9 +101,9 @@
   text-align: center;
   margin: 0 auto;
   position: relative;
-  height: 100vh;
-  overflow: hidden;
-  margin-bottom: 100px;
+  height: fit-content;
+  overflow: auto;
+  padding-bottom: 100px;
   background-color: #48321e66;
 }
 
@@ -115,13 +115,13 @@ cite {
   color: var(--color-fondo-cabecera);
 }
 
-.forma-fondo {
-  width: 60%;
-  height: 100vh;
+.forma-fondo{
+  width: 40%;
+  height: 460px;
   margin: 0 auto;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
   background-color: var(--color-forma);
 }
 
@@ -153,21 +153,18 @@ cite {
 .section-1 {
   position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   height: 100vh;
-  padding: 30px;
 }
 
 .textos {
   color: var(--color-texto);
   width: 50%;
   height: auto;
-  margin-top: 70px;
+  margin-top: 50px;
   margin-left: 50px;
   padding: 10px;
   font-size: 1vw;
-  z-index: -1;
 }
 
 .textos p {
@@ -177,17 +174,7 @@ cite {
   width: 65%;
 }
 
-.linea-corta img {
-  display: none;
-  /* position: absolute;
-  width: 120vw;
-  height: 300px;
-  filter: opacity(36%) brightness(220%) hue-rotate(16deg);
-  top: 174%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  z-index: 100; */
-}
+
 
 .textos h2 {
   text-align: center;
@@ -205,8 +192,8 @@ cite {
 }
 
 .fotografia img {
-  width: 80%;
-  height: 70vh;
+  width: 90%;
+  height: 75vh;
   margin: 0 auto;
   z-index: -1;
   border-top-left-radius: 50%;
@@ -276,12 +263,12 @@ cite {
 
 .fotografia2 {
   width: 60%;
-  height: 100vh;
+  height: auto;
 }
 
 .fotografia2 img {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   border-top-left-radius: 0;
   border-top-right-radius: 20%;
 }
@@ -337,13 +324,13 @@ cite {
 
 .fotografia3 {
   width: 50%;
-  height: 80vh;
+  height: auto;
   z-index: -1;
 }
 
 .fotografia3 img {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   border-top-left-radius: 0;
   border-top-right-radius: 20%;
 }
@@ -413,7 +400,7 @@ cite {
 }
 .fotografia5 img {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
 }
 
 .section-4 button {
@@ -561,15 +548,14 @@ cite {
   }
 
   .forma-fondo {
-    width: 70%;
-    height: 80vh;
-    transform: translateY(-295px);
-  }
+    width: 57%;
+    height: 461px;
+    transform: translateY(-461px);
+}
 
   .fotografia img {
-    width: 100%;
-    height: auto;
-    transform: translateY(1%);
+    width: 95%;
+height: 60vh;
   }
 
   p {
@@ -622,10 +608,10 @@ cite {
   }
 
   .forma-fondo {
-    width: 100%;
-    height: 63%;
-    transform: translateY(-285px);
-  }
+    width: 90%;
+    height: 520px;
+    transform: translateY(-520px);
+}
 
   .logo {
     margin-top: 120px;
@@ -964,11 +950,11 @@ cite {
     width: 12%;
   }
 
-  .forma-fondo {
+  .forma-fondo{
     width: 100%;
-    height: 63%;
-    transform: translateY(-230px);
-  }
+    height: 420px;
+    transform: translateY(-420px);
+}
 
   .logo {
     margin-top: 120px;
@@ -1326,11 +1312,12 @@ cite {
   }
 
   .forma-fondo {
-    transform: translateY(-200px);
-  }
+    height: 300px;
+    transform: translateY(-300px);
+}
 
   .logo {
-    margin-top: 100px;
+    margin-top: 90px;
     width: 90%;
   }
 
