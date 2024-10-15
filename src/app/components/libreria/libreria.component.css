@@ -849,6 +849,7 @@
     font-size: 12px;
   }
 
+
   .textos5  p {
     width: 90%;
     margin-left: 15px;
@@ -981,11 +982,10 @@
     text-align: left;
 }
 */
-  .left  {
-    top: 20vh;
-    left: -22px;
-  }
-
+.left[_ngcontent-ng-c18552447] {
+  top: 20vh;
+  left: -50px;
+}
   .left ul{
     font-size: 13px;
 

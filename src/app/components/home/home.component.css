@@ -995,7 +995,8 @@ height: 60vh;
     width: 90%;
     padding: 10px;
     text-align: justify;
-  }
+    position: relative;
+  top: -200px;  }
 
   .linea-corta img {
     display: none;
@@ -1005,6 +1006,8 @@ height: 60vh;
     font-family: "Nanum Myeongjo", serif;
     font-size: 20px;
     padding: 20px;
+    position: relative;
+    top: -116px;
   }
 
   .textos .texto-blanco {
@@ -1283,6 +1286,8 @@ height: 60vh;
     display: block;
     padding: 0px;
     height: auto;
+    position: relative;
+    top: 10px;
   }
 
   .textos2,
