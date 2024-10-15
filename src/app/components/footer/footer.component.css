@@ -11,7 +11,7 @@ footer {
   height: auto;
   background-color: var(--color-footer);
   padding-top: 20px;
-  padding-bottom: 60px;
+  padding-bottom: 70px;
 }
 
 footer h2 {
@@ -41,6 +41,7 @@ footer h2 {
   font-family: "Allura", cursive;
   font-weight: lighter;
   text-transform: uppercase;
+  margin-bottom: 50px;
   text-shadow:
     3px 0px 0 rgba(10, 10, 10, 0.7)
 }

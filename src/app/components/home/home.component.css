@@ -101,9 +101,9 @@
   text-align: center;
   margin: 0 auto;
   position: relative;
-  height: fit-content;
-  overflow: auto;
-  padding-bottom: 100px;
+  height: auto;
+  overflow:auto;
+  padding-bottom: 150px;
   background-color: #48321e66;
 }
 
@@ -154,7 +154,8 @@ cite {
   position: relative;
   display: flex;
   align-items: center;
-  height: 100vh;
+  height: auto;
+  top: -150px;
 }
 
 .textos {

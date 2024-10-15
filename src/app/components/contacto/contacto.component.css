@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  height: auto;
 }
 
 #fachada {
@@ -26,8 +26,7 @@
   color: var(--color-texto);
   width: 50%;
   height: auto;
-  margin-top: 70px;
-  margin-left: 50px;
+  margin-top: 100px;
   font-size: 1vw;
   animation: slideInFromTop 2s ease-out;
 }
@@ -416,7 +415,7 @@ button svg {
   box-shadow: none;
 }
 
-@media (max-width: 926px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .contact-cabecera .textos {
     width: 100%; /* Aumenta el ancho en pantallas pequeñas */
     margin: 0 auto; /* Centra el contenido */
@@ -427,6 +426,8 @@ button svg {
     margin-top: -80px;
     position: absolute;
     width: 100%;
+    color: var(--color-texto-white);
+    background-color: var(--color-secundario-transparente);
     font-weight: lighter;
     /* margin-bottom: 50px; */
   }
@@ -487,84 +488,84 @@ button svg {
     max-width: 100%; /* Asegura que no exceda el ancho del contenedor */
   }
 
-  .section-3{
-
+  .section-3 {
     height: auto;
     position: relative;
-
     flex-direction: column;
-    top: 400px;
-    padding-bottom: 138px;
+    top: 0px;
+  }
 
-}
-
-  .section-3 .fotografia img {
+  .section-3 .fotografia {
     width: 100%;
+    height: auto;
+  }
+
+  .fotografia img {
     height: auto;
   }
 
   .map {
-    width: 50%;
-    height: 30vh;
+    width: 60%;
+    height: 300px;
   }
 
   .direccion p {
-    font-size: 17px;
+    font-size: 20px;
     padding: 20px; /* Ajusta el margen superior */
   }
 }
 
-/* Responsive styles for mobile screens */
-@media (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 768px) {
   .contact-cabecera {
-    flex-direction: column; /* Mantiene la dirección de columna */
-    width: 100%; /* Asegura que ocupe el 100% del ancho */
-    margin-top: -31px;
-    height: auto; /* Ajusta la altura al contenido */
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    top: -50px;
   }
 
   .contact-cabecera .textos {
-    width: 100%; /* Ancho completo en móviles */
-    margin-top: 160px; /* Espaciado vertical */
-    margin-bottom: 25px;
+    width: 100%;
+    left: 0px;
   }
 
   .contact-cabecera .textos h1 {
     width: 100%;
-    font-size: 25px;
+    font-size: 30px;
     padding: 5px;
   }
 
   .contact-cabecera .textos p {
+    position: relative;
     width: 80%;
     font-size: 15px;
   }
 
+  .quotes {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
   .contact-cabecera button {
     width: 65%;
-    margin: 30px auto;
-    margin-left: 70px;
+    margin-top: 50px;
   }
+
   .contact-cabecera button a {
     font-size: 15px;
   }
 
   .contact-cabecera .fotografia {
-    width: 100%;
+    width: 70%;
+    height: auto;
   }
   .contact-cabecera .fotografia img {
-    width: 90%;
+    width: 100%;
     height: 400px;
-    margin-left: 22px;
+
     border-top-left-radius: 0%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-  }
-
-  .contact-cabecera button {
-    width: 90%;
-    margin: 20px 20px;
-    font-size: 4vw;
   }
 
   .formularios {
@@ -617,8 +618,7 @@ button svg {
   }
 
   .form-box {
-    position: relative;
-    top: 0px;
+   width: 100%;
   }
 
   .form__container {
@@ -655,22 +655,22 @@ button svg {
   .section-3 .fotografia img {
     position: relative;
     width: 100%;
-    top: -400px;
+
   }
   .map {
-    position: relative;
     width: 90%;
-    height: 30vh;
-    top: 400px;
+    height: 300px;
+
   }
 
-  .direccion p {
-    margin-top: 5px;
+  .direccion p{
+    margin: 50px;
+    font-size: 17px;
     text-align: center;
   }
 
   .textos h1 {
-    font-size: 5vw;
+    font-size:5vw;
   }
 
   .formularios h5 {
@@ -684,30 +684,163 @@ button svg {
   }
 }
 
-@media (max-width: 376px) {
-  .contact-cabecera .textos h1,
-  .h1-form,
-  .form-box h1 {
+@media (max-width: 480px) {
+  .contact-cabecera {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    top: 10px;
+  }
+
+  .contact-cabecera .textos {
+    width: 100%;
+    left: 0px;
+  }
+
+  .contact-cabecera .textos h1 {
+    width: 100%;
     font-size: 20px;
+    padding: 5px;
   }
 
+  .contact-cabecera .textos p {
+    position: relative;
+    width: 85%;
+    font-size: 15px;
+  }
+
+  .contact-cabecera button {
+    width: 65%;
+    margin-top: 50px;
+  }
+
+  .contact-cabecera button a {
+    font-size: 10px;
+  }
+
+  .contact-cabecera .fotografia {
+    width: 90%;
+    height: auto;
+  }
   .contact-cabecera .fotografia img {
-    height: 340px;
-    margin-left: 20px;
+    width: 100%;
+    height: 300px;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
   }
 
-  .btn{
-    top: 100px;
-}
+  .formularios {
+    display: inline;
+    flex-direction: column;
+    width: 100%;
+  }
 
-.section-3 {
-  margin-top: 0px;
-}
+  .formulario {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    margin-left: 0px;
+    padding: 20px;
+  }
 
-}
+  .formularios .fotografia img {
+    display: none;
+  }
 
-@media (max-width: 320px) {
+  .form__input[type="select"],
+  .form__input {
+    height: auto;
+    font-size: 12px;
+    line-height: 1.5rem;
+  }
+
+  .cajon {
+    color: var(--color-principal);
+    font-size: 15px;
+    background-color: transparent;
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+    width: 100%;
+    padding: 10px;
+    top: 0px;
+  }
+
+  .form__button {
+    width: 90%;
+    left: 20px;
+    margin-top: 151px;
+    font-weight: lighter;
+  }
+
+  .h1-form {
+    color: var(--color-titulo);
+    text-align: center;
+    margin-bottom: 65px;
+    font-size: 25px;
+  }
+
+  .form-box {
+   width: 100%;
+  }
+
+  .form__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form__left,
+  .form__right {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+
   .btn {
-    left: 44px;
+    top: 60px;
+  }
+
+  .section-3 {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 0px;
+  }
+
+  .section-3 .fotografia {
+    width: 100%;
+    height: auto;
+  }
+
+  .section-3 .fotografia img {
+    position: relative;
+    width: 100%;
+
+  }
+  .map {
+    width: 90%;
+    height: 300px;
+
+  }
+
+  .direccion p{
+    margin: 50px;
+    font-size: 17px;
+    text-align: center;
+  }
+
+
+
+  .formularios h5 {
+    width: 80%;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .form__group--textarea,
+  #options {
+    width: 96%;
   }
 }
+
