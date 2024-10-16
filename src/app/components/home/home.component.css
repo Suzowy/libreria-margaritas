@@ -1007,14 +1007,14 @@ height: 60vh;
     top: -130px;
   }
 
-  .textos[_ngcontent-ng-c1874831204]   .texto-blanco[_ngcontent-ng-c1874831204] {
+  .textos .texto-blanco{
     width: 90%;
     top: 490px;
-    /* font-size: 15px; */
-    padding: 10px;
+     font-size: 15px;
+    padding-top: 50px;
     text-align: justify;
     position: absolute;
-    /* color: var(--color-texto-white); */
+    color: var(--color-texto-white);
     margin-left: 20px;
     z-index: 100;
 }
