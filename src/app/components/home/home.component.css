@@ -1013,7 +1013,7 @@ height: 60vh;
      font-size: 15px;
     padding-top: 50px;
     text-align: justify;
-    position: absolute;
+    position: relative;
     color: var(--color-texto-white);
     margin-left: 20px;
     z-index: 100;
