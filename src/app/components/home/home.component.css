@@ -998,9 +998,6 @@ height: 60vh;
     position: relative;
   top: -200px;  }
 
-  .linea-corta img {
-    display: none;
-  }
 
   .textos h2 {
     font-family: "Nanum Myeongjo", serif;
@@ -1010,24 +1007,17 @@ height: 60vh;
     top: -116px;
   }
 
-  .textos .texto-blanco {
+  .textos .texto-blanco{
     width: 90%;
+    top: 490px;
     font-size: 15px;
     padding: 10px;
     text-align: justify;
     position: absolute;
     color: var(--color-texto-white);
     margin-left: 20px;
-    /* background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.814),
-      rgba(0, 0, 0, 0.449)
-    ); */
-    padding-top: 0;
-    padding-bottom: 200px;
     z-index: 100;
-  }
-
+}
   .fotografia {
     width: 100%;
     height: auto;
