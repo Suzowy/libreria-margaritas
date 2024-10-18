@@ -101,7 +101,7 @@
   text-align: center;
   margin: 0 auto;
   position: relative;
-  height: auto;
+  min-height: 100vh;
   overflow:auto;
   padding-bottom: 150px;
   background-color: #48321e66;
@@ -116,12 +116,13 @@ cite {
 }
 
 .forma-fondo{
-  width: 40%;
-  height: 460px;
+  width: 55%;
+  position: absolute;
+  height: 555px;
   margin: 0 auto;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  transform: translateY(-100%);
+  transform: translateX(41%) translateY(-100%);
   background-color: var(--color-forma);
 }
 
@@ -133,7 +134,7 @@ cite {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+height:100%;
   z-index: -1;
 }
 
@@ -154,24 +155,20 @@ cite {
   position: relative;
   display: flex;
   align-items: center;
-  height: auto;
-  top: -150px;
+  min-height: 100vh;
+  margin-top: 100px;
 }
 
 .textos {
   color: var(--color-texto);
   width: 50%;
-  height: auto;
-  margin-top: 50px;
-  margin-left: 50px;
-  padding: 10px;
-  font-size: 1vw;
+  top: 50px;
 }
 
 .textos p {
   margin: 0 auto;
-  text-align: left;
-  line-height: 1.6;
+  text-align: justify;
+  line-height: 2;
   width: 65%;
 }
 
@@ -179,11 +176,9 @@ cite {
 
 .textos h2 {
   text-align: center;
-  width: 100%;
   font-weight: lighter;
-  margin-top: 13px;
-  margin-bottom: 10px;
-  font-size: 25px;
+  top: 15px;
+  bottom: 15px;
   color: var(--color-titulo);
 }
 
@@ -193,10 +188,8 @@ cite {
 }
 
 .fotografia img {
-  width: 90%;
-  height: 75vh;
-  margin: 0 auto;
-  z-index: -1;
+  width: 85%;
+  height: 85vh;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }
@@ -207,14 +200,13 @@ cite {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .textos2 {
   width: 40%;
   height: auto;
-  font-size: 15px;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .textos2 p {
@@ -224,25 +216,24 @@ cite {
 }
 
 .parrafo1 {
-  position: relative;
+  position: absolute;
   background-color: var(--color-secundario-transparente);
-  width: 120%;
-  height: 250px;
-  padding: 50px;
+  width: 60%;
+  height: 240px;
+  padding: 20px;
   z-index: 10;
-  margin-top: -60px;
+  margin-top: -150px;
 }
 
 .parrafo1 p {
   color: var(--color-texto-white);
-  width: 50%;
+  width: 40%;
   font-size: 18px;
   margin-left: 100px;
 }
 
 .textos2 h2 {
   font-family: "Bodoni Moda SC", serif;
-  margin: 0 auto;
   text-align: left;
   color: var(--color-texto-white);
   text-transform: uppercase;
@@ -254,22 +245,23 @@ cite {
 }
 
 .parrafo2 {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .parrafo2 p {
-  margin-left: 80px;
+  margin-left: 100px;
+  line-height: 2;
   color: var(--color-texto);
 }
 
 .fotografia2 {
-  width: 60%;
+  width: 55%;
   height: auto;
 }
 
 .fotografia2 img {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   border-top-left-radius: 0;
   border-top-right-radius: 20%;
 }
@@ -280,47 +272,47 @@ cite {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .textos3 {
   width: 50%;
-  height: auto;
-  font-size: 15px;
-  line-height: 1.7;
-}
-
-.textos3 p {
-  margin: 0 auto;
-  text-align: left;
-  margin-top: 30px;
-  width: 65%;
 }
 
 .parrafo1-3 h2 {
   background-color: var(--color-secundario-transparente);
-  width: 120%;
+  position: absolute;
+  width: 70%;
+  top: 30px;
   padding-left: 60px;
   padding-top: 40px;
   padding-bottom: 40px;
   z-index: 10;
 }
 
+.textos3 p {
+  position: relative;
+  text-align: left;
+  margin-top: 20px;
+  width: 65%;
+line-height: 2;
+}
+
+
 .parrafo1-3 p,
 .parrafo2-3 p {
+  top: 50px;
   margin-left: 70px;
   color: var(--color-texto);
 }
 
 .textos3 h2 {
-  margin: 0 auto;
   text-align: left;
   color: var(--color-texto-white);
   text-transform: uppercase;
   font-weight: lighter;
-  margin-top: -60px;
   margin-bottom: 10px;
-  font-size: 45px;
+  font-size: 40px;
 }
 
 .fotografia3 {
@@ -331,18 +323,18 @@ cite {
 
 .fotografia3 img {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   border-top-left-radius: 0;
   border-top-right-radius: 20%;
 }
 
 /* seccion4 */
 .section-4 {
-  margin-top: 200px;
+  margin-top: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .textos4 h4,
@@ -354,19 +346,16 @@ cite {
 }
 
 .textos4 {
-  margin-top: 60px;
+  margin-top: -100px;
   width: 60%;
-  height: auto;
-  font-size: 17px;
   color: var(--color-texto);
 }
 
 .textos4 p {
-  line-height: 1.5;
+  line-height: 2;
   text-align: left;
-  margin-top: 30px;
   margin-left: 80px;
-  width: 40%;
+  width: 50%;
 }
 
 .imagenes {
@@ -384,11 +373,6 @@ cite {
   left: -35%;
 }
 
-.fotografia5 {
-  width: 100%;
-  z-index: 1;
-}
-
 .fotografia4 img {
   position: absolute;
   width: 60%;
@@ -399,12 +383,19 @@ cite {
   border-top-right-radius: 50%;
   object-fit: cover;
 }
+
+.fotografia5 {
+  width: 100%;
+  z-index: 1;
+}
+
 .fotografia5 img {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-4 button {
+  margin-top: 30px;
   margin-left: 75px;
 }
 
@@ -414,14 +405,13 @@ cite {
   position: relative;
   overflow: hidden;
   margin-top: 100px;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-5 h1 {
   text-align: center;
   text-transform: uppercase;
   color: var(--color-titulo);
-
   padding-top: 100px;
 }
 
@@ -491,41 +481,38 @@ cite {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .textos6 {
   color: var(--color-texto);
   width: 50%;
-  height: auto;
-  padding: 10px;
 }
 
 .textos6 h5 {
   text-align: left;
-  margin-left: 90px;
+  margin-left: 30px;
+  line-height: 1.5;
   margin-top: 40px;
-  width: 50%;
+  width: 60%;
 }
 
 .textos6 h1 {
   text-align: left;
   font-weight: lighter;
   text-transform: uppercase;
-  margin-left: 90px;
+  margin-left: 30px;
 }
 
 .foto-about {
-  margin: 0 auto;
   width: 50%;
   height: auto;
-  margin-left: 50px;
-  /* margin-top: 44px; */
+  margin-left: 70px;
 }
 
 .foto-about img {
-  width: 100%;
-  height: auto;
+  width: 80%;
+  height: 80vh;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 50%;
@@ -533,45 +520,29 @@ cite {
 }
 
 .section-6 button {
-  margin-left: 100px;
-  margin-top: 40px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-  .estrella {
-    width: 9%;
-  }
+@media (max-width: 1024px) {
 
   .cita,
   cite {
-    left: 50%;
     font-size: 12px;
   }
 
-  .forma-fondo {
-    width: 57%;
-    height: 461px;
-    transform: translateY(-461px);
-}
-
-  .fotografia img {
-    width: 95%;
-height: 60vh;
+  .subtitulo{
+    font-size: 15px;
   }
 
-  p {
-    width: 50%;
-    font-size: 12px;
-  }
-
+  /* seccion2 */
   .textos h2 {
     font-size: 20px;
   }
-  .parrafo1 {
-    width: 133%;
-    height: 284px;
-    margin-top: -221px;
-  }
+
+
+  /* seccion3 */
+
 
   .fotografia2 img,
   .fotografia3 img,
@@ -579,9 +550,6 @@ height: 60vh;
     height: 80vh;
   }
 
-  .textos3 h2 {
-    margin-top: -107px;
-  }
 
   .fotografia4 img {
     width: 50%;
@@ -597,21 +565,39 @@ height: 60vh;
   }
 
   .foto-about img {
-    width: 100%;
-    height: auto;
-    margin-top: 39px;
-  }
+    width: 80%;
+    height: 60vh;
+}
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+
+
+@media (max-width: 913px) {
+
+
+  /* seccion2 */
+  .parrafo1 {
+    width: 75%;
+    height: 245px;
+}
+
+/* seccion3 */
+.parrafo1-3  h2 {
+  width: 80%;
+  top: 10px;
+}
+
+}
+
+@media (max-width: 768px) {
   .estrella {
     width: 9%;
   }
 
   .forma-fondo {
-    width: 90%;
-    height: 520px;
-    transform: translateY(-520px);
+    width:100%;
+    height: 570px;
+    transform: translateY(-570px);
 }
 
   .logo {
@@ -640,34 +626,26 @@ height: 60vh;
     width: 100%;
     margin-left: 0;
     padding: 5px;
-    font-size: 3vw;
     z-index: 10;
   }
 
   .textos p {
     width: 90%;
     padding: 10px;
-    text-align: justify;
-  }
-
-  .linea-corta img {
-    display: none;
   }
 
   .textos h2 {
-    font-family: "Nanum Myeongjo", serif;
     font-size: 20px;
     padding: 20px;
   }
 
   .textos .texto-blanco {
-    width: 90%;
-    font-size: 20px;
+    width: 100%;
     padding: 20px;
+    font-size: 17px;
     text-align: center;
     position: absolute;
     color: var(--color-texto-white);
-    margin-left: 25px;
     padding-top: 0;
     padding-bottom: 200px;
     z-index: 100;
@@ -683,78 +661,69 @@ height: 60vh;
     width: 100%;
     height: auto;
     border-radius: 0%;
+    /* mask-image: linear-gradient(to top, rgb(255, 255, 255), rgba(233, 223, 223, 0.893)); */
+    z-index: -1;
+  }
+
+/* seccion2 */
+  .parrafo1{
+    width: 100%;
+    height: auto;
+    background-color: var(--color-secundario);
+}
+
+
+.parrafo2  p {
+text-align: center;
+  width: 100%;
+  margin-left: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 30px;
+  position: absolute;
+  font-size: 15px;
+  top: 630px;
+  color: var(--color-texto-white);
+  z-index: 10;
+}
+
+
+  .fotografia2 img {
+    width: 100%;
+    margin-top: 100px;
+    border-top-right-radius: 0;
     mask-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.893));
     z-index: -1;
   }
 
-  .parrafo1 {
-    position: relative;
-    margin-left: -60px;
-    background-color: var(--color-secundario);
-    width: 125%;
-    height: 240px;
-    padding: 10px;
-    z-index: 10;
-    margin-top: -100px;
-  }
+/*seccion3 */
+.parrafo1-3  h2 {
+  width: 100%;
+  top: -100px;
+  position: relative;
+}
 
-  .parrafo2 p {
-    padding-top: 375px;
-    padding-bottom: 143px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: -65px;
-    text-align: justify;
-    width: 100%;
-    line-height: 2.1;
-    font-size: 20px;
-    position: absolute;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.49),
-      rgba(0, 0, 0, 0)
-    );
-    margin-left: 0px;
-    font-weight: 500;
-    color: var(--color-texto-white);
-  }
-  .fotografia2 img {
-    width: 138%;
-    height: 100vh;
-    margin-top: -56px;
-    margin-left: -92px;
-    border-top-right-radius: 0;
-  }
 
-  .textos3 h2 {
-    margin-top: -100px;
-    margin-left: -70px;
-    text-align: center;
-    font-size: 23px;
-    font-family: "Nanum Myeongjo", serif;
-  }
 
   .parrafo1-3 p,
   .parrafo2-3 p {
-    margin-left: 18px;
-    text-align: justify;
+    margin: 0 auto;
+    font-size: 15px;
     width: 90%;
-    margin-bottom: 20px;
+
   }
 
   .fotografia3 img {
-    width: 104%;
-    height: 50vh;
-    margin-left: -10px;
+    width: 100%;
+    height:auto;
+    margin-top: 100px;
     border-top-right-radius: 0;
   }
 
   .textos4 {
-    /* background-color: #ffffff87; */
-    margin-top: -149px;
+    margin-top: -20px;
     width: 100%;
     height: auto;
-    font-size: 17px;
     color: var(--color-texto);
   }
 
@@ -762,7 +731,7 @@ height: 60vh;
     background-color: var(--color-secundario);
     position: absolute;
     color: var(--color-texto-white);
-    font-size: 12px;
+    font-size: 15px;
     padding: 20px;
     /* border-top-left-radius: 0px; */
     /* border-top-right-radius: 0px; */
@@ -779,6 +748,7 @@ height: 60vh;
     margin-top: 50px;
     margin-left: 115px;
     width: 70%;
+    font-size: 15px;
     color: var(--color-texto);
   }
 
@@ -833,7 +803,7 @@ height: 60vh;
   .enlaces img {
     width: 200px;
     height: 200px;
-    transition: transform 0.3s ease-in-out; /* Para hacer que la imagen también responda al hover */
+    transition: transform 0.3s ease-in-out;
   }
 
   .fotografia6,
@@ -868,17 +838,17 @@ height: 60vh;
 
   .foto-about {
     height: auto;
-    width: 100%;
+    width:90%;
+    margin: 0 auto;
     margin-top: -10px;
-    margin-left: 0px;
+
   }
 
   .foto-about img {
     position: relative;
-    width: 102%;
+    width: 100%;
     height: auto;
     margin-top: 75px;
-    margin-left: -4px;
     mask-image: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.966) 50%,
@@ -897,15 +867,23 @@ height: 60vh;
 
   .textos6 h5 {
     text-align: center;
-    margin-left: 20px;
     margin-top: 0px;
-    width: 90%;
-    font-size: 20px;
+    margin-left: 0px;
+    width: 100%;
+    padding: 50px;
+    font-size: 17px;
     font-weight: bold;
   }
 
+
+  .botones{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+
   .section-6 button {
-    margin-left: 260px;
+
     margin-top: 615px;
   }
 
@@ -934,8 +912,7 @@ height: 60vh;
 
   .fotografia2,
   .fotografia3,
-  .fotografia4,
-  .foto-about {
+  .fotografia4 {
     width: 100%;
     height: auto;
   }
@@ -953,8 +930,8 @@ height: 60vh;
 
   .forma-fondo{
     width: 100%;
-    height: 420px;
-    transform: translateY(-420px);
+    height: 490px;
+    transform: translateY(-490px);
 }
 
   .logo {
@@ -996,7 +973,7 @@ height: 60vh;
     padding: 10px;
     text-align: justify;
     position: relative;
-  top: -200px;  }
+   }
 
 
   .textos h2 {
@@ -1004,19 +981,15 @@ height: 60vh;
     font-size: 20px;
     padding: 20px;
     position: relative;
-    top: -130px;
+
   }
 
   .textos .texto-blanco{
-    width: 90%;
-    top: 490px;
-     font-size: 15px;
-    padding-top: 50px;
+    width: 100%;
     text-align: justify;
     position: relative;
-    color: var(--color-texto-white);
-    margin-left: 20px;
-    z-index: 100;
+    color: var(--color-texto);
+    margin-left: 0px;
 }
   .fotografia {
     width: 100%;
@@ -1024,20 +997,19 @@ height: 60vh;
   }
 
   .fotografia img {
-    margin-top: -70px;
     width: 100%;
     height: auto;
     border-radius: 0%;
-    mask-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0.893));
     z-index: -1;
   }
 
   .parrafo1 {
     position: relative;
-    margin-left: -60px;
+    margin-left: 0px;
+    text-align: center;
     background-color: var(--color-secundario);
-    width: 125%;
-    height: 240px;
+    width: 100%;
+    height: auto;
     padding: 10px;
     z-index: 10;
     margin-top: -100px;
@@ -1045,7 +1017,7 @@ height: 60vh;
 
   .parrafo2 {
     position: relative;
-    top: -130px;
+    top: -633px;
   }
 
   .parrafo2 p {
@@ -1053,7 +1025,7 @@ height: 60vh;
     padding-bottom: 143px;
     padding-left: 20px;
     padding-right: 20px;
-    margin-top: -55px;
+    margin-top: -100px;
     text-align: justify;
     width: 100%;
     line-height: 2;
@@ -1072,17 +1044,29 @@ height: 60vh;
   .fotografia2 img {
     width: 100%;
     height: 70vh;
-    margin-top: -56px;
+    margin-top: -100px;
     margin-left: 0px;
     border-top-right-radius: 0;
   }
 
+  .parrafo1  p {
+    width: 60%;
+    margin-left: 20px;
+}
+
+.textos2 h2{
+  margin-left: 20px;
+}
+
+
+
   .textos3 h2 {
-    margin-top: -100px;
-    margin-left: -70px;
-    text-align: center;
+    margin-top: 0px;
+    margin-left: 0px;
+    text-align: left;
     font-size: 23px;
     font-family: "Nanum Myeongjo", serif;
+    background: var(--color-secundario);
   }
 
   .parrafo1-3 p,
@@ -1094,15 +1078,15 @@ height: 60vh;
   }
 
   .fotografia3 img {
-    width: 104%;
-    height: 50vh;
-    margin-left: -10px;
+    width: 100%;
+    height:auto;
+    margin-left: 0px;
     border-top-right-radius: 0;
   }
 
   .textos4 {
-    /* background-color: #ffffff87; */
-    margin-top: -149px;
+    background-color: #ffffff87;
+    margin-top: -50px;
     width: 100%;
     height: auto;
     font-size: 17px;
@@ -1115,8 +1099,8 @@ height: 60vh;
     color: var(--color-texto-white);
     font-size: 12px;
     padding: 20px;
-    /* border-top-left-radius: 0px; */
-    /* border-top-right-radius: 0px; */
+     border-top-left-radius: 0px;
+     border-top-right-radius: 0px;
     text-align: center;
     margin-top: -80px;
     margin-left: 0px;
@@ -1137,16 +1121,13 @@ height: 60vh;
     font-family: "Nanum Myeongjo", serif;
     position: relative;
     text-align: center;
-    margin-left: 102px;
-    width: 47%;
+    margin-left:125px;
     text-transform: uppercase;
     color: var(--color-titulo);
   }
 
   .section-4 .button {
-    margin-left: 110px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left: 0px;
   }
 
   .section-5 {
@@ -1184,7 +1165,7 @@ height: 60vh;
   .enlaces img {
     width: 200px;
     height: 200px;
-    transition: transform 0.3s ease-in-out; /* Para hacer que la imagen también responda al hover */
+    transition: transform 0.3s ease-in-out;
   }
 
   .fotografia6,
@@ -1220,17 +1201,17 @@ height: 60vh;
   .foto-about {
     height: auto;
     width: 100%;
-    margin-top: -10px;
+    margin-top: 0px;
     margin-left: 0px;
     z-index: -1;
   }
 
   .foto-about img {
     position: relative;
-    width: 102%;
+    width: 100%;
     height: auto;
     margin-top: 75px;
-    margin-left: -4px;
+    margin-left: 0px;
     mask-image: linear-gradient(
       to top,
       rgba(255, 255, 255, 0.966) 50%,
@@ -1258,8 +1239,9 @@ height: 60vh;
   }
 
   .section-6 button {
-    margin-left: 110px;
-    margin-top: 381px;
+    margin-top: 300px;
+    margin-left: 0px;
+
   }
 
   .section {
@@ -1301,15 +1283,15 @@ height: 60vh;
   }
 }
 
-/* moviles pequeñisimos */
 @media (max-width: 376px) {
-  .estrella {
+   .estrella {
     width: 15%;
   }
 
-  .forma-fondo {
-    height: 300px;
-    transform: translateY(-300px);
+  .forma-fondo{
+    width: 100%;
+    height: 480px;
+    transform: translateY(-480px);
 }
 
   .logo {
@@ -1333,43 +1315,16 @@ height: 60vh;
     font-size: 9px;
   }
 
-  .textos h2 {
-    font-size: 18px;
-    padding: 15px;
-  }
+  .parrafo2 p{
+    padding-top: 235px;
+    padding-bottom: 143px;
+    margin-top: -100px;
+    font-weight: lighter;
+}
 
-  .textos .texto-blanco {
-    top: 474px;
-    background: #00000014;
-    font-size: 15px;
-    padding: 10px;
-    margin-left: 15px;
-  }
-
-  .fotografia img {
-    margin-top: -60px;
-  }
-
-  .parrafo1 {
-    margin-left: -75px;
-    width: 120%;
-    height: 220px;
-  }
-
-  .parrafo2 p {
-    padding-top: 238px;
-    padding-bottom: 120px;
-    font-size: 14px;
-  }
-
-  .fotografia2 img {
-    width: 120%;
-    margin-left: -40px;
-  }
-
-  .section-5 h1 {
-    font-size: 30px;
-  }
+.textos4  .h4-2{
+  margin-left: 93px;
+}
 
   .enlaces img {
     width: 150px;
@@ -1377,17 +1332,18 @@ height: 60vh;
   }
 
   .textos6 h1 {
-    margin-top: -500px;
+    margin-top: -600px;
   }
 
-  .section-6 button {
-    margin-left: 100px;
-    margin-top: 350px;
-  }
+  .foto-about img {
+    margin-top: 200px;
+}
+
+
 }
 
 @media (max-width: 320px) {
-  .estrella {
+ .estrella {
     width: 20%;
   }
 
@@ -1418,27 +1374,15 @@ height: 60vh;
     font-size: 16px;
   }
 
-  .textos .texto-blanco {
-    top: 887px;
-    font-size: 14px;
-    padding: 5px;
-    margin-left: 10px;
-  }
+
 
   .fotografia img {
-    margin-top: -50px;
-  }
-
-  .parrafo1 {
-    margin-left: -78px;
-    width: 130%;
-    height: 200px;
+    margin-top: -100px;
   }
 
   .parrafo2 p {
-    padding-top: 300px;
-    padding-bottom: 100px;
     font-size: 13px;
+    font-weight: lighter;
   }
 
   .parrafo1 p{
@@ -1450,34 +1394,21 @@ height: 60vh;
 }
 
 
-  .fotografia2 img {
-    width: 115%;
-    margin-left: -30px;
-  }
-
-  .textos3  h2 {
-    margin-left: -60px;
-}
 
 .textos4 .h4-2{
-  margin-left: 85px;
+  margin-left: 78px;
 }
 
-.section-4 .button {
-  margin-left: 80px;
-}
+
 
   .section-5 h1 {
     font-size: 28px;
   }
 
 
-  .textos6 h1 {
-    margin-top: -470px;
-  }
 
   .section-6 button {
-    margin-left:74px;
     margin-top: 300px;
   }
 }
+
