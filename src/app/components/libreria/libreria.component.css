@@ -575,6 +575,12 @@
   .data p {
     width: 100%;
   }
+
+
+
+
+
+
 }
 
 
@@ -693,7 +699,6 @@
   margin-bottom: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  padding-right: 34px;
   color:var(--color-texto-white);
   font-size: 14px;
 }
@@ -737,6 +742,19 @@
   padding-top: 0px;
   margin-top: -100px;
 }
+
+.section-5 .botones{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.section-5   button {
+  margin-left: 0px;
+}
+
 
   /* .left{
     width: 100%;
