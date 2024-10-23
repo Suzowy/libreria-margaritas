@@ -161,319 +161,109 @@
   <section class="section section-6" id="section6">
     <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <!-- Primer Producto -->
-        <div class="carousel-item active">
-          <div class="product">
-            <div class="product-content">
-              <section class="producto">
-                <img class="portada"
-                  src="https://m.media-amazon.com/images/I/81nK4VEFOHL._SL1500_.jpg"
-                  alt="portada del libro">
-                <div class="botones">
-                  <button id="buy">
-                    <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-                     <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
-                     <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                   </svg>
-                     <p class="text">Lo necesito</p>
-                   </button>
+      <!-- Contenedor principal del carrusel -->
+<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item" *ngFor="let book of books; let i = index" [class.active]="i === 0">
+      <div class="product">
+        <div class="product-content">
+          <section class="producto">
+            <img class="portada" [src]="book.image" alt="portada del libro">
+            <div class="botones">
+              <button id="buy" (click)="addToCart(book)">
+                <div class="default-btn">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="#FF0000" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                  </svg>
+                  <span>Lo necesito</span>
                 </div>
-              </section>
-              <section class="data">
-                <h4>LA SOCIEDAD SECRETA DE BRUJAS REBELDES</h4>
-                <p>Si te has preguntado cómo sería mover las cosas con tu mente como Matilda, Prácticamente magia es una
-                  de tus películas favoritas y te encantan las historias que ocurren en Inglaterra, esta es tu novela.
-                  Te encantará sumergirte en una historia con mucho humor, personajes entrañables de los que, sin duda,
-                  te vas a enamorar y optimismo ante lo desconocido en una casa de cuento rodeada de árboles.</p>
-                <!-- Acordeón implementado -->
-                <div class="accordion" id="accordionExample1">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFichaTecnica1">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFichaTecnica1" aria-expanded="false"
-                        aria-controls="collapseFichaTecnica1">
-                        Ficha técnica
-                      </button>
-                    </h2>
-                    <div id="collapseFichaTecnica1" class="accordion-collapse collapse"
-                      aria-labelledby="headingFichaTecnica1" data-bs-parent="#accordionExample1">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>Páginas: 336</li>
-                          <li>Año: 2023</li>
-                          <li>Editorial: Ediciones B</li>
-                          <li>Traducción: Noemi Risco</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingResenaEditorial1">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseResenaEditorial1" aria-expanded="false"
-                        aria-controls="collapseResenaEditorial1">
-                        Reseña de la editorial
-                      </button>
-                    </h2>
-                    <div id="collapseResenaEditorial1" class="accordion-collapse collapse"
-                      aria-labelledby="headingResenaEditorial1" data-bs-parent="#accordionExample1">
-                      <div class="accordion-body">
-                        <p>Contenido de la reseña de la editorial.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTeGustara1">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTeGustara1" aria-expanded="false" aria-controls="collapseTeGustara1">
-                        Te gustará si también leíste
-                      </button>
-                    </h2>
-                    <div id="collapseTeGustara1" class="accordion-collapse collapse" aria-labelledby="headingTeGustara1"
-                      data-bs-parent="#accordionExample1">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>La casa en el mar más azul, de T.J. Klune</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingLibroPerfecto1">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseLibroPerfecto1" aria-expanded="false"
-                        aria-controls="collapseLibroPerfecto1">
-                        Un libro perfecto para
-                      </button>
-                    </h2>
-                    <div id="collapseLibroPerfecto1" class="accordion-collapse collapse"
-                      aria-labelledby="headingLibroPerfecto1" data-bs-parent="#accordionExample1">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>Desconectar en vacaciones</li>
-                          <li>Terminar la historia con una sonrisa</li>
-                          <li>Evadirte de la realidad con un toque fantástico</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
+                <div class="hover-btn">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="#ffd300" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  <span>Comprar</span>
                 </div>
-              </section>
+              </button>
             </div>
-
-          </div>
-        </div>
-
-        <!-- Segundo Producto -->
-        <div class="carousel-item">
-          <div class="product">
-            <div class="product-content">
-              <section class="producto">
-                <img class="portada"
-                  src="https://m.media-amazon.com/images/I/71xbaSasq7L._SL1500_.jpg"
-                  alt="portada del libro">
-                <div class="botones">
-                  <button id="buy">
-                    <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-                     <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
-                     <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                   </svg>
-                     <p class="text">Lo necesito</p>
-                   </button>
-                </div>
-              </section>
-              <section class="data">
-                <h4>UN CUENTO PERFECTO</h4>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse repudiandae excepturi laudantium nobis voluptatum ullam tenetur dolore ad corrupti quas vero error incidunt ipsa enim sequi, minus optio nihil. Necessitatibus?</p>
-                <!-- Acordeón implementado -->
-                <div class="accordion" id="accordionExample2">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFichaTecnica2">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFichaTecnica2" aria-expanded="false"
-                        aria-controls="collapseFichaTecnica2">
-                        Ficha técnica
-                      </button>
-                    </h2>
-                    <div id="collapseFichaTecnica2" class="accordion-collapse collapse"
-                      aria-labelledby="headingFichaTecnica2" data-bs-parent="#accordionExample2">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>Páginas: 336</li>
-                          <li>Año: 2023</li>
-                          <li>Editorial: Ediciones B</li>
-                          <li>Traducción: Noemi Risco</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingResenaEditorial2">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseResenaEditorial2" aria-expanded="false"
-                        aria-controls="collapseResenaEditorial2">
-                        Reseña de la editorial
-                      </button>
-                    </h2>
-                    <div id="collapseResenaEditorial2" class="accordion-collapse collapse"
-                      aria-labelledby="headingResenaEditorial2" data-bs-parent="#accordionExample2">
-                      <div class="accordion-body">
-                        <p>Contenido de la reseña de la editorial.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTeGustara2">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTeGustara2" aria-expanded="false" aria-controls="collapseTeGustara2">
-                        Te gustará si también leíste
-                      </button>
-                    </h2>
-                    <div id="collapseTeGustara2" class="accordion-collapse collapse" aria-labelledby="headingTeGustara2"
-                      data-bs-parent="#accordionExample2">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>La casa en el mar más azul, de T.J. Klune</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingLibroPerfecto2">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseLibroPerfecto2" aria-expanded="false"
-                        aria-controls="collapseLibroPerfecto2">
-                        Un libro perfecto para
-                      </button>
-                    </h2>
-                    <div id="collapseLibroPerfecto2" class="accordion-collapse collapse"
-                      aria-labelledby="headingLibroPerfecto2" data-bs-parent="#accordionExample2">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>Desconectar en vacaciones</li>
-                          <li>Terminar la historia con una sonrisa</li>
-                          <li>Evadirte de la realidad con un toque fantástico</li>
-                        </ul>
-                      </div>
-                    </div>
+          </section>
+          <section class="data">
+            <h4>{{book.name}}</h4>
+            <p>{{book.description}}</p>
+            <div class="accordion" [id]="'accordionExample' + i">
+              <!-- Ficha técnica -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" [id]="'headingFichaTecnica' + i">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseFichaTecnica' + i" aria-expanded="false" [attr.aria-controls]="'collapseFichaTecnica' + i">
+                    Ficha técnica
+                  </button>
+                </h2>
+                <div [id]="'collapseFichaTecnica' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'headingFichaTecnica' + i" [attr.data-bs-parent]="'#accordionExample' + i">
+                  <div class="accordion-body">
+                    <ul>
+                      <li>Páginas: {{book.pages}}</li>
+                      <li>Año: {{book.year}}</li>
+                      <li>Editorial: {{book.publisher}}</li>
+                      <li>Traducción: {{book.translation ? 'Sí' : 'No'}}</li>
+                    </ul>
                   </div>
                 </div>
-              </section>
+              </div>
+
+              <!-- Reseña editorial -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" [id]="'headingResenaEditorial' + i">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseResenaEditorial' + i" aria-expanded="false" [attr.aria-controls]="'collapseResenaEditorial' + i">
+                    Reseña de la editorial
+                  </button>
+                </h2>
+                <div [id]="'collapseResenaEditorial' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'headingResenaEditorial' + i" [attr.data-bs-parent]="'#accordionExample' + i">
+                  <div class="accordion-body">
+                    <p>{{book.review}}</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Te gustará si también leíste -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" [id]="'headingTeGustara' + i">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseTeGustara' + i" aria-expanded="false" [attr.aria-controls]="'collapseTeGustara' + i">
+                    Te gustará si también leíste
+                  </button>
+                </h2>
+                <div [id]="'collapseTeGustara' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'headingTeGustara' + i" [attr.data-bs-parent]="'#accordionExample' + i">
+                  <div class="accordion-body">
+                    <ul>
+                      <li *ngFor="let suggestion of book.suggestions">{{suggestion}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Un libro perfecto para -->
+              <div class="accordion-item">
+                <h2 class="accordion-header" [id]="'headingLibroPerfecto' + i">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapseLibroPerfecto' + i" aria-expanded="false" [attr.aria-controls]="'collapseLibroPerfecto' + i">
+                    Un libro perfecto para
+                  </button>
+                </h2>
+                <div [id]="'collapseLibroPerfecto' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'headingLibroPerfecto' + i" [attr.data-bs-parent]="'#accordionExample' + i">
+                  <div class="accordion-body">
+                    <ul>
+                      <li *ngFor="let reason of book.perfectFor">{{reason}}</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
-
-          </div>
+          </section>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-        <!-- Tercer Producto -->
-        <div class="carousel-item">
-          <div class="product">
-            <div class="product-content">
-              <section class="producto">
-                <img class="portada"
-                  src="https://m.media-amazon.com/images/I/716dJ3POQ1L._SL1500_.jpg"
-                  alt="portada del libro">
-                <div class="botones">
-                  <button id="buy">
-                    <svg viewBox="0 0 16 16" class="bi bi-cart-check" height="24" width="24" xmlns="http://www.w3.org/2000/svg" fill="#fff">
-                     <path d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z"></path>
-                     <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"></path>
-                   </svg>
-                     <p class="text">Lo necesito</p>
-                   </button>
-                </div>
-              </section>
-              <section class="data">
-                <h4>LA GRIETA DEL SILENCIO</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ducimus rerum consectetur, illum vero aliquam dolor? Quae, eum sequi. Odit quisquam aperiam ipsa magni quam quasi id, fugit eos vel asperiores.</p>
-                <!-- Acordeón implementado -->
-                <div class="accordion" id="accordionExample3">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingFichaTecnica3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseFichaTecnica3" aria-expanded="false"
-                        aria-controls="collapseFichaTecnica3">
-                        Ficha técnica
-                      </button>
-                    </h2>
-                    <div id="collapseFichaTecnica3" class="accordion-collapse collapse"
-                      aria-labelledby="headingFichaTecnica3" data-bs-parent="#accordionExample3">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>Páginas: 324</li>
-                          <li>Año: 2024</li>
-                          <li>Editorial: SUMA</li>
-                          <li>Traducción: ""</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingResenaEditorial3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseResenaEditorial3" aria-expanded="false"
-                        aria-controls="collapseResenaEditorial3">
-                        Reseña de la editorial
-                      </button>
-                    </h2>
-                    <div id="collapseResenaEditorial3" class="accordion-collapse collapse"
-                      aria-labelledby="headingResenaEditorial3" data-bs-parent="#accordionExample3">
-                      <div class="accordion-body">
-                        <p>La grieta del silencio es el nuevo thriller de Javier Castillo que te atrapará de principio a fin. Una historia en la que Miren se verá envuelta en la investigación de la desaparición del pequeño Daniel Miller hace treinta años y el hallazgo actual de un cadáver con los labios sellados.
-
-                          Junto a su antiguo profesor de periodismo, Jim Schmoer, tendrá que sortear multitud de obstáculos y enigmas hasta lograr descubrir qué conecta ambos casos.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingTeGustara3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseTeGustara3" aria-expanded="false" aria-controls="collapseTeGustara3">
-                        Te gustará si también leíste
-                      </button>
-                    </h2>
-                    <div id="collapseTeGustara3" class="accordion-collapse collapse" aria-labelledby="headingTeGustara3"
-                      data-bs-parent="#accordionExample3">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex doloribus nam commodi!</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingLibroPerfecto3">
-                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#collapseLibroPerfecto3" aria-expanded="false"
-                        aria-controls="collapseLibroPerfecto3">
-                        Un libro perfecto para
-                      </button>
-                    </h2>
-                    <div id="collapseLibroPerfecto3" class="accordion-collapse collapse"
-                      aria-labelledby="headingLibroPerfecto3" data-bs-parent="#accordionExample3">
-                      <div class="accordion-body">
-                        <ul>
-                          <li>Lorem ipsum dolor sit amet</li>
-                          <li>Recusandae dignissimos tempora animi voluptatem adipisci</li>
-                          <li>impedit magnam dicta facilis deleniti deserunt natus.</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-
-          </div>
-        </div>
 
 
       </div>

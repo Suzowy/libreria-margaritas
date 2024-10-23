@@ -13,6 +13,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { ClubDeLecturaComponent } from './components/club-de-lectura/club-de-lectura.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { CarritoComponent } from './components/carrito/carrito.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BlogComponent } from './components/blog/blog.component';
     HomeComponent,
     LibreriaComponent,
     SobreNosotrasComponent,
-    TalleresComponent
+    TalleresComponent,
+    CarritoComponent
   ],
   imports: [
     BrowserModule,
