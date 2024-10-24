@@ -8,41 +8,45 @@
   cursor: pointer;
 }
 
-.cart-content.show > ul{
+.cart-content.show  > ul {
   font-size: 12px;
+  display: inline-grid;
+  margin-left: 0px;
   text-transform: lowercase;
+  gap: 6px;
 }
 
 .cart-content.show > ul > li {
   display: flex;
-  justify-content:left;
+  justify-content: space-between;
   text-align: left;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-content: center;
-  align-items: stretch;
-  flex-direction: column;
+  align-items: baseline;
+  flex-direction: row;
 }
 
 .cart div {
-  position: absolute;
-  top: 50px; /* Ajusta la posición según el diseño */
-  right: 0;
+  position: fixed; /* Cambia de absolute a fixed */
+  top: 70px; /* Ajusta para que el carrito se coloque debajo del header */
+  right: 10px;
   background-color: var(--color-fondo-cabecera);
   border: 1px solid #ccc;
   color: var(--color-texto);
-  padding: 20px;
+  padding: 20px 10px 20px 10px;
   border-radius: 5px;
-  width: 300px;
+  width: 450px;
   height: auto;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   display: none;
+  z-index: 10002; /* Asegúrate de que esté por encima del header */
 }
 
 .cart div.show {
   display: block;
 }
 
-/* Estilo base para el contenedor del carrito */
+
 .cart-content {
   max-height: 0;
   overflow: hidden;
@@ -51,7 +55,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-/* Cuando se active el carrito (con la clase "show") */
+
 .cart-content.show {
   max-height: 500px;
   opacity: 1;
@@ -60,6 +64,7 @@
 .delete-button {
   width: 20px;
   height: 20px;
+  margin-left: 10px;
   border-radius: 50%;
   background-color: var(--color-secundario);
   border: none;
@@ -118,4 +123,36 @@
   transform: translateY(0px);
   transition-duration: 0.3s;
 }
+
+p {
+  color: var(--color-titulo);
+  font-weight:bold ;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
+
+ @media only screen and (max-width: 480px) {
+
+  .cart div{
+    top: 60px;
+    right: 4px;
+    width: 98vw;
+    padding: 10px;
+    z-index: 10002;
+}
+
+.cart-content.show > ul{
+  font-size: 12px;
+  display: inline-grid;
+  margin-left: -20px;
+  text-transform: lowercase;
+  gap: 6px;
+}
+
+
+
+}
+
 
