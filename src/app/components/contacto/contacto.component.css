@@ -71,9 +71,14 @@
   animation: slideInFromRight 2s ease-out;
 }
 
-.contact-cabecera button {
-  margin-left: 17vw;
+.contact-cabecera .botones {
+  display: flex;
+  flex-direction: row;
   margin-bottom: 50px;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .quotes {

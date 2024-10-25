@@ -76,15 +76,15 @@ header ul li {
   line-height:5;
 }
 
-header a {
+header a, .carrito-logo {
   display: block;
   text-decoration: none;
-  color: #63564e;
+  color: var(--color-titulo);
   transition: 0.3s ease-in-out;
 
 }
 
-header a:hover {
+header a:hover, .carrito-logo {
   transform: scale(1.1);
   color: black;
 }

@@ -3,9 +3,17 @@
   display: inline-block;
 }
 
+
+
 .carrito-logo {
   width: 25px;
   cursor: pointer;
+  transition: 0.3s ease-in-out;
+
+}
+
+.carrito-logo:hover {
+  transform: scale(1.1);
 }
 
 .cart-content.show  > ul {
@@ -162,17 +170,17 @@ p {
   fill: white;
 }
 
-.Btn::before {
+.Btn[_ngcontent-ng-c466530382]::before {
   width: 130px;
   height: 130px;
   position: absolute;
   content: "";
-  background-color: white;
+  background-color: #86b16c;
   border-radius: 50%;
   left: -100%;
   top: 0;
   transition-duration: .3s;
-  mix-blend-mode: difference;
+  mix-blend-mode: color;
 }
 
 .Btn:hover::before {
@@ -203,6 +211,12 @@ p {
   margin-left: -20px;
   text-transform: lowercase;
   gap: 6px;
+}
+
+
+.carrito-logo {
+  width: 30px;
+  cursor: pointer;
 }
 
 
