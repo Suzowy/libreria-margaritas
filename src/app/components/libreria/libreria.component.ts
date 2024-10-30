@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, HostListener } from '@angular/core';
 import { CartService } from '../../services/cart.service';
-
+import { ScrollService } from '../../services/scroll.service';
 @Component({
   selector: 'app-libreria',
   templateUrl: './libreria.component.html',
@@ -34,7 +34,7 @@ export class LibreriaComponent implements AfterViewInit {
       year: 2023,
       publisher: 'Ediciones B',
       translation: 'Noemi Risco',
-      description: 'Lorem ipsum dolor sit amet consectetur...',
+      description: 'Elísabet Benavent, @BetaCoqueta, vuelve al panorama de la literatura con una novela que explora el significado del éxito en la vida y reflexiona con ironía y humor acerca de las imposiciones sociales, la presión del grupo y la autoexigencia que, aunque cueste creerlo, no es sinónimo de felicidad.',
       review: 'Una historia mágica que te hará soñar y creer en el amor.',
       suggestions: ['La casa en el mar más azul, de T.J. Klune'],
       perfectFor: ['Desconectar en vacaciones', 'Terminar la historia con una sonrisa', 'Evadirte de la realidad con un toque fantástico']
@@ -95,90 +95,16 @@ export class LibreriaComponent implements AfterViewInit {
   ];
 
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService,
+    private scrollService: ScrollService
+  ) {}
 
   ngAfterViewInit(): void {
-    this.sections = Array.from(document.querySelectorAll('.section'));
-    this.containElement = document.querySelector('.contain') as HTMLElement;
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        } else {
-          entry.target.classList.remove('active');
-        }
-      });
-
-      if (this.isLastSectionInView()) {
-        this.disableScrollSnap();
-      } else {
-        this.enableScrollSnap();
-      }
-    }, { threshold: 0.1 });
-
-    this.sections.forEach(section => observer.observe(section));
+    this.scrollService.initializeScrollEffect();
   }
 
-  @HostListener('window:wheel', ['$event'])
-  onScroll(event: WheelEvent): void {
-    if (this.isScrolling) {
-      return;
-    }
-
-    this.isScrolling = true;
-
-    if (event.deltaY > 0) {
-      // Scroll hacia abajo
-      if (this.currentSectionIndex < this.sections.length - 1) {
-        this.currentSectionIndex++;
-        this.sections[this.currentSectionIndex].scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    } else {
-      // Scroll hacia arriba
-      if (this.currentSectionIndex > 0) {
-        this.currentSectionIndex--;
-        this.sections[this.currentSectionIndex].scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    }
-
-    // Deshabilitar scroll snap si estamos en la última sección
-    if (this.isLastSectionInView()) {
-      this.disableScrollSnap();
-    } else {
-      this.enableScrollSnap();
-    }
-
-    // Espera antes de permitir otro scroll
-    setTimeout(() => {
-      this.isScrolling = false;
-    }, 800);
-  }
-
-  // Método para agregar un libro al carrito
   addToCart(book: { name: string; price: number; image: string }) {
     this.cartService.addToCart(book);
-  }
-
-  private isLastSectionInView(): boolean {
-    const lastSection = this.sections[this.sections.length - 1];
-    const rect = lastSection.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-
-    return rect.bottom <= viewportHeight;
-  }
-
-  private enableScrollSnap(): void {
-    this.containElement.style.scrollSnapType = 'y mandatory'; // Habilita scroll snap
-  }
-
-  private disableScrollSnap(): void {
-    this.containElement.style.scrollSnapType = 'none'; // Desactiva scroll snap
   }
 }

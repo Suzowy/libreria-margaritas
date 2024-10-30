@@ -151,6 +151,7 @@ height:100%;
 }
 
 /* seccion 1 Seamos sinceros... */
+
 .section-1 {
   position: relative;
   display: flex;
@@ -189,7 +190,7 @@ height:100%;
 
 .fotografia img {
   width: 85%;
-  height: 85vh;
+  height: 80vh;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
 }

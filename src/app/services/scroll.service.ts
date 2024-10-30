@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ScrollService {
-  private currentSectionIndex = 0;
+  private currentSectionIndex = -1; // antes de la primera sección
   private sections!: NodeListOf<HTMLElement>;
   private isScrolling = false;
   private cleanupScrollEffect!: () => void;
@@ -23,63 +23,53 @@ export class ScrollService {
           }
         });
       },
-      {
-        threshold: 0, // Se activa cuando la parte superior de la nueva sección es visible
-        rootMargin: '0px' // Ajuste para activar la intersección justo cuando se muestra la nueva sección
-      }
+      { threshold: 0.1 }
     );
 
-    this.sections.forEach((section) => {
-      observer.observe(section);
-    });
 
-    const handleScroll = this.handleScroll.bind(this);
-    const handleKeyPress = this.handleKeyPress.bind(this);
+    this.sections.forEach((section) => observer.observe(section));
 
-    window.addEventListener('wheel', handleScroll);
-    window.addEventListener('keydown', handleKeyPress);
+
+    window.addEventListener('wheel', this.handleScroll);
+    window.addEventListener('keydown', this.handleKeyPress);
 
     this.cleanupScrollEffect = () => {
-      window.removeEventListener('wheel', handleScroll);
-      window.removeEventListener('keydown', handleKeyPress);
+      window.removeEventListener('wheel', this.handleScroll);
+      window.removeEventListener('keydown', this.handleKeyPress);
     };
 
     return this.cleanupScrollEffect;
   }
 
-  private handleScroll(event: WheelEvent) {
+  private handleScroll = (event: WheelEvent) => {
     if (this.isScrolling) return;
     this.isScrolling = true;
 
-    if (event.deltaY > 0) {
-      this.scrollToSection(this.currentSectionIndex + 1);
-    } else {
-      this.scrollToSection(this.currentSectionIndex - 1);
-    }
+    const direction = event.deltaY > 0 ? 1 : -1;
+    this.scrollToSection(this.currentSectionIndex + direction);
 
-    setTimeout(() => {
-      this.isScrolling = false;
-    }, 800); // Ajusta el tiempo de espera basado en la duración de la animación
-  }
+    setTimeout(() => (this.isScrolling = false), 800);
+  };
 
-  private handleKeyPress(event: KeyboardEvent) {
+  private handleKeyPress = (event: KeyboardEvent) => {
     if (this.isScrolling) return;
     this.isScrolling = true;
 
-    if (event.key === 'ArrowDown') {
-      this.scrollToSection(this.currentSectionIndex + 1);
-    } else if (event.key === 'ArrowUp') {
-      this.scrollToSection(this.currentSectionIndex - 1);
+    const direction = event.key === 'ArrowDown' ? 1 : event.key === 'ArrowUp' ? -1 : 0;
+    if (direction !== 0) {
+      this.scrollToSection(this.currentSectionIndex + direction);
     }
 
-    setTimeout(() => {
-      this.isScrolling = false;
-    },800);
-  }
+    setTimeout(() => (this.isScrolling = false), 800);
+  };
 
   private scrollToSection(index: number) {
-    if (index < 0 || index >= this.sections.length) {
-      this.cleanupScrollEffect();
+    // Permitir desplazamiento hacia la cabecera
+    if (index < -1 || index >= this.sections.length) return;
+
+    if (index === -1) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      this.currentSectionIndex = index;
       return;
     }
 

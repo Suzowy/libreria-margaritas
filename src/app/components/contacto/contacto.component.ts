@@ -1,14 +1,13 @@
-import { Component, OnInit, AfterViewInit, HostListener, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, OnDestroy, HostListener, ElementRef } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
-
+import { ScrollService } from '../.././services/scroll.service';
 
 @Component({
   selector: 'app-contacto',
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
 })
-export class ContactoComponent implements OnInit, AfterViewInit {
+export class ContactoComponent implements OnInit, AfterViewInit, OnDestroy {  // Agrega OnDestroy aquí
   public widthSlider!: number;
   public anchuraToSlider!: any;
   public autor: any;
@@ -16,92 +15,24 @@ export class ContactoComponent implements OnInit, AfterViewInit {
   showSuccessMessage: boolean | undefined;
 
   // Variables para el scroll
-  private isScrolling = false;
-  private currentSectionIndex = 0;
-  private sections: HTMLElement[] = [];
-  private containElement!: HTMLElement;
+  private cleanupScroll!: () => void; // Para almacenar la función de limpieza de scroll
 
-  constructor(private elRef: ElementRef) {}
+  constructor(private elRef: ElementRef, private scrollService: ScrollService) {}
 
   ngOnInit() {
     this.email = 'margaritas-a-medianoche@gmail.com';
   }
 
   ngAfterViewInit(): void {
-    // Inicializar las secciones para el scroll
-    this.sections = Array.from(this.elRef.nativeElement.querySelectorAll('.section'));
-    this.containElement = this.elRef.nativeElement.querySelector('.contain');
-
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        } else {
-          entry.target.classList.remove('active');
-        }
-      });
-
-      if (this.isLastSectionInView()) {
-        this.disableScrollSnap();
-      } else {
-        this.enableScrollSnap();
-      }
-    }, { threshold: 0.1 });
-
-    this.sections.forEach(section => observer.observe(section));
+    // Inicializa el efecto de scroll y almacena la función de limpieza
+    this.cleanupScroll = this.scrollService.initializeScrollEffect();
   }
 
-  @HostListener('window:wheel', ['$event'])
-  onScroll(event: WheelEvent): void {
-    if (this.isScrolling) {
-      return;
+  ngOnDestroy(): void {
+    // Llama a la función de limpieza del scroll cuando el componente se destruya
+    if (this.cleanupScroll) {
+      this.cleanupScroll();
     }
-
-    this.isScrolling = true;
-
-    if (event.deltaY > 0) {
-      if (this.currentSectionIndex < this.sections.length - 1) {
-        this.currentSectionIndex++;
-        this.sections[this.currentSectionIndex].scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    } else {
-      if (this.currentSectionIndex > 0) {
-        this.currentSectionIndex--;
-        this.sections[this.currentSectionIndex].scrollIntoView({
-          behavior: 'smooth',
-          block: 'start',
-        });
-      }
-    }
-
-    if (this.isLastSectionInView()) {
-      this.disableScrollSnap();
-    } else {
-      this.enableScrollSnap();
-    }
-
-    setTimeout(() => {
-      this.isScrolling = false;
-    }, 800);
-  }
-
-  private isLastSectionInView(): boolean {
-    const lastSection = this.sections[this.sections.length - 1];
-    const rect = lastSection.getBoundingClientRect();
-    const viewportHeight = window.innerHeight;
-
-    return rect.bottom <= viewportHeight;
-  }
-
-  private enableScrollSnap(): void {
-    this.containElement.style.scrollSnapType = 'y mandatory';
-  }
-
-  private disableScrollSnap(): void {
-    this.containElement.style.scrollSnapType = 'none';
   }
 
   onSubmit(form: NgForm) {

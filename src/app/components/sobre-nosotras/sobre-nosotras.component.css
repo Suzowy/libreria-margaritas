@@ -138,7 +138,7 @@ p {
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  height: 80vh;
+  height: 79vh;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   display: flex;
@@ -165,6 +165,7 @@ p {
 
 .botones{
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .about4 {

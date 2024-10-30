@@ -14,20 +14,22 @@ export class AppComponent implements OnInit, OnDestroy {
   showScrollToTopButton = false;
 isLoading: any;
 
-  constructor(private scrollService: ScrollService,
-              @Inject(PLATFORM_ID) private platformId: Object,
-              private router: Router) {}
+  constructor(
+    private scrollService: ScrollService,
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private router: Router
+  ) {}
 
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)) {
       this.cleanupScrollEffect = this.scrollService.initializeScrollEffect();
     }
 
-
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      this.scrollToTop();
+      console.log('Navegación completada');
+      setTimeout(() => this.scrollToTop(), 0);
     });
   }
 
@@ -43,16 +45,10 @@ isLoading: any;
     this.showScrollToTopButton = window.scrollY > scrollThreshold;
   }
 
-
   scrollToTop(): void {
+    console.log('Desplazando al inicio de la página');
     if (isPlatformBrowser(this.platformId)) {
-      const cabeceraElement = document.getElementById('cabecera');
-      if (cabeceraElement) {
-        cabeceraElement.scrollIntoView({ behavior: 'smooth' });
-      } else {
-
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }
 }

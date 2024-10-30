@@ -83,27 +83,26 @@ ul {
 .section {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 2s ease, transform 1s ease;
+ transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
   margin-bottom: 100px;
-min-height: 100vh;
+  min-height: 100vh;
 }
 
 .section.active {
   opacity: 1;
-  transform: translateY(0);
+
 }
 
 .section.entering {
   opacity: 1;
-  transform: translateY(110px);
-  transition: opacity 1s ease, transform 1s ease;
+
 }
 
 .section.exiting {
   opacity: 0;
-  transform: translateY(-50px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+
 }
+
 
 /* boton volver arriba  */
 .btn-back-to-top {
