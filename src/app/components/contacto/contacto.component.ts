@@ -7,7 +7,7 @@ import { ScrollService } from '../.././services/scroll.service';
   templateUrl: './contacto.component.html',
   styleUrls: ['./contacto.component.css']
 })
-export class ContactoComponent implements OnInit, AfterViewInit, OnDestroy {  // Agrega OnDestroy aquí
+export class ContactoComponent implements OnInit, AfterViewInit, OnDestroy {
   public widthSlider!: number;
   public anchuraToSlider!: any;
   public autor: any;
@@ -15,7 +15,7 @@ export class ContactoComponent implements OnInit, AfterViewInit, OnDestroy {  //
   showSuccessMessage: boolean | undefined;
 
   // Variables para el scroll
-  private cleanupScroll!: () => void; // Para almacenar la función de limpieza de scroll
+  private cleanupScroll!: () => void;
 
   constructor(private elRef: ElementRef, private scrollService: ScrollService) {}
 

@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ScrollService {
-  private currentSectionIndex = -1; // antes de la primera sección
+  private currentSectionIndex = -1; // comienza antes de la primera sección
   private sections!: NodeListOf<HTMLElement>;
   private isScrolling = false;
   private cleanupScrollEffect!: () => void;
@@ -12,6 +12,7 @@ export class ScrollService {
   constructor() {}
 
   initializeScrollEffect() {
+    // Seleccionamos las secciones de la página
     this.sections = document.querySelectorAll('.section');
 
     const observer = new IntersectionObserver(
@@ -19,24 +20,28 @@ export class ScrollService {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const index = Array.from(this.sections).indexOf(entry.target as HTMLElement);
-            this.applyTransitionEffect(index);
+            this.currentSectionIndex = index;
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.5 } // Ajustar el umbral para una detección más precisa
     );
-
 
     this.sections.forEach((section) => observer.observe(section));
 
-
+    // Eventos de desplazamiento
     window.addEventListener('wheel', this.handleScroll);
     window.addEventListener('keydown', this.handleKeyPress);
 
+    // Limpieza de eventos y observer
     this.cleanupScrollEffect = () => {
       window.removeEventListener('wheel', this.handleScroll);
       window.removeEventListener('keydown', this.handleKeyPress);
+      observer.disconnect();
     };
+
+    // Lleva al usuario a la cabecera al cargar la página
+    this.scrollToSection(-1);
 
     return this.cleanupScrollEffect;
   }
@@ -64,31 +69,18 @@ export class ScrollService {
   };
 
   private scrollToSection(index: number) {
-    // Permitir desplazamiento hacia la cabecera
+    // Asegura que el índice esté dentro del rango
     if (index < -1 || index >= this.sections.length) return;
 
     if (index === -1) {
+      // Navega a la cabecera
       window.scrollTo({ top: 0, behavior: 'smooth' });
       this.currentSectionIndex = index;
       return;
     }
 
-    this.applyTransitionEffect(index);
+    // Desplázate a la siguiente o anterior sección
     this.sections[index].scrollIntoView({ behavior: 'smooth' });
     this.currentSectionIndex = index;
-  }
-
-  private applyTransitionEffect(index: number) {
-    this.sections.forEach((section, i) => {
-      if (i === index) {
-        section.classList.add('entering');
-        section.classList.remove('exiting');
-      } else if (i < index) {
-        section.classList.add('exiting');
-        section.classList.remove('entering');
-      } else {
-        section.classList.remove('entering', 'exiting');
-      }
-    });
   }
 }
