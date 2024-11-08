@@ -432,9 +432,23 @@ button:hover .hover-btn {
 
 .data p {
   width: 60%;
+  max-height:150px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
   margin: 0 auto;
   text-align: justify;
   color: black;
+}
+
+.data p.expanded {
+  max-height: none;
+}
+
+.ver{
+margin-top: 20px;
+color: var(--color-texto-white);
+background: none;
+border: none;
 }
 
 .portada {
@@ -789,6 +803,11 @@ button:hover .hover-btn {
   .data p {
     width: 100%;
   }
+
+  .ver{
+    margin-top: 20px;
+    color: var(--color-texto);
+    }
 
   .accordion {
     width: 100%;

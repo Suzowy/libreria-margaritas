@@ -8,6 +8,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { ClubDeLecturaComponent } from './components/club-de-lectura/club-de-lectura.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ErrorComponent } from './components/error/error.component';
+import { PagoComponent } from './components/pago/pago.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'talleres', component: TalleresComponent },
   { path: 'contacto', component: ContactoComponent },
   { path: 'club-de-lectura', component: ClubDeLecturaComponent },
+  { path: 'pago', component: PagoComponent },
   { path: 'blog', component: BlogComponent },
   { path: '**', component: ErrorComponent }
 ];

@@ -169,6 +169,17 @@
         <div class="product-content">
           <section class="producto">
             <img class="portada" [src]="book.image" alt="portada del libro">
+
+          </section>
+          <section class="data">
+            <h4>{{ book.name }}</h4>
+            <p [innerHTML]="book.description" [ngClass]="{ 'expanded': expandedDescription[i] }">
+              {{ book.description }}
+            </p>
+            <button class="ver" (click)="toggleDescription(i)">
+              {{ expandedDescription[i] ? 'Ver menos' : 'Leer más...' }}
+            </button>
+
             <div class="botones">
               <button id="buy" (click)="addToCart(book)">
                 <div class="default-btn">
@@ -187,10 +198,8 @@
                 </div>
               </button>
             </div>
-          </section>
-          <section class="data">
-            <h4>{{book.name}}</h4>
-            <p>{{book.description}}</p>
+
+
             <div class="accordion" [id]="'accordionExample' + i">
               <!-- Ficha técnica -->
               <div class="accordion-item">

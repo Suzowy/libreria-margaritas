@@ -175,7 +175,7 @@ p {
   height: 130px;
   position: absolute;
   content: "";
-  background-color: #86b16c;
+  background-color: rgba(118, 76, 17, 0.933);
   border-radius: 50%;
   left: -100%;
   top: 0;

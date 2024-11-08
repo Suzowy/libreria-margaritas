@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,7 +15,7 @@ import { ContactoComponent } from './components/contacto/contacto.component';
 import { ClubDeLecturaComponent } from './components/club-de-lectura/club-de-lectura.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { CarritoComponent } from './components/carrito/carrito.component';
-
+import { PagoComponent } from './components/pago/pago.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,9 +29,11 @@ import { CarritoComponent } from './components/carrito/carrito.component';
     LibreriaComponent,
     SobreNosotrasComponent,
     TalleresComponent,
+   PagoComponent,
     CarritoComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,

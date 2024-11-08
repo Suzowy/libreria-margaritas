@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../services/cart.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-carrito',
@@ -11,8 +12,10 @@ export class CarritoComponent implements OnInit {
   total = 0;
   showCart = false;
 
-
-  constructor(public cartService: CartService) { }
+  constructor(
+    public cartService: CartService,
+    private router: Router // Inyectar Router aquí
+  ) { }
 
   ngOnInit(): void {
     this.cart = this.cartService.getCart();
@@ -29,15 +32,7 @@ export class CarritoComponent implements OnInit {
     this.cart = this.cartService.getCart();
   }
 
-
   checkout() {
-    console.log("Compra finalizada:", this.cart);
-    this.cart = [];
-    this.total = 0;
-
-    this.cartService.clearCart();
-    this.cart = this.cartService.getCart();
+    this.router.navigate(['/pago']);
   }
-
-
 }
