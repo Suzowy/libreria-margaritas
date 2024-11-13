@@ -1,38 +1,54 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CartService } from '../../services/cart.service';
 import { Router } from '@angular/router';
-
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-carrito',
   templateUrl: './carrito.component.html',
   styleUrls: ['./carrito.component.css']
 })
 export class CarritoComponent implements OnInit {
+  @ViewChild(HeaderComponent) headerComponent!: HeaderComponent;
   cart: any[] = [];
   total = 0;
   showCart = false;
 
   constructor(
     public cartService: CartService,
-    private router: Router // Inyectar Router aquí
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.cart = this.cartService.getCart();
-    this.total = this.cartService.calculateTotal();
+    this.updateCart();
   }
 
   toggleCart() {
     this.showCart = !this.showCart;
   }
 
-  removeFromCart(product: any) {
-    console.log('Removiendo del carrito:', product);
-    this.cartService.removeFromCart(product);
+  updateCart() {
     this.cart = this.cartService.getCart();
+    this.total = this.cartService.total; // Usa el getter de total directamente
+  }
+
+  removeFromCart(product: any) {
+    this.cartService.removeFromCart(product);
+    this.updateCart();
+  }
+
+  increaseQuantity(product: any) {
+    this.cartService.addToCart(product); // Reutiliza la lógica de agregar para incrementar
+    this.updateCart();
+  }
+
+  decreaseQuantity(product: any) {
+    this.cartService.decreaseQuantity(product); // Nuevo método para reducir cantidad en el servicio
+    this.updateCart();
   }
 
   checkout() {
     this.router.navigate(['/pago']);
   }
 }
+
+

@@ -1,15 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CartService } from '../../services/cart.service';
 
 
 @Component({
   selector: 'app-pago',
   templateUrl: './pago.component.html',
-  styleUrls: ['./pago.component.css'],
+  styleUrls: ['./pago.component.css']
 })
-export class PagoComponent {
-  totalAmount: number = 100; // Ajusta según tu lógica de carrito
+export class PagoComponent implements OnInit {
+  totalCompra: number = 0;
 
-  processPayment() {
-    alert('Pago procesado con éxito!');
+  constructor(private cartService: CartService) {}
+
+  ngOnInit(): void {
+    // Usamos la propiedad total del servicio CartService para obtener el total de la compra
+    this.totalCompra = this.cartService.total;
+  }
+
+  processPayment(): void {
+    // Lógica para procesar el pago
+    alert('Pago realizado');
   }
 }

@@ -1,9 +1,23 @@
-.formularios {
+.fotografia {
   display: flex;
+  width: 30%;
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fotografia img {
+  width: 100%;
+  height: auto;
+}
+
+.formularios {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
 .form-box {
@@ -90,10 +104,20 @@
   width: 100%;
 }
 
+.total-compra {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--color-titulo);
+}
+
 @media (max-width: 768px) {
-  .form-box {
-    width: 80%;
-    padding: 10px;
+  .formularios {
+    flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+  }
+
+  .fotografia, .form-box {
+    width: 100%; /* Los elementos ocupan todo el ancho */
   }
 
   .h1-form h1 {
@@ -117,9 +141,8 @@
 }
 
 @media (max-width: 480px) {
-  .form-box {
-    width: 90%;
-    padding: 8px;
+  .fotografia, .form-box {
+    width: 100%; /* En pantallas muy pequeñas, ocupa todo el ancho */
   }
 
   .h1-form h1 {

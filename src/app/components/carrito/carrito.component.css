@@ -1,72 +1,105 @@
-.cart {
-  position: relative;
-  display: inline-block;
-}
-
-
-
+/* Estilo del logo del carrito */
 .carrito-logo {
   width: 25px;
   cursor: pointer;
   transition: 0.3s ease-in-out;
-
 }
-
 .carrito-logo:hover {
   transform: scale(1.1);
 }
 
-.cart-content.show  > ul {
+/* Estilo general del carrito */
+.cart-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Para centrarlo */
+  background-color: var(--color-fondo-cabecera);
+  border: 1px solid #ccc;
+  color: var(--color-texto);
+  padding: 20px 10px;
+  border-radius: 5px;
+  width: 40%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  display: none; /* Oculto por defecto */
+  z-index: 10002;
+ height:auto;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.cart-content.show {
+  display: block; /* Mostrar solo al activar 'show' */
+  max-height: 800px;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1); /* Centrado y animación de aparición */
+}
+/* Otros estilos relevantes para alinear y distribuir los elementos */
+.cart-content.show > ul {
   font-size: 12px;
-  display: inline-grid;
   margin-left: 0px;
-  text-transform: lowercase;
-  gap: 6px;
+  display: grid;
+  gap: 10px;
 }
 
 .cart-content.show > ul > li {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   text-align: left;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.cart-item-title {
+  width: 130px;
+  font-size: 10px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-button {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secundario);
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantity-button:hover {
+  background-color: var(--color-titulo);
+  transform: scale(1.1);
+}
+
+.quantity-button:active {
+  transform: scale(0.9);
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
   flex-wrap: wrap;
   align-content: center;
-  align-items: baseline;
-  flex-direction: row;
-}
-
-.cart div {
-  position: fixed; /* Cambia de absolute a fixed */
-  top: 70px; /* Ajusta para que el carrito se coloque debajo del header */
-  right: 10px;
-  background-color: var(--color-fondo-cabecera);
-  border: 1px solid #ccc;
-  color: var(--color-texto);
-  padding: 20px 10px 20px 10px;
-  border-radius: 5px;
-  width: 450px;
-  height: auto;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: none;
-  z-index: 10002; /* Asegúrate de que esté por encima del header */
-}
-
-.cart div.show {
-  display: block;
-}
-
-
-.cart-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.5s ease-in-out;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-
-.cart-content.show {
-  max-height: 500px;
-  opacity: 1;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .delete-button {
@@ -97,49 +130,9 @@
 }
 
 .delete-button:hover {
-  width: 90px;
-  border-radius: 50px;
   transition-duration: 0.3s;
   background-color: rgb(255, 69, 69);
-  align-items: center;
 }
-
-.delete-button:hover .delete-svgIcon {
-  width: 10px;
-  transition-duration: 0.3s;
-  transform: translateY(60%);
-  -webkit-transform: rotate(360deg);
-  -moz-transform: rotate(360deg);
-  -o-transform: rotate(360deg);
-  -ms-transform: rotate(360deg);
-  transform: rotate(360deg);
-}
-
-.delete-button::before {
-  display: none;
-  content: "Delete";
-  color: white;
-  transition-duration: 0.3s;
-  font-size: 2px;
-}
-
-.delete-button:hover::before {
-  display: block;
-  padding-right: 10px;
-  font-size: 13px;
-  opacity: 1;
-  transform: translateY(0px);
-  transition-duration: 0.3s;
-}
-
-p {
-  color: var(--color-titulo);
-  font-weight:bold ;
-  margin-top: 40px;
-  margin-bottom: 20px;
-}
-
-/* button pagar*/
 
 .Btn {
   width: 130px;
@@ -147,7 +140,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color:var(--color-secundario);
+  background-color: var(--color-secundario);
+
   border: none;
   color: white;
   font-weight: 600;
@@ -159,7 +153,12 @@ p {
   font-family: "Forum", serif;
   position: relative;
   overflow: hidden;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
+}
+
+.Btn>a{
+  text-decoration: none;
+  color: var(--color-texto-white);
 }
 
 .svgIcon {
@@ -170,7 +169,7 @@ p {
   fill: white;
 }
 
-.Btn[_ngcontent-ng-c466530382]::before {
+.Btn::before {
   width: 130px;
   height: 130px;
   position: absolute;
@@ -179,48 +178,38 @@ p {
   border-radius: 50%;
   left: -100%;
   top: 0;
-  transition-duration: .3s;
+  transition-duration: 0.3s;
   mix-blend-mode: color;
 }
 
 .Btn:hover::before {
-  transition-duration: .3s;
-  transform: translate(100%,-50%);
+  transition-duration: 0.3s;
+  transform: translate(100%, -50%);
   border-radius: 0;
 }
 
 .Btn:active {
-  transform: translate(5px,5px);
-  transition-duration: .3s;
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
+}
+p {
+  color: var(--color-titulo);
+  font-weight: bold;
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
-
- @media only screen and (max-width: 480px) {
-
-  .cart div{
-    top: 60px;
-    right: 4px;
-    width: 98vw;
-    padding: 10px;
-    z-index: 10002;
+/* Responsive */
+@media (max-width: 768px) {
+  .cart-content {
+    width: 100%; /* Ajustar al 90% del ancho en pantallas más pequeñas */
+  }
 }
 
-.cart-content.show > ul{
-  font-size: 12px;
-  display: inline-grid;
-  margin-left: -20px;
-  text-transform: lowercase;
-  gap: 6px;
-}
-
-
-.carrito-logo {
-  width: 30px;
-  cursor: pointer;
-}
-
-
-
+@media (max-width: 480px) {
+  .carrito-logo {
+    width: 30px;
+  }
 }
 
 

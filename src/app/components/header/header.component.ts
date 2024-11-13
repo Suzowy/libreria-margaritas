@@ -7,7 +7,6 @@ import { isPlatformBrowser } from '@angular/common';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngOnInit(): void {
@@ -16,8 +15,10 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  closeMenuOnClick(): void {
+  public closeMenuOnClick(): void {
     const menuItems = document.querySelector('header ul');
+
+
     document.querySelectorAll('header a').forEach(link => {
       link.addEventListener('click', () => {
         if (menuItems) {
@@ -29,5 +30,19 @@ export class HeaderComponent implements OnInit {
         }
       });
     });
+
+
+    const payButton = document.querySelector('.Btn');
+    if (payButton) {
+      payButton.addEventListener('click', () => {
+        if (menuItems) {
+          menuItems.classList.remove('show');
+          const checkbox = document.getElementById('checkbox') as HTMLInputElement;
+          if (checkbox) {
+            checkbox.checked = false;
+          }
+        }
+      });
+    }
   }
 }
