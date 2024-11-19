@@ -1,4 +1,4 @@
-/* Estilo del logo del carrito */
+/*logo*/
 .carrito-logo {
   width: 25px;
   cursor: pointer;
@@ -13,7 +13,7 @@
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Para centrarlo */
+  transform: translate(-50%, -50%);
   background-color: var(--color-fondo-cabecera);
   border: 1px solid #ccc;
   color: var(--color-texto);
@@ -21,7 +21,7 @@
   border-radius: 5px;
   width: 40%;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  display: none; /* Oculto por defecto */
+  display: none;
   z-index: 10002;
  height:auto;
   opacity: 0;
@@ -29,12 +29,17 @@
 }
 
 .cart-content.show {
-  display: block; /* Mostrar solo al activar 'show' */
+  display: block;
   max-height: 800px;
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1); /* Centrado y animación de aparición */
+  transform: translate(-50%, -50%) scale(1);
 }
-/* Otros estilos relevantes para alinear y distribuir los elementos */
+
+.start-shopping-link{
+  text-decoration: none;
+
+}
+
 .cart-content.show > ul {
   font-size: 12px;
   margin-left: 0px;
@@ -192,17 +197,33 @@
   transform: translate(5px, 5px);
   transition-duration: 0.3s;
 }
-p {
+
+p{
+  display: flex;
   color: var(--color-titulo);
   font-weight: bold;
   margin-top: 40px;
   margin-bottom: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
 }
+
+.start-shopping-link{
+  text-decoration: none;
+display: flex;
+flex-direction: row;
+flex-wrap: nowrap;
+align-content: center;
+justify-content: center;
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
   .cart-content {
-    width: 100%; /* Ajustar al 90% del ancho en pantallas más pequeñas */
+    width: 95%;
   }
 }
 

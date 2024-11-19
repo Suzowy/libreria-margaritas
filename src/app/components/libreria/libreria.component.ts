@@ -7,7 +7,7 @@ import { ScrollService } from '../../services/scroll.service';
   styleUrls: ['./libreria.component.css'],
 })
 export class LibreriaComponent implements AfterViewInit {
-
+  tooltipActive: boolean = false;
 
   books = [
     {
@@ -112,5 +112,12 @@ export class LibreriaComponent implements AfterViewInit {
 
   toggleDescription(index: number) {
     this.expandedDescription[index] = !this.expandedDescription[index];
+  }
+
+  showTooltip(event: Event): void {
+    this.tooltipActive = true;
+    setTimeout(() => {
+      this.tooltipActive = false;
+    }, 1000);
   }
 }
