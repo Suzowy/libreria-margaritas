@@ -90,26 +90,25 @@ ul {
 
 /* boton volver arriba  */
 .btn-back-to-top {
-  width: 120px;
+  width: 50px;
   position: fixed;
-  text-transform: uppercase;
-  font-family: "Forum", serif;
-  bottom: 20px;
-  right: 20px;
+  /* text-transform: uppercase; */
+  /* font-family: "Forum", serif; */
+  bottom: 10px;
+  right: 10px;
   background-color: var(--color-boton);
-  color: var(--color-titulo);
-  padding: 10px 10px;
+  padding: 10px 5px;
   border-radius: 10px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.523);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.377);
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 10px; /* 10px */
   transition: all 0.3s ease-in-out;
   z-index: 1000;
+  align-content: center;
+  justify-content: center;
+  border: none;
 }
-
 .btn-back-to-top img {
   width: 20px;
   height: 20px;
