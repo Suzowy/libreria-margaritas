@@ -78,7 +78,7 @@
   color: var(--color-texto-white);
   width: 70%;
   text-align: center;
-  font-size: 5vw;
+  font-size: 4vw;
   font-weight: lighter;
   line-height: 1;
   z-index: 3;
@@ -102,7 +102,7 @@
   margin: 0 auto;
   position: relative;
   min-height: 100vh;
-  overflow:auto;
+  overflow: auto;
   padding-bottom: 150px;
   background-color: #48321e66;
 }
@@ -115,14 +115,14 @@ cite {
   color: var(--color-fondo-cabecera);
 }
 
-.forma-fondo{
-  width: 55%;
+.forma-fondo {
+  width: 40%;
   position: absolute;
-  height: 555px;
+  height: 489px;
   margin: 0 auto;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  transform: translateX(41%) translateY(-100%);
+  transform: translateX(76%) translateY(-116%);
   background-color: var(--color-forma);
 }
 
@@ -134,7 +134,7 @@ cite {
   top: 0;
   left: 0;
   width: 100%;
-height:100%;
+  height: 100%;
   z-index: -1;
 }
 
@@ -172,8 +172,6 @@ height:100%;
   line-height: 2;
   width: 65%;
 }
-
-
 
 .textos h2 {
   text-align: center;
@@ -296,9 +294,8 @@ height:100%;
   text-align: left;
   margin-top: 20px;
   width: 65%;
-line-height: 2;
+  line-height: 2;
 }
-
 
 .parrafo1-3 p,
 .parrafo2-3 p {
@@ -525,14 +522,16 @@ line-height: 2;
   margin-left: 30px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1400px) {
+}
 
+@media (max-width: 1024px) {
   .cita,
   cite {
     font-size: 12px;
   }
 
-  .subtitulo{
+  .subtitulo {
     font-size: 15px;
   }
 
@@ -541,16 +540,13 @@ line-height: 2;
     font-size: 20px;
   }
 
-
   /* seccion3 */
-
 
   .fotografia2 img,
   .fotografia3 img,
   .fotografia5 img {
     height: 80vh;
   }
-
 
   .fotografia4 img {
     width: 50%;
@@ -568,26 +564,21 @@ line-height: 2;
   .foto-about img {
     width: 80%;
     height: 60vh;
+  }
 }
-}
-
-
 
 @media (max-width: 913px) {
-
-
   /* seccion2 */
   .parrafo1 {
     width: 75%;
     height: 245px;
-}
+  }
 
-/* seccion3 */
-.parrafo1-3  h2 {
-  width: 80%;
-  top: 10px;
-}
-
+  /* seccion3 */
+  .parrafo1-3 h2 {
+    width: 80%;
+    top: 10px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -596,10 +587,10 @@ line-height: 2;
   }
 
   .forma-fondo {
-    width:100%;
-    height: 570px;
-    transform: translateY(-570px);
-}
+    width: 71%;
+    height: 527px;
+    transform: translateX(21%) translateY(-170%);
+  }
 
   .logo {
     margin-top: 120px;
@@ -666,28 +657,26 @@ line-height: 2;
     z-index: -1;
   }
 
-/* seccion2 */
-  .parrafo1{
+  /* seccion2 */
+  .parrafo1 {
     width: 100%;
     height: auto;
     background-color: var(--color-secundario);
-}
+  }
 
-
-.parrafo2  p {
-text-align: center;
-  width: 100%;
-  margin-left: 0px;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 30px;
-  position: absolute;
-  font-size: 15px;
-  top: 630px;
-  color: var(--color-texto-white);
-  z-index: 10;
-}
-
+  .parrafo2 p {
+    text-align: center;
+    width: 100%;
+    margin-left: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    position: absolute;
+    font-size: 15px;
+    top: 630px;
+    color: var(--color-texto-white);
+    z-index: 10;
+  }
 
   .fotografia2 img {
     width: 100%;
@@ -697,26 +686,23 @@ text-align: center;
     z-index: -1;
   }
 
-/*seccion3 */
-.parrafo1-3  h2 {
-  width: 100%;
-  top: -100px;
-  position: relative;
-}
-
-
+  /*seccion3 */
+  .parrafo1-3 h2 {
+    width: 100%;
+    top: -100px;
+    position: relative;
+  }
 
   .parrafo1-3 p,
   .parrafo2-3 p {
     margin: 0 auto;
     font-size: 15px;
     width: 90%;
-
   }
 
   .fotografia3 img {
     width: 100%;
-    height:auto;
+    height: auto;
     margin-top: 100px;
     border-top-right-radius: 0;
   }
@@ -839,10 +825,9 @@ text-align: center;
 
   .foto-about {
     height: auto;
-    width:90%;
+    width: 90%;
     margin: 0 auto;
     margin-top: -10px;
-
   }
 
   .foto-about img {
@@ -876,22 +861,20 @@ text-align: center;
     font-weight: bold;
   }
 
-  .section-4 .botones{
+  .section-4 .botones {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 
-
-  .botones{
+  .botones {
     margin: 0 auto;
     display: flex;
     justify-content: center;
   }
 
   .section-6 button {
-
     margin-top: 615px;
   }
 
@@ -936,11 +919,12 @@ text-align: center;
     width: 12%;
   }
 
-  .forma-fondo{
-    width: 100%;
-    height: 490px;
-    transform: translateY(-490px);
-}
+  .forma-fondo {
+    width: 96%;
+    height: 394px;
+    transform: translateY(-552px);
+    transform: translateX(2%) translateY(-130%);
+  }
 
   .logo {
     margin-top: 120px;
@@ -981,18 +965,16 @@ text-align: center;
     padding: 10px;
     text-align: justify;
     position: relative;
-   }
-
+  }
 
   .textos h2 {
     font-family: "Nanum Myeongjo", serif;
     font-size: 20px;
     padding: 20px;
     position: relative;
-
   }
 
-  .textos .texto-blanco{
+  .textos .texto-blanco {
     width: 100%;
     font-size: 15px;
     text-align: center;
@@ -1000,29 +982,26 @@ text-align: center;
     color: var(--color-texto);
     margin-left: 0px;
     padding-bottom: 100px;
-}
+  }
 
-
-
-.fotografia {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
-}
+  .fotografia {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+  }
 
   .fotografia img {
     mask-image: linear-gradient(to top, rgba(0, 0, 0, 0.972) 34%, transparent);
-      width: 100%;
-      height: auto;
-      /* border-top-left-radius: 0;
+    width: 100%;
+    height: auto;
+    /* border-top-left-radius: 0;
       border-top-right-radius: 0;
       border-top-right-radius: 50%;
       border-top-left-radius: 50%; */
-
   }
 
   .parrafo1 {
@@ -1071,16 +1050,14 @@ text-align: center;
     border-top-right-radius: 0;
   }
 
-  .parrafo1  p {
+  .parrafo1 p {
     width: 60%;
     margin-left: 20px;
-}
+  }
 
-.textos2 h2{
-  margin-left: 20px;
-}
-
-
+  .textos2 h2 {
+    margin-left: 20px;
+  }
 
   .textos3 h2 {
     margin-top: 0px;
@@ -1104,7 +1081,7 @@ text-align: center;
 
   .fotografia3 img {
     width: 100%;
-    height:70vh;
+    height: 70vh;
     margin-left: 0px;
     mask-image: linear-gradient(
       to top,
@@ -1128,8 +1105,8 @@ text-align: center;
     color: var(--color-texto-white);
     font-size: 12px;
     padding: 20px;
-     border-top-left-radius: 0px;
-     border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
     text-align: center;
     margin-top: -80px;
     margin-left: 0px;
@@ -1150,19 +1127,19 @@ text-align: center;
     font-family: "Nanum Myeongjo", serif;
     position: relative;
     text-align: center;
-    margin-left:110px;
+    margin-left: 110px;
     text-transform: uppercase;
     color: var(--color-titulo);
   }
 
-  .section-4 .botones{
+  .section-4 .botones {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     align-content: center;
-}
+  }
 
   .section-4 .button {
     margin-left: 0px;
@@ -1279,7 +1256,6 @@ text-align: center;
   .section-6 button {
     margin-top: 300px;
     margin-left: 0px;
-
   }
 
   .section {
@@ -1322,15 +1298,16 @@ text-align: center;
 }
 
 @media (max-width: 376px) {
-   .estrella {
+  .estrella {
     width: 15%;
   }
 
-  .forma-fondo{
-    width: 100%;
-    height: 480px;
-    transform: translateY(-480px);
-}
+  .forma-fondo {
+    width: 90%;
+    height: 360px;
+    transform: translateY(-552px);
+    transform: translateX(5%) translateY(-135%);
+  }
 
   .logo {
     margin-top: 90px;
@@ -1353,16 +1330,16 @@ text-align: center;
     font-size: 9px;
   }
 
-  .parrafo2 p{
+  .parrafo2 p {
     padding-top: 150px;
     padding-bottom: 143px;
     margin-top: -100px;
     font-weight: lighter;
-}
+  }
 
-.textos4  .h4-2{
-  margin-left: 93px;
-}
+  .textos4 .h4-2 {
+    margin-left: 93px;
+  }
 
   .enlaces img {
     width: 150px;
@@ -1375,17 +1352,13 @@ text-align: center;
 
   .foto-about img {
     margin-top: 200px;
-}
-
-
+  }
 }
 
 @media (max-width: 320px) {
- .estrella {
+  .estrella {
     width: 20%;
   }
-
-
 
   .logo {
     margin-top: 80px;
@@ -1412,8 +1385,6 @@ text-align: center;
     font-size: 16px;
   }
 
-
-
   .fotografia img {
     margin-top: -100px;
   }
@@ -1423,30 +1394,23 @@ text-align: center;
     font-weight: lighter;
   }
 
-  .parrafo1 p{
+  .parrafo1 p {
     font-size: 17px;
-}
+  }
 
-.textos2  h2 {
-  font-size: 50px;
-}
+  .textos2 h2 {
+    font-size: 50px;
+  }
 
-
-
-.textos4 .h4-2{
-  margin-left: 78px;
-}
-
-
+  .textos4 .h4-2 {
+    margin-left: 78px;
+  }
 
   .section-5 h1 {
     font-size: 28px;
   }
 
-
-
   .section-6 button {
     margin-top: 300px;
   }
 }
-
