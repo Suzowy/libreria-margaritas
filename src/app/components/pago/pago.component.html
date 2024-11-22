@@ -3,9 +3,24 @@
     <div class="fotografia">
       <img src="assets/img/formulario-pago.png" alt="chica pagando" />
     </div>
-    <div class="total-compra">
-      <h2>Total de la compra: {{ totalCompra | currency }}</h2>
+    <div class="cart-content" *ngIf="cart.length > 0">
+      <ul>
+        <li *ngFor="let item of cart">
+          <div class="cart-item-title">{{ item.name }}</div>
+          <div>{{ item.quantity }} x {{ item.price | currency:'EUR' }}</div>
+        </li>
+      </ul>
     </div>
+
+    <!-- Mostrar el total y el botón de pago -->
+    <div class="total-compra">
+      <h2>Total de la compra: {{ totalCompra | currency:'EUR' }}</h2>
+    </div>
+
+
+    <button class="Btn" (click)="continueShopping()">Seguir comprando</button>
+
+
     <div class="form-box">
       <div class="h1-form">
         <h1>Formulario de Pago</h1>

@@ -7,8 +7,41 @@
 }
 
 .fotografia img {
-  width: 100%;
+  width: 60%;
   height: auto;
+}
+
+.cart-content {
+  display: contents;
+  max-height: 800px;
+  opacity: 1;
+}
+
+.cart-content > ul {
+  margin-top: 20px;
+  font-size: 12px;
+  margin-left: 0px;
+  display: grid;
+  gap: 10px;
+  color: var(--color-texto);
+}
+
+.cart-content > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.cart-item-title {
+  width: 130px;
+  font-size: 10px;
+  font-weight: bold;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .formularios {
@@ -83,19 +116,63 @@
 }
 
 .Btn {
-  width: 100%;
-  padding: 12px;
-  background-color: var(--color-principal);
-  color: white;
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-secundario);
+  margin-top: 20px;
+  margin-bottom: 30px;
   border: none;
-  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
   cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+  border-radius: 10px;
+  border: solid 1px var(--color-fondo-cabecera);
+  box-shadow: 2px 2px 8px rgba(114, 114, 114, 0.913);
+  font-family: "Forum", serif;
+  position: relative;
+  overflow: hidden;
+  transition-duration: 0.3s;
 }
 
-.Btn:hover {
-  background-color: var(--color-secundario);
+.Btn > a {
+  text-decoration: none;
+  color: var(--color-texto-white);
+}
+
+.svgIcon {
+  width: 16px;
+}
+
+.svgIcon path {
+  fill: white;
+}
+
+.Btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: rgba(118, 76, 17, 0.933);
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: 0.3s;
+  mix-blend-mode: color;
+}
+
+.Btn:hover::before {
+  transition-duration: 0.3s;
+  transform: translate(100%, -50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px, 5px);
+  transition-duration: 0.3s;
 }
 
 .form__container {
@@ -116,7 +193,8 @@
     flex-direction: column; /* Cambia a columna en pantallas pequeñas */
   }
 
-  .fotografia, .form-box {
+  .fotografia,
+  .form-box {
     width: 100%; /* Los elementos ocupan todo el ancho */
   }
 
@@ -141,7 +219,8 @@
 }
 
 @media (max-width: 480px) {
-  .fotografia, .form-box {
+  .fotografia,
+  .form-box {
     width: 100%; /* En pantallas muy pequeñas, ocupa todo el ancho */
   }
 

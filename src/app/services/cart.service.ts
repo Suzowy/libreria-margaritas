@@ -17,16 +17,16 @@ export class CartService {
     } else {
       this.cart.push({ ...product, quantity: 1 });
     }
-    this.cartSubject.next(this.cart); // Notificar a los componentes que escuchan este observable
+    this.cartSubject.next(this.cart);
   }
 
   getCart() {
-    return this.cartSubject.asObservable(); // Retornar el observable del carrito
+    return this.cartSubject.asObservable();
   }
 
   removeFromCart(product: { name: string }) {
     this.cart = this.cart.filter(item => item.name !== product.name);
-    this.cartSubject.next(this.cart); // Notificar a los componentes sobre el cambio
+    this.cartSubject.next(this.cart);
   }
 
   decreaseQuantity(product: { name: string }) {
@@ -43,7 +43,7 @@ export class CartService {
 
   clearCart() {
     this.cart = [];
-    this.cartSubject.next(this.cart); // Notificar a los componentes que el carrito está vacío
+    this.cartSubject.next(this.cart);
   }
 
   get total() {

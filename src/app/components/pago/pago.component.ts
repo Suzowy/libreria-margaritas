@@ -8,14 +8,25 @@ import { Router } from '@angular/router';
   styleUrls: ['./pago.component.css']
 })
 export class PagoComponent implements OnInit {
-  totalCompra: number = 0;
+  cart: any[] = []; // Array para almacenar los productos del carrito
+  totalCompra: number = 0; // Variable para el total de la compra
 
   constructor(private cartService: CartService, private router: Router) {}
 
   ngOnInit(): void {
-    // Usamos la propiedad total del servicio CartService para obtener el total de la compra
-    this.totalCompra = this.cartService.total;
+    // Suscripción para obtener los productos del carrito
+    this.cartService.getCart().subscribe(cart => {
+      this.cart = cart;
+      this.totalCompra = this.cartService.total; // Obtener el total del carrito
+    });
   }
+
+  // Añadir el método continueShopping en PagoComponent
+continueShopping(): void {
+  // Aquí puedes redirigir a la página de la librería o donde sea necesario
+  this.router.navigate(['/libreria']);
+}
+
 
   processPayment(): void {
     // Lógica para procesar el pago
@@ -26,8 +37,5 @@ export class PagoComponent implements OnInit {
 
     // Restablecer el total de la compra a 0 después de limpiar el carrito
     this.totalCompra = 0;
-
-    // Redirigir al inicio o a la página deseada
-   // this.router.navigate(['/''']);  Redirigir al inicio, por ejemplo
   }
 }
