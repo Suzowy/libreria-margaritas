@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ScrollService {
-  private currentSectionIndex = -1; // comienza antes de la primera sección
+  private currentSectionIndex = -1; // comienza antes de la primera sección en la cabecera
   private sections!: NodeListOf<HTMLElement>;
   private isScrolling = false;
   private cleanupScrollEffect!: () => void;
@@ -12,7 +12,6 @@ export class ScrollService {
   constructor() {}
 
   initializeScrollEffect() {
-    // Seleccionamos las secciones de la página
     this.sections = document.querySelectorAll('.section');
 
     const observer = new IntersectionObserver(
@@ -24,7 +23,7 @@ export class ScrollService {
           }
         });
       },
-      { threshold: 0.5 } // Ajustar el umbral para una detección más precisa
+      { threshold: 0.5 }
     );
 
     this.sections.forEach((section) => observer.observe(section));
@@ -69,17 +68,14 @@ export class ScrollService {
   };
 
   private scrollToSection(index: number) {
-    // Asegura que el índice esté dentro del rango
     if (index < -1 || index >= this.sections.length) return;
 
     if (index === -1) {
-      // Navega a la cabecera
       window.scrollTo({ top: 0, behavior: 'smooth' });
       this.currentSectionIndex = index;
       return;
     }
 
-    // Desplázate a la siguiente o anterior sección
     this.sections[index].scrollIntoView({ behavior: 'smooth' });
     this.currentSectionIndex = index;
   }
