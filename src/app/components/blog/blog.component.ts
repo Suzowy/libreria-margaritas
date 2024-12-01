@@ -123,6 +123,7 @@ Escribí hace apenas unas semanas la última página, solo que esta vez no es un
       expanded: false,
     },
   ];
+recentPosts: any;
 
   toggleDescription(postId: number): void {
     const post = this.posts.find(p => p.id === postId);
@@ -130,5 +131,7 @@ Escribí hace apenas unas semanas la última página, solo que esta vez no es un
       post.expanded = !post.expanded;
     }
   }
+
+
 
 }
