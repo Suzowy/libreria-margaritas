@@ -193,21 +193,20 @@ cite {
   border-top-right-radius: 50%;
 }
 
-.line{
+.line {
   position: absolute;
-  top:  58%;
+  top: 58%;
   left: -18%;
   filter: contrast(0.5);
 }
 
-.line-2{
+.line-2 {
   position: absolute;
   top: 55%;
   left: -1%;
   z-index: -1;
   filter: contrast(0.2);
 }
-
 
 .line-3 {
   position: absolute;
@@ -683,24 +682,23 @@ cite {
   }
 
   .line {
+    top: -15%;
+    left: -19%;
+  }
 
-    top: -7%;
-    left: -5%;
+  .line-2 {
+    top: -18%;
+    left: -30%;
+  }
+  .line-3 {
+    top: 71%;
+    left: -62%;
+    z-index: -1;
+  }
 
-}
-
-
-.line-2{
-  top: -20%;
-  left: -30%;
-}
-.line-3{
-  top: 71%;
-  left: -62%;
-  z-index: -1;
-}
-
-  .line img, .line-2 img, .line-3 img{
+  .line img,
+  .line-2 img,
+  .line-3 img {
     width: 100%;
   }
 
@@ -962,22 +960,21 @@ cite {
 }
 
 @media (max-width: 480px) {
-
   .cabecera::before {
     height: 40%;
-    filter: blur(0.7px) brightness(0.6);
-}
+    filter: blur(0.7px) brightness(0.6) contrast(0.5)
+      drop-shadow(0px 2px 10px rgba(51, 51, 51, 0.883));
+  }
 
-.cabecera {
-  padding-bottom: 50px;
-  z-index: 1;
-  background: linear-gradient(to bottom, var(--color-secundario), rgba(255, 255, 255, 0));
-}
-
+  .cabecera {
+    padding-bottom: 50px;
+    z-index: 1;
+    background: transparent;
+  }
 
   .estrella {
     width: 15%;
-    z-index: 1;
+    z-index: 100;
   }
 
   .forma-fondo {
@@ -995,7 +992,7 @@ cite {
     font-size: 11px;
   }
 
-  .titulo{
+  .titulo {
     margin-top: 100px;
     color: var(--color-titulo);
     font-size: 25px;
@@ -1003,7 +1000,7 @@ cite {
     z-index: 1;
   }
   .subtitulo {
-    margin-top:  60px;
+    margin-top: 60px;
     font-size: 12px;
     color: var(--color-texto);
     width: 70%;
@@ -1067,8 +1064,6 @@ cite {
       border-top-right-radius: 50%;
       border-top-left-radius: 50%; */
   }
-
-
 
   .parrafo1 {
     position: relative;
@@ -1364,22 +1359,21 @@ cite {
 }
 
 @media (max-width: 376px) {
-
   .cabecera::before {
     height: 40%;
-    filter: blur(0.7px) brightness(0.6);
-}
+    filter: blur(0.7px) brightness(0.6) contrast(0.5)
+      drop-shadow(0px 2px 10px rgba(51, 51, 51, 0.883));
+  }
 
-.cabecera {
-  padding-bottom: 50px;
-  z-index: 1;
-  background: linear-gradient(to bottom, var(--color-secundario), rgba(255, 255, 255, 0));
-}
-
+  .cabecera {
+    padding-bottom: 50px;
+    z-index: 1;
+    background: transparent;
+  }
 
   .estrella {
     width: 15%;
-    z-index: 1;
+    z-index: 100;
   }
 
   .forma-fondo {
@@ -1397,15 +1391,15 @@ cite {
     font-size: 11px;
   }
 
-  .titulo{
-    margin-top:100px;
+  .titulo {
+    margin-top: 100px;
     color: var(--color-titulo);
     font-size: 25px;
     padding: 10px;
     z-index: 1;
   }
   .subtitulo {
-    margin-top:  60px;
+    margin-top: 60px;
     font-size: 12px;
     color: var(--color-texto);
     width: 70%;
