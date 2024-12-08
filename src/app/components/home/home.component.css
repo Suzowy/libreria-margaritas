@@ -200,6 +200,14 @@ cite {
   filter: contrast(0.5);
 }
 
+.line-2{
+  position: absolute;
+  top: 55%;
+  left: -1%;
+  z-index: -1;
+  filter: contrast(0.2);
+}
+
 
 .line-3 {
   position: absolute;
@@ -675,21 +683,24 @@ cite {
   }
 
   .line {
-    /* position: absolute; */
-    top: -8%;
-    left: -24%;
-    /* filter: contrast(0.5); */
+
+    top: -7%;
+    left: -5%;
+
 }
 
+
+.line-2{
+  top: -20%;
+  left: -30%;
+}
 .line-3{
-  position: absolute;
-  top: 73%;
+  top: 71%;
   left: -62%;
-  filter: hue-rotate(197deg);
   z-index: -1;
 }
 
-  .line img, .line-3 img{
+  .line img, .line-2 img, .line-3 img{
     width: 100%;
   }
 
@@ -951,15 +962,14 @@ cite {
 }
 
 @media (max-width: 480px) {
+
+
   .estrella {
     width: 12%;
   }
 
   .forma-fondo {
-    width: 96%;
-    height: 394px;
-    transform: translateY(-552px);
-    transform: translateX(2%) translateY(-130%);
+    display: none;
   }
 
   .logo {
@@ -1336,20 +1346,32 @@ cite {
 }
 
 @media (max-width: 376px) {
+
+  .cabecera::before {
+    height: 40%;
+    filter: blur(0.7px) brightness(0.6);
+}
+
+.cabecera {
+  padding-bottom: 50px;
+  z-index: 1;
+  background: linear-gradient(to bottom, var(--color-secundario), rgba(255, 255, 255, 0));
+}
+
+
   .estrella {
     width: 15%;
+    z-index: 1;
   }
 
   .forma-fondo {
-    width: 90%;
-    height: 360px;
-    transform: translateY(-552px);
-    transform: translateX(5%) translateY(-135%);
+    display: none;
   }
 
   .logo {
     margin-top: 90px;
     width: 90%;
+    z-index: 1;
   }
 
   .cita,
@@ -1357,15 +1379,25 @@ cite {
     font-size: 11px;
   }
 
+  .titulo{
+    margin-top: 60px;
+    color: var(--color-titulo);
+    font-size: 25px;
+    padding: 10px;
+    z-index: 1;
+  }
   .subtitulo {
-    margin-top: 100px;
+    margin-top:  60px;
     font-size: 12px;
+    color: var(--color-texto);
     width: 70%;
   }
 
   .button {
     width: 180px;
+    margin-top: 40px;
     font-size: 9px;
+    z-index: 100;
   }
 
   .parrafo2 p {
