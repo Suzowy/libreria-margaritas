@@ -963,9 +963,21 @@ cite {
 
 @media (max-width: 480px) {
 
+  .cabecera::before {
+    height: 40%;
+    filter: blur(0.7px) brightness(0.6);
+}
+
+.cabecera {
+  padding-bottom: 50px;
+  z-index: 1;
+  background: linear-gradient(to bottom, var(--color-secundario), rgba(255, 255, 255, 0));
+}
+
 
   .estrella {
-    width: 12%;
+    width: 15%;
+    z-index: 1;
   }
 
   .forma-fondo {
@@ -973,29 +985,35 @@ cite {
   }
 
   .logo {
-    margin-top: 120px;
-    width: 100%;
+    margin-top: 90px;
+    width: 90%;
+    z-index: 1;
   }
 
   .cita,
   cite {
-    font-size: 12px;
+    font-size: 11px;
   }
 
-  .titulo {
-    width: 100%;
-    font-size: 32px;
+  .titulo{
+    margin-top: 60px;
+    color: var(--color-titulo);
+    font-size: 25px;
+    padding: 10px;
+    z-index: 1;
   }
   .subtitulo {
-    margin-top: 150px;
-    font-size: 13px;
-    width: 60%;
+    margin-top:  60px;
+    font-size: 12px;
+    color: var(--color-texto);
+    width: 70%;
   }
 
   .button {
-    margin-top: 0px;
-    width: 200px;
-    font-size: 10px;
+    width: 180px;
+    margin-top: 40px;
+    font-size: 9px;
+    z-index: 100;
   }
 
   .textos {
