@@ -563,7 +563,7 @@ article p {
 
 .about2 .foto-about {
   position: relative;
-  top: -25px;
+  /* top: -25px; */
   width: 100%;
   z-index: -1;
 }
@@ -585,7 +585,7 @@ article p {
   .destacado-about2 h5 {
     font-size: 25px;
     margin-left: 30px;
-    margin-top: 265px;
+    margin-top: 395px;
     z-index: 10;
   }
 
@@ -682,10 +682,10 @@ article p {
 }
 
 @media (max-width: 376px) {
-
+/* 
   .texto-about2 .p-1 {
     margin-top: -575px;
-}
+} */
 
 .about2{
   margin-top: 60px;
