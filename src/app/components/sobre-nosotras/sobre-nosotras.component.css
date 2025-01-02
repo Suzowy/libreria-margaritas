@@ -670,7 +670,7 @@ article p {
   }
 
   .about7-final p {
-    font-size: 10px;
+    font-size: 13px;
     width: 90%;
   }
 
@@ -680,7 +680,8 @@ article p {
   }
 
   .about7{
-    margin-bottom: 0px;
+    min-height: none;
+    margin-bottom: 50px;
   }
 
 }
