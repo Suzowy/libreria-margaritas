@@ -53,6 +53,10 @@
       </div>
       <button class="Btn" (click)="processPayment()">Realizar pago</button>
     </div>
+      <!-- Mensaje de página en construcción -->
+  <div *ngIf="mensajeConstruccion" class="mensaje-construccion">
+    {{ mensajeConstruccion }}
+  </div>
 
   </div>
 </div>

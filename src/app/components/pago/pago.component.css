@@ -188,6 +188,20 @@
   color: var(--color-titulo);
 }
 
+.mensaje-construccion {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #ffd5cd;
+  color: #ff1100;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-align: center;
+}
+
+
+
+
 @media (max-width: 768px) {
   .formularios {
     flex-direction: column; /* Cambia a columna en pantallas pequeñas */

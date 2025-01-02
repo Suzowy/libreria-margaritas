@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class PagoComponent implements OnInit {
   cart: any[] = []; // Array para almacenar los productos del carrito
   totalCompra: number = 0; // Variable para el total de la compra
+  mensajeConstruccion: string | undefined;
 
   constructor(private cartService: CartService, private router: Router) {}
 
@@ -29,8 +30,8 @@ continueShopping(): void {
 
 
   processPayment(): void {
-    // Lógica para procesar el pago
-    alert('Pago realizado');
+     // Mostrar mensaje de que la página está en construcción
+       this.mensajeConstruccion = 'La página de pago todavía está en construcción. Por favor, inténtelo más tarde.';
 
     // Limpiar el carrito después del pago
     this.cartService.clearCart();
