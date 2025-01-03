@@ -96,17 +96,6 @@
   z-index: 1;
 }
 
-.cabecera {
-  display: block;
-  text-align: center;
-  margin: 0 auto;
-  position: relative;
-  min-height: 100vh;
-  overflow: auto;
-  padding-bottom: 150px;
-  /* background-color: #48321e66; */
-}
-
 .cita,
 cite {
   font-size: 0.9vw;
@@ -122,14 +111,25 @@ cite {
   margin: 0 auto;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
-  transform: translateX(76%) translateY(-116%);
+  transform: translateX(76%) translateY(-107%);
   background-color: var(--color-forma);
+}
+
+.cabecera {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .cabecera::before {
   content: "";
-  background: url("/assets/img/libreria.jpg") no-repeat center center;
+  background: linear-gradient(rgba(0, 0, 0, 0.104), #c1ac90),
+    url("/assets/img/libreria.jpg") no-repeat center center;
   background-size: cover;
+  filter: blur(0.5px) brightness(0.9) contrast(0.9);
   position: absolute;
   top: 0;
   left: 0;
@@ -344,7 +344,7 @@ cite {
 
 .fotografia3 img {
   width: 100%;
- height: 100vh;
+  height: 100vh;
   border-top-left-radius: 0;
   border-top-right-radius: 20%;
 }
@@ -544,9 +544,6 @@ cite {
 .section-6 button {
   margin-top: 30px;
   margin-left: 30px;
-}
-
-@media (max-width: 1400px) {
 }
 
 @media (max-width: 1024px) {
@@ -960,18 +957,6 @@ cite {
 }
 
 @media (max-width: 480px) {
-  .cabecera::before {
-    height: 100%;
-    filter: blur(0.7px) brightness(0.6) contrast(0.6)
-    ;
-  }
-
-  .cabecera {
-    /* padding-bottom: 50px; */
-    z-index: 1;
-    background: transparent;
-  }
-
   .estrella {
     width: 15%;
     z-index: 100;
@@ -1014,8 +999,7 @@ cite {
     z-index: 100;
   }
 
-
-  .section-1{
+  .section-1 {
     margin-top: 0px;
   }
   .textos {
@@ -1068,18 +1052,17 @@ cite {
     border-bottom-right-radius: 168%;
     border-top-right-radius: 135%;
     border-top-left-radius: 205%;
-}
+  }
 
   .line {
     top: 38%;
     left: -81%;
-}
+  }
 
-.line-2{
-  top: -12%;
-  left: -49%;
-}
-
+  .line-2 {
+    top: -12%;
+    left: -49%;
+  }
 
   .parrafo1 {
     position: relative;
@@ -1098,9 +1081,9 @@ cite {
     top: -633px;
   }
 
-  .parrafo2 p{
+  .parrafo2 p {
     padding-left: 25px;
-    padding-right:25px;
+    padding-right: 25px;
     text-align: justify;
     font-weight: lighter;
     margin-left: 0px;
@@ -1108,7 +1091,7 @@ cite {
     top: 517px;
     margin-top: 30px;
     position: absolute;
-}
+  }
 
   .fotografia2 img {
     width: 100%;
@@ -1132,11 +1115,11 @@ cite {
     margin-left: 20px;
   }
 
-  .line-3{
+  .line-3 {
     top: 0%;
     left: -67%;
     z-index: 10;
-}
+  }
 
   .textos3 h2 {
     margin-top: 0px;
@@ -1151,12 +1134,11 @@ cite {
 
   .parrafo1-3 p,
   .parrafo2-3 p {
-   top: -40px;
+    top: -40px;
     margin-left: 18px;
     text-align: justify;
     width: 90%;
     margin-bottom: 20px;
-
   }
 
   .fotografia3 img {
@@ -1378,12 +1360,6 @@ cite {
 }
 
 @media (max-width: 376px) {
-  .cabecera::before {
-    height: 100%;
-    filter: blur(0.7px) brightness(0.6) contrast(0.6)
-    ;
-  }
-
   .cabecera {
     padding-bottom: 0px;
     z-index: 1;
@@ -1423,7 +1399,6 @@ cite {
     font-size: 9px;
     z-index: 100;
   }
-
 
   .textos4 .h4-2 {
     margin-left: 93px;
