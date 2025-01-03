@@ -978,7 +978,7 @@ cite {
   }
 
   .titulo {
-    margin-top: 150px;
+    margin-top: 60px;
     color: var(--color-texto-white);
     font-size: 40px;
     width: 97%;
@@ -986,7 +986,7 @@ cite {
     z-index: 1;
   }
   .subtitulo {
-    margin-top: 100px;
+    margin-top: 60px;
     font-size: 15px;
     color: var(--color-texto-white);
     width: 70%;
@@ -1381,7 +1381,7 @@ cite {
   }
 
   .titulo {
-    margin-top: 70px;
+    margin-top: 60px;
     font-size: 25px;
     padding: 10px;
     z-index: 1;
