@@ -148,6 +148,7 @@ cite {
   font-weight: lighter;
 }
 
+
 .olas{
   position: relative;
   margin-top: -1%;
@@ -1163,6 +1164,7 @@ cite {
 
   .fotografia3 img {
     width: 100%;
+    height: 50vh;
     margin-top: 0px;
     margin-left: 0px;
     mask-image: linear-gradient(
