@@ -127,7 +127,7 @@ p {
 .destacado-about3 {
   background-color: var(--color-secundario-transparente);
   width: 90%;
-  height: 150px;
+  height: 160px;
   position: absolute;
   transform: translateX(-30%);
   z-index: -1;

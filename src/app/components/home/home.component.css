@@ -126,7 +126,7 @@ cite {
 
 .cabecera::before {
   content: "";
-  background: linear-gradient(#00000017 60%, #c4a884), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
+  background: linear-gradient(#00000000 60%, #c4a884), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -963,7 +963,7 @@ cite {
 @media (max-width: 480px) {
 
   .cabecera::before {
-    background: linear-gradient(#695a401a 60%, #c5b094), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
+    background: linear-gradient(#695a4000 60%, #c5b094), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     top: 0;
