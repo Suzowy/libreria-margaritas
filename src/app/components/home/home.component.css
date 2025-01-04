@@ -126,10 +126,8 @@ cite {
 
 .cabecera::before {
   content: "";
-  background: linear-gradient(rgba(0, 0, 0, 0.104), #c1ac90),
-    url("/assets/img/libreria.jpg") no-repeat center center;
+  background: linear-gradient(#00000017 60%, #c4a884), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
   background-size: cover;
-  filter: blur(0.5px) brightness(0.9) contrast(0.9);
   position: absolute;
   top: 0;
   left: 0;
@@ -148,6 +146,12 @@ cite {
 .cabecera .button:hover {
   color: var(--color-texto-white);
   font-weight: lighter;
+}
+
+.olas{
+  position: relative;
+  margin-top: -1%;
+  z-index: -10;
 }
 
 /* seccion 1 Seamos sinceros... */
@@ -957,6 +961,19 @@ cite {
 }
 
 @media (max-width: 480px) {
+
+  .cabecera::before {
+    background: linear-gradient(#695a4066 60%, #c5b094), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+
   .estrella {
     width: 15%;
     z-index: 100;
