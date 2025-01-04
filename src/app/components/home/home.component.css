@@ -1014,8 +1014,8 @@ cite {
   }
 
   .button {
-    width: -180px;
-    margin-top: 40px;
+   
+    margin-top: -180px;
     font-size: 9px;
     z-index: 100;
   }
