@@ -545,6 +545,13 @@ cite {
   border-bottom-left-radius: 50%;
 }
 
+.line-3{
+  top: 49%;
+  left: -15%;
+  z-index: -1;
+}
+
+
 .section-6 button {
   margin-top: 30px;
   margin-left: 30px;
@@ -1014,7 +1021,7 @@ cite {
   }
 
   .button {
-   
+
     margin-top: -180px;
     font-size: 9px;
     z-index: 100;
@@ -1072,16 +1079,16 @@ cite {
 }
 
   .line{
-    top: 40%;
+    top: 35%;
     left: -42%;
     transform: rotate(198deg);
 }
 
-  .line-2 {
-    top: -12%;
-    left: -49%;
-  }
-
+.line-2{
+  top: 133%;
+  left: -88%;
+  z-index: 10;
+}
   .parrafo1 {
     position: relative;
     margin-left: 0px;
@@ -1133,11 +1140,7 @@ cite {
     margin-left: 20px;
   }
 
-  .line-2{
-    top: 133%;
-    left: -88%;
-    z-index: 10;
-}
+
   .textos3 h2 {
     margin-top: 0px;
     margin-left: 0px;
@@ -1293,7 +1296,7 @@ cite {
   }
 
   .line-3{
-    top: -10%;
+    top: -1%;
     left: -77%;
   }
 
