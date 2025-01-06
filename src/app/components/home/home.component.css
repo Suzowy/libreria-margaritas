@@ -1044,7 +1044,7 @@ cite {
   }
 
   .flechas {
-    margin-top:20px;
+    margin-top:30px;
     z-index: 1000;
   }
 
@@ -1057,13 +1057,14 @@ cite {
     width: 100%;
     margin-left: 0;
     padding: 5px;
-    font-size: 15px;
+
     z-index: 10;
   }
 
   .textos p {
     width: 90%;
     padding: 10px;
+    font-size: 15px;
     text-align: justify;
     position: relative;
   }
