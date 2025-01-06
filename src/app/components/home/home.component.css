@@ -473,7 +473,7 @@ cite {
 
 .enlaces img:hover {
   transform: scale(1.01);
-  filter: drop-shadow(2px 2px 10px #322d25d1);
+  filter: drop-shadow(2px 0px 10px #322d25d1);
 }
 
 .enlaces h2 {
@@ -884,7 +884,6 @@ cite {
   .foto-about img {
     position: relative;
     width: 100%;
-    height: auto;
     margin-top: 75px;
     mask-image: linear-gradient(
       to top,
@@ -1019,7 +1018,6 @@ cite {
   }
 
   .button {
-
     margin-top: -180px;
     font-size: 9px;
     z-index: 100;
@@ -1028,11 +1026,12 @@ cite {
   .section-1 {
     margin-top: 0px;
   }
+
   .textos {
     width: 100%;
     margin-left: 0;
     padding: 5px;
-    font-size: 3vw;
+    font-size: 15px;
     z-index: 10;
   }
 
@@ -1231,6 +1230,8 @@ cite {
     margin-left: 0px;
   }
 
+ 
+
   .section-5 {
     margin-top: 20px;
     margin-bottom: 50px;
@@ -1254,6 +1255,7 @@ cite {
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
+    gap: 0px;
   }
 
   .enlaces a {
@@ -1272,7 +1274,8 @@ cite {
   .fotografia6,
   .fotografia7,
   .fotografia8 {
-    width: 40%;
+    width: 50%;
+    padding: 12px;
     overflow: hidden;
   }
 
@@ -1281,10 +1284,6 @@ cite {
     font-size: 12px;
   }
 
-
-  .enlaces a:hover img {
-    transform: scale(1.05);
-  }
 
   .line-3{
     top: -1%;

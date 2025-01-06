@@ -549,7 +549,7 @@ h1 {
   }
   .contact-cabecera .fotografia img {
     width: 100%;
-    height: 400px;
+    height: 50vh;
 
     border-top-left-radius: 0%;
     border-bottom-left-radius: 50%;
@@ -711,7 +711,7 @@ h1 {
   }
   .contact-cabecera .fotografia img {
     width: 100%;
-    height: 300px;
+    height: 50vh;
     border-top-left-radius: 0%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
@@ -788,7 +788,7 @@ h1 {
   }
 
   .btn {
-    top: 80px;
+    top: 20px;
   }
 
   .section-3 {
