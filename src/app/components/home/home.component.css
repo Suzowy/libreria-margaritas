@@ -361,7 +361,6 @@ cite {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
 }
 
 .textos4 h4,
@@ -473,7 +472,7 @@ cite {
 
 .enlaces img:hover {
   transform: scale(1.01);
-  filter: drop-shadow(2px 0px 10px #322d25d1);
+  filter: drop-shadow(0px 2px 5px #322d25d1);
 }
 
 .enlaces h2 {
@@ -1230,7 +1229,7 @@ cite {
     margin-left: 0px;
   }
 
- 
+
 
   .section-5 {
     margin-top: 20px;
@@ -1266,8 +1265,8 @@ cite {
   }
 
   .enlaces img {
-    width: 200px;
-    height: 200px;
+    width: 160px;
+    height: 160px;
     transition: transform 0.3s ease-in-out;
   }
 
@@ -1275,7 +1274,7 @@ cite {
   .fotografia7,
   .fotografia8 {
     width: 50%;
-    padding: 12px;
+    padding: 5px;
     overflow: hidden;
   }
 
