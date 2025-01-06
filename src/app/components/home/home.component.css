@@ -55,7 +55,7 @@
   font-size: 50px;
   color: var(--color-texto-white);
   font-family: "Bodoni Moda SC", serif;
-  font-weight: lighter;
+  font-weight: 600;
   text-transform: uppercase;
   text-shadow: 4px 0px 0 rgba(61, 61, 61, 0.856);
 }
@@ -72,7 +72,8 @@
 
 .titulo {
   position: relative;
-  font-family: "Bodoni Moda", serif;
+  font-family: "Forum", serif;
+  text-shadow: 3px 0px 0 rgba(54, 53, 53, 0.706);
   margin: 0 auto;
   margin-top: 90px;
   color: var(--color-texto-white);
@@ -126,7 +127,7 @@ cite {
 
 .cabecera::before {
   content: "";
-  background: linear-gradient(#00000000 60%, #c4a884), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
+  background: linear-gradient(#5b4d3443  60%, #c4a884), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
@@ -200,9 +201,9 @@ cite {
 
 .line {
   position: absolute;
-  top: 55%;
-  left: -18%;
-  filter: contrast(0.5);
+  top: 46%;
+  left: -1%;
+  opacity: 0.6;
 }
 
 .line-2 {
@@ -472,7 +473,7 @@ cite {
 
 .enlaces img:hover {
   transform: scale(1.01);
-  filter: drop-shadow(5px 5px 10px #322d25d1);
+  filter: drop-shadow(2px 2px 10px #322d25d1);
 }
 
 .enlaces h2 {
@@ -485,7 +486,7 @@ cite {
 }
 
 .enlaces img:hover + h2 {
-  color: var(--color-texto-white);
+  color: var(--color-titulo);
   text-decoration-line: underline;
 }
 
@@ -532,24 +533,31 @@ cite {
 }
 
 .foto-about {
+  display: flex;
   width: 50%;
   height: auto;
   margin-left: 70px;
 }
 
-.foto-about img {
+.foto-about img{
   width: 80%;
-  height: 80vh;
+  max-height: 70vh;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   border-bottom-right-radius: 50%;
   border-bottom-left-radius: 50%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .line-3{
   top: 49%;
   left: -15%;
   z-index: -1;
+  opacity: 0.6;
 }
 
 
@@ -855,23 +863,12 @@ cite {
   }
 
   .enlaces h2 {
-    position: absolute;
-    top: 50%;
-    left: -100%;
-    transform: translateY(-50%);
     font-family: "Nanum Myeongjo", serif;
-    font-size: 13px;
-    color: white;
-    background-color: var(--color-secundario);
-    padding: 10px 15px;
-    border-radius: 5px;
+    font-size: 12px;
     transition: all 0.5s ease-in-out;
   }
 
-  .enlaces a:hover h2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+
 
   .enlaces a:hover img {
     transform: scale(1.05);
@@ -971,7 +968,7 @@ cite {
 @media (max-width: 480px) {
 
   .cabecera::before {
-    background: linear-gradient(#695a4000 60%, #c5b094), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
+    background: linear-gradient(#5b4d3443 60%, #c5b094), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
     background-size: cover;
     position: absolute;
     top: 0;
@@ -1050,6 +1047,7 @@ cite {
     font-family: "Nanum Myeongjo", serif;
     font-size: 20px;
     padding: 20px;
+    margin-bottom: 20px;
     position: relative;
   }
 
@@ -1075,20 +1073,22 @@ cite {
 
   .fotografia img{
     width: 100%;
-    height: 60vh;
-    mask-image: linear-gradient(to top, rgb(255 255 255 / 92%) 50%, rgba(0, 0, 0, 0));
+    height: 50vh;
+    /* mask-image: linear-gradient(to top, rgb(255 255 255 / 92%) 50%, rgba(0, 0, 0, 0)); */
 }
 
   .line{
-    top: 35%;
+    display: none;
+    /* top: 35%;
     left: -42%;
-    transform: rotate(198deg);
+    transform: rotate(198deg); */
 }
 
 .line-2{
-  top: 133%;
+  display: none;
+  /* top: 133%;
   left: -88%;
-  z-index: 10;
+  z-index: 10; */
 }
   .parrafo1 {
     position: relative;
@@ -1121,15 +1121,15 @@ cite {
 
   .fotografia2 img {
     width: 100%;
-    height: auto;
+    height: 50vh;
     margin-top: 250px;
     margin-left: 0px;
     border-top-right-radius: 0;
-    mask-image: linear-gradient(
+    /* mask-image: linear-gradient(
       to top,
       rgb(255, 255, 255) 50%,
       rgba(0, 0, 0, 0)
-    );
+    ); */
   }
 
   .parrafo1 p {
@@ -1139,6 +1139,8 @@ cite {
 
   .textos2 h2 {
     margin-left: 20px;
+    font-weight: 600;
+    text-shadow: 3px 0px 0 rgb(131 128 125 / 40%);
   }
 
 
@@ -1167,11 +1169,11 @@ cite {
     height: 50vh;
     margin-top: 0px;
     margin-left: 0px;
-    mask-image: linear-gradient(
+    /* mask-image: linear-gradient(
       to top,
-      rgb(255, 255, 255) 62%,
+      rgba(255, 255, 255, 0.301) 62%,
       rgba(0, 0, 0, 0)
-    );
+    ); */
   }
 
   .textos4 {
@@ -1248,7 +1250,7 @@ cite {
 
   .enlaces {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
@@ -1270,28 +1272,15 @@ cite {
   .fotografia6,
   .fotografia7,
   .fotografia8 {
-    width: 100%;
+    width: 40%;
     overflow: hidden;
   }
 
   .enlaces h2 {
-    position: absolute;
-    top: 50%;
-    left: -100%;
-    transform: translateY(-50%);
     font-family: "Nanum Myeongjo", serif;
-    font-size: 13px;
-    color: white;
-    background-color: var(--color-secundario);
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.5s ease-in-out;
+    font-size: 12px;
   }
 
-  .enlaces a:hover h2 {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
 
   .enlaces a:hover img {
     transform: scale(1.05);
