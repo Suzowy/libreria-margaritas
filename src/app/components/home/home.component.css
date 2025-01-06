@@ -149,6 +149,27 @@ cite {
   font-weight: lighter;
 }
 
+.flechas {
+  margin-top:100px;
+  position: relative;
+  z-index: 100;
+  animation: moveUpDown 2s infinite ease-in-out;
+}
+
+.flechas img{
+  width: 40px;
+  height:auto;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
 
 .olas{
   position: relative;
@@ -1022,6 +1043,12 @@ cite {
     z-index: 100;
   }
 
+  .flechas {
+    margin-top:20px;
+    z-index: 1000;
+  }
+
+
   .section-1 {
     margin-top: 0px;
   }
@@ -1228,8 +1255,6 @@ cite {
   .section-4 .button {
     margin-left: 0px;
   }
-
-
 
   .section-5 {
     margin-top: 20px;
