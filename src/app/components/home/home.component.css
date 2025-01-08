@@ -127,7 +127,7 @@ cite {
 
 .cabecera::before {
   content: "";
-  background: linear-gradient(#5b4d3443  60%, #c4a884), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
+  background: linear-gradient(#5b4d3400  82%, #c4a884ee), url(/assets/img/fachada-margaritas.jpg) no-repeat center center;
   background-size: cover;
   position: absolute;
   top: 0;
