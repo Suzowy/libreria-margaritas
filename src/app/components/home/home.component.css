@@ -648,9 +648,7 @@ cite {
   }
 
   .forma-fondo {
-    width: 71%;
-    height: 527px;
-    transform: translateX(21%) translateY(-170%);
+   display: none;
   }
 
   .logo {
